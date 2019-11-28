@@ -577,7 +577,7 @@ footer .contact{
 }
 .carrito h3:nth-child(1){
    
-    width: 600px;
+    width: 800px;
 }
 .carrito h3{
     color:#0A83FC;
@@ -598,7 +598,7 @@ footer .contact{
 
 .carrito2 figure{
     display: flex;
-    width: 600px;
+    width: 780px;
 }
 .carrito2 figure p{
     
@@ -616,7 +616,16 @@ footer .contact{
     padding-top: 12px;
     width: 235px;
     height: auto;
-    padding-top: 50px;
+    padding-top: 65px;
+    text-align: center;
+    
+}
+.carrito2 input{
+    text-align: center;
+    padding-top: 8px;
+    width: 235px;
+    height: auto;
+    font-size: 25px;
     text-align: center;
     
 }
