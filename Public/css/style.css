@@ -10,7 +10,7 @@ header{
     align-items: center;
 }
 .container{
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -260,19 +260,43 @@ footer .contact{
     padding: 15px 20px;
 }
 .about{
-    background-color: yellow;
+  
     width: 100%;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0px 0px  3px #888;
+    padding: 30px;
 
     
 }
+
 .info{
     margin-left: 100px;
 }
 .integrantes{
     margin-right: 100px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
 .carrito{
     margin-top: 150px;
     width: 100%;
@@ -325,3 +349,57 @@ footer .contact{
     
 }
 
+=======
+.target {
+    margin-left: 80%;
+}
+.target i{
+    margin-left: 20px;
+}
+.gener{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px  3px #888;
+    padding: 30px;
+}
+
+
+
+
+
+
+
+
+/***************index_admin**********************/
+.fon{
+    margin-bottom: 40%;
+    background: rgb(240, 247, 255);
+    border: rgb(255, 255, 255) solid;
+    width: 300px;
+    height: 400px;
+    border-radius: 15%;
+}
+.fon:hover{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1)
+    }
+.ajustar{
+    margin-top: 2%;
+}
+
+.h3index{
+    margin-top: 40%;
+}
+
+
+
+
+
+
+/*****************************************************/
+
+>>>>>>> 79013714bd5281fa591a2dace9bcb2aed9a86363
