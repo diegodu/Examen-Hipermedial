@@ -100,7 +100,7 @@ header .nav-bar ul ul {
  top:100%;
  left:0;
  width: 100%;
- background:rgba(255,255,255,.3);
+ background:rgba(0,0,0,.3);
  padding:0;
 }
 
@@ -206,19 +206,65 @@ header .nav-bar ul li:hover > ul {
 .information{
     clear: both;
     background-color: #0A83FC;
-    padding: 50px 0px;
-}
-.information .container>div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 60%;
-
+    padding: 70px 0px;
+    height: 300px;
 }
 .information .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.information .container>div{
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 10%;
+
+}
+.information .container>div h3{
+    
+    font-size: 40px;
+    font-weight: 300;
+
+}
+.information .container>div p{
+    
+    text-align: justify;
+
+}
+.information .container i {
+    font-size: 200px;
+    color: white;
+    margin-right: 10%;
+}
+footer{
+    width: 100%;
+}
+#map{
+    
+    width: 60%;
+    height: 300px;
+}
+footer .contact{
+    display: flex;
+    
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px 20px;
+}
+.about{
+    background-color: yellow;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    
 }
 
