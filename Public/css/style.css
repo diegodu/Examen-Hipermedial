@@ -258,6 +258,8 @@ footer .contact{
     flex-direction: column;
     justify-content: space-around;
     padding: 15px 20px;
+
+    
 }
 .about{
   
@@ -276,24 +278,64 @@ footer .contact{
 .integrantes{
     margin-right: 100px;
 }
+.target {
+    margin-left: 80%;
+}
+footer .contact{
+    
+    margin-left: 10%;
+    justify-content: flex-start;
+  justify-content: flex-start;  
+}
+.information .info_cat {
+    display: flex;
+    color: white;
 
+}
+.information .info_cat div {
+    margin-left: 80px;
+    margin-right: 80px;
 
+}
+.information .info_cat div h3{
+    font-size: 40px;
 
+}
+.information .info_cat figure {
+    margin-right: 200px;
 
+}
+.information .info_cat figure img {
+    width: 100px;
+    height: 200px;
+}
+.information .info_cat figure img{
+    width: 120px;
+}
+.maincontent1{
+    width: 100%;
+    display: flex;
+    justify-content: initial;
+    justify-content: initial;  
+}
+.maincontent1 .card{
+    border: 2px solid rgba(0,0,0, 0.2);
+    border: 2px solid rgba(0,0,0, 0.2);
+    padding: 25px 30px;
+    justify-content: start;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.maincontent1 .desc div{
+    padding: 10px;
+    border: none;
+}
+.maincontent1 .desc div input{
+    background-color: rgb(139, 139, 253);
+    color: blue;
+    width: 20%;
+    padding: 10px;
+    border: none;
+}
 
 
 .target {
@@ -309,7 +351,43 @@ footer .contact{
     box-shadow: 0px 0px  3px #888;
     padding: 30px;
 }
+#menu{
+    width: 15%;
+    background-color: rgb(179, 178, 178);
 
+}
+#menu input{
+    background-color: rgb(179, 178, 178);
+
+}
+#menu h3{
+    text-align: center;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    padding: 15px 0px;
+}
+#menu input:hover{
+    background-color: rgb(37, 37, 37);
+    color: white;
+    padding: 8px 0px;
+}
+.barra{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(179, 178, 178);
+}
+.barra input{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(179, 178, 178);
+    
+}
+.barra input:hover{
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
 
 
 
