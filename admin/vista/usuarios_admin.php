@@ -21,7 +21,7 @@
         <nav class="nav-bar container">
             <ul>
                 <li><a href="index_admin.html">Inicio</a></li>
-                <li><a href="usuarios_admin.php">Clientes</a></li>
+                <li><a href="usuarios_admin.php" style="text-decoration-color: rgb(52, 122, 226);">Clientes</a></li>
                 <li><a href="productos_admin.php">Productos</a></li>
                 <li><a href="#">Pedidos</a></li>
                 <li><a href="#">Facturas</a></li>
@@ -30,45 +30,30 @@
         </nav>
 
     </header>
+<!-------------------------------------------------------------->
 
 
-    <section class="maincontent container ajustar">
-        <div class="card fon">
-            <figure>
-                <a href="#"> <img src="../../imagenes/christian/usuario.png"></a>
-            </figure>
-            <a href="#">
-                <h3 class="h3index">Usuarios</h3>
-            </a>
-        </div>
-        <div class="card fon">
-            <figure>
-                <a href="#"> <img src="../../imagenes/christian/libro-abierto.png"></a>
-            </figure>
-            <a href="#">
-                <h3 class="h3index">Libros</h3>
-            </a>
-        </div>
-        <div class="card fon">
-            <figure>
-                <a href="#"></a> <img src="../../imagenes/christian/pedidos.png"></a>
-            </figure>
-            <a href="#">
-                <h3 class="h3index">Pedidos</h3>
-            </a>
 
-        </div>
-        <div class="card fon">
-            <figure>
-                <a href="#"> <img src="../../imagenes/christian/factura.png"></a>
-            </figure>
-            <a href="#">
-                <h3 class="h3index">Facturas</h3>
-            </a>
-          
-        </div>
+<!------------------php---------------------------->
 
-    </section>
+<?php
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-------------------------------------------------------------->
+
 
     <section class="information">
         <div class="container">
