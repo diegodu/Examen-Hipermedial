@@ -72,18 +72,21 @@ header nav ul .search-content input{
     border-radius: 20px;
     border: 1px solid #0A83FC;
 }
+
 header .nav-bar ul {
     list-style:none;
     margin:0;
     padding:0;
-}  
+}
+   
 header .nav-bar ul a {
     display:block;
     text-decoration:none;
     padding:10px;
     text-transform:uppercase;
     letter-spacing:1px;
-}  
+}
+   
 header .nav-bar ul li {
     position:relative;
     float:left;
@@ -153,12 +156,14 @@ header .nav-bar ul li:hover > ul {
     grid-row-gap: 50px;
     grid-column-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 .maincontent h2{
     text-align: center;
     margin-bottom:50px ;
     grid-column-start: 1;
-    grid-column-end: 5; 
+    grid-column-end: 5;
+  
 }
 .maincontent .card{
     border: 2px solid rgba(0,0,0, 0.2);
@@ -218,15 +223,18 @@ header .nav-bar ul li:hover > ul {
     flex-direction: column;
     width: 60%;
     margin-left: 10%;
+
 }
 .information .container>div h3{
     
     font-size: 40px;
     font-weight: 300;
+
 }
 .information .container>div p{
     
     text-align: justify;
+
 }
 .information .container i {
     font-size: 200px;
@@ -242,7 +250,8 @@ footer{
     height: 300px;
 }
 footer .contact{
-    display: flex;   
+    display: flex;
+    
 }
 .redes{
     display: flex;
@@ -256,7 +265,9 @@ footer .contact{
     display: flex;
     justify-content: space-between;
     box-shadow: 0px 0px  3px #888;
-    padding: 30px;   
+    padding: 30px;
+
+    
 }
 
 .info{
@@ -297,103 +308,13 @@ footer .contact{
     justify-content: space-between;
     box-shadow: 0px 0px  3px #888;
     padding: 30px;
-    
 }
-.barra {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    background-color: rgb(187, 187, 187);
-    justify-content: center;
-}
-.barra input{
 
-    width: 50px;
-    height: 50px;
-    margin-left: 20px;
-    background:none;
-    border: none;
-    
-}
-.barra input:hover{
-    background-color: rgb(39, 39, 39);
-    color: white;
-}
-#menu{
-    width: 15%;
-    background-color: rgb(192, 192, 187);
-    text-align: start;
-}
-#menu h3{
-    text-align: center;
-    background-color: rgb(39, 39, 39);
-    color: white;
-    padding: 10px;
-}
-#menu input{
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 10px;
-}
-#menu input:hover{
-    background-color: rgb(39, 39, 39);
-    color: white;
-}
-.information .info_cat  {
-    color: white;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: initial;
-    width: 70%;
-    margin-left: 10%;
-}
-.information .info_cat figure{
-    font-size: 200px;
-    margin-left: 10%;
-    justify-content: flex-start;  
-}
-.information .info_cat figure img{
-    width: 120px;
-}
-.maincontent1{
-    width: 100%;
-    display: flex;
-    justify-content: initial;  
-}
-.maincontent1 .card{
-    border: 2px solid rgba(0,0,0, 0.2);
-    padding: 25px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.maincontent1 .desc{
-    border: 2px solid rgba(0,0,0, 0.2);
-    padding: 25px 30px;
-    justify-content: start;
-}
-.maincontent1 .desc div{
-    
-    padding: 10px 0px;
-   
-}
-.maincontent1 .desc div .va{
-    color: #FF4858;
-    font-weight: 300;
-}
-.maincontent1 .desc div i:hover{
-    color: yellow;
-    font-weight: 300;
-}
-.maincontent1 .desc div input{
-    background-color: rgb(181, 181, 250);
-    color:rgb(0, 0, 94);
-    padding: 10px;
-    border: none;
-}
+
+
+
+
+
 
 
 /***************index_admin**********************/
@@ -557,6 +478,149 @@ footer .contact{
 
 
 
+
+
+
+
+/* parte Malla*/
+.carro{
+
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+}
+.carrito{
+    margin-top: 160px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    box-shadow: 5px 0px  5px #888;
+    
+}
+.carrito h3:nth-child(1){
+   
+    width: 600px;
+}
+.carrito h3{
+    color:#0A83FC;
+    padding-top: 12px;
+    text-align: center;
+    width: 250px;
+  
+}
+
+.carrito2{
+   
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 20px 20px;
+    box-shadow: 0px 0px  4px #888;
+}
+
+.carrito2 figure{
+    display: flex;
+    width: 600px;
+}
+.carrito2 figure p{
+    
+    padding-top: 60px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+.carrito2 figure img{
+    
+    width: 120px;
+    height: 160px;
+}
+.carrito2 p{
+    padding-top: 12px;
+    width: 235px;
+    height: auto;
+    padding-top: 50px;
+    text-align: center;
+    
+}
+
+.pago{
+    padding-top: 20px;
+    width: 100%;
+    padding-left: 52%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: auto;
+    float: right;
+    box-shadow: 0px 0px  4px #888;
+}
+.calculapago{
+    display: flex;
+    color:#0A83FC;
+}
+.calculapago h3{
+   
+    width: 400px;
+    color:#0A83FC;
+}
+.calculapago h2{
+    
+    width: 400px;
+    color:#0A83FC;
+    
+}
+.calculapago p{
+    text-align: center;
+    width: 200px;
+    
+
+}
+
+#contenido{
+    top: 0%;
+    position: static;
+    bottom:5%;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    align-items: center;
+    margin-bottom: 30px;
+    
+    box-shadow: 0px 0px  4px #888;
+   
+}
+#contenido h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+form{
+    width: 450px;
+    margin: auto;
+    background: rgba(0, 0, 0,.2);
+    padding: 10px 20px 30px;
+    border-radius: 30px;
+
+}
+input, textarea{
+    width: 100%;
+    margin-bottom: 7px;
+    padding: 5px;
+    font-size: 17px;
+    border: none;
+    font-family: rale;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+.ubicarIco{
+    position: relative;
+    text-align: center;
+}
+.ubicarIco i{
+    position: absolute;
+    padding: 7px;
+}
+.ubicarIco input{
+    text-align: center;
+}
 
 
 
