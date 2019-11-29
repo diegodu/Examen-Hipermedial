@@ -254,6 +254,7 @@ footer{
     height: 300px;
 }
 footer .contact{
+    
     display: flex;
     
 }
@@ -286,8 +287,7 @@ footer .contact{
     margin-left: 80%;
 }
 footer .contact{
-    
-    margin-left: 10%;
+    margin-left: 0%;
     justify-content: flex-start;
   justify-content: flex-start;  
 }
@@ -806,4 +806,33 @@ input, textarea{
 	75% {margin-left: -300%;}
 	100% {margin-left: -300%;}
 }
-
+.somos{
+    padding-top: 160px;
+    width: 100%;
+    height: 700px;
+}
+.somos img{
+    display: block;
+    width: 1000px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.somos2{
+ display: flex;
+ width: 100%;
+ padding-left: 70px;
+ padding-right: 50px;
+ padding-bottom: 20px;
+}
+.somos2 p{
+    width: 800px;
+    margin-top: 20px;
+    text-align: justify;
+}
+.somos2 img{
+    width: 800px;
+    height: 500px;
+    margin-top: 20px;
+    text-align: justify;
+}
