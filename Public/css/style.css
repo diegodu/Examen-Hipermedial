@@ -329,12 +329,43 @@ footer .contact{
     padding: 10px;
     border: none;
 }
-.maincontent1 .desc div input{
-    background-color: rgb(139, 139, 253);
+.maincontent1 .desc div i:hover{
+    color: yellow;
+
+}
+.va{
+    color: red;
+}
+.maincontent1 .desc .agregar{
+    margin-left: 10px;
+    display: flex;
+    background-color: rgb(175, 175, 255);
     color: blue;
-    width: 20%;
+    width: 23%;
+    height: 40px;
     padding: 10px;
     border: none;
+    border-radius: 10px;
+}
+.maincontent1 .desc .agregar input{
+    color: blue;
+    width: 75%;
+    height: 100%;
+    border: none;
+    justify-content: center;
+    background-color: rgb(175, 175, 255);
+    font-size: 15px;
+    margin-right: 14px;
+ 
+ 
+
+}
+.maincontent1 .desc .agregar i{
+    color: blue;
+    width: 100%;
+    border: none;
+    margin-left: 5px;
+    
 }
 
 
