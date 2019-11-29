@@ -10,7 +10,11 @@ header{
     align-items: center;
 }
 .container{
-    width: 80%;
+    width: 95%;
+    margin: 0 auto;
+}
+.container1{
+    width: 30%;
     margin: 0 auto;
 }
 
@@ -508,7 +512,10 @@ footer .contact{
     border: rgb(255, 255, 255) solid;
     width: 300px;
     height: 400px;
-    border-radius: 15%;
+    border-radius: 5%;
+    text-align: center;
+    
+    
 }
 .fon:hover{
     -moz-transform: scale(1.1);
@@ -516,13 +523,33 @@ footer .contact{
     -o-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1)
+    
     }
 .ajustar{
+   
     margin-top: 2%;
 }
 
-.h3index{
-    margin-top: 40%;
+figure.fi{
+    margin-top: 10%;
+}
+
+.xx {
+    margin-top: 15%;
+    text-decoration: none ;
+    
+
+}
+
+img.h{
+    
+    width: 70%;
+    height: 70%;
+    text-align: center;
+}
+.estilo{
+    text-decoration: none;
+    font-family: cursive, 'Times New Roman', Times, serif;
 }
 
 
@@ -815,5 +842,43 @@ input, textarea{
 }
 
 
+.slider1 {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
 
+.slider1 ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 10s infinite alternate linear;
+}
+
+.slider1 li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider1 img {
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 300px;
+	width: 100%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
 
