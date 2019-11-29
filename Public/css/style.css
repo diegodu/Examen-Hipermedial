@@ -449,6 +449,7 @@ footer .contact{
 .ajustar{
    
     margin-top: 2%;
+    margin-left: 8%;
 }
 
 figure.fi{
@@ -471,6 +472,10 @@ img.h{
 .estilo{
     text-decoration: none;
     font-family: cursive, 'Times New Roman', Times, serif;
+}
+
+.es{
+    height: 400px;
 }
 
 
