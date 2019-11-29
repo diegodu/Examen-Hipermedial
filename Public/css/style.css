@@ -403,7 +403,10 @@ footer .contact{
     border: rgb(255, 255, 255) solid;
     width: 300px;
     height: 400px;
-    border-radius: 15%;
+    border-radius: 5%;
+    text-align: center;
+    
+    
 }
 .fon:hover{
     -moz-transform: scale(1.1);
@@ -411,13 +414,33 @@ footer .contact{
     -o-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1)
+    
     }
 .ajustar{
+   
     margin-top: 2%;
 }
 
-.h3index{
-    margin-top: 40%;
+figure.fi{
+    margin-top: 10%;
+}
+
+.xx {
+    margin-top: 15%;
+    text-decoration: none ;
+    
+
+}
+
+img.h{
+    
+    width: 70%;
+    height: 70%;
+    text-align: center;
+}
+.estilo{
+    text-decoration: none;
+    font-family: cursive, 'Times New Roman', Times, serif;
 }
 
 
