@@ -10,11 +10,7 @@ header{
     align-items: center;
 }
 .container{
-    width: 95%;
-    margin: 0 auto;
-}
-.container1{
-    width: 30%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -320,7 +316,7 @@ footer .contact{
     width: 100%;
     display: flex;
     justify-content: initial;
-    justify-content: initial;  
+
 }
 .maincontent1 .card{
     border: 2px solid rgba(0,0,0, 0.2);
@@ -423,7 +419,107 @@ footer .contact{
     background-color: rgb(37, 37, 37);
     color: white;
 }
+.maincontent2{
+    display: flex;
+    justify-content: space-between;
+  
+    width: 80%;
+    padding: 50px;
+  
 
+}
+.maincontent2 .divi{
+    display: flex;
+    width: 80%;
+    box-shadow: 0px 0px  3px #888;
+    height: 400px;
+    
+}
+.maincontent2 .fi{
+    width: 20%;
+    box-shadow: 0px 0px  3px #888;
+
+}
+.maincontent2 .divi .imag{
+    width: 50%;
+    padding: 20px;
+    box-shadow: 0px 0px  3px #888;
+    
+
+}
+.maincontent2 .divi .imag figure{
+   
+    padding: 20px;
+    width: 100%;
+    height: 350px;
+    box-shadow: 0px 0px  3px #888;
+}
+.maincontent2 .divi .imag figure img{
+   
+    width: 100%;
+    height: 100%;
+}
+.maincontent2 .divi .informa{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+}
+.maincontent2 .divi .informa div h3{
+    padding: 10px 0px 0px 0px;
+}
+.maincontent2 .divi .informa div i{
+    font-size: 10px;
+}
+.maincontent2 .divi .informa .ess {
+    padding: 10px 0px;
+}
+.maincontent2 .divi .informa .ess .est{
+    display: flex;
+    
+}
+.maincontent2 .divi .informa .con{
+    display: flex;
+    background-color: blue;
+    width: 40%;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+    
+}
+.maincontent2 .divi .informa .con input{
+    display: flex;
+    background-color: blue;
+    width:80%;
+    color: white;
+    
+}
+.maincontent2 .divi .informa .con i{
+    display: flex;
+    background-color: blue;
+    width:20%;
+    color: white;
+    margin-left: 10px;
+    font-size: 20px;
+    padding: 8px 0px;
+}
+.maincontent2 .divi .informa .com{
+   padding: 10px;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    
+}
+.maincontent2 .divi .informa .com i{
+    font-size: 20px;
+ }
+ .maincontent2 .divi .informa .com input{
+    
+    box-shadow: 0px 0px  3px #888;
+    height: 80px;
+    text-align: start;
+    margin-top: 20px;
+ }
+ 
 
 
 
@@ -453,6 +549,7 @@ footer .contact{
 .ajustar{
    
     margin-top: 2%;
+    margin-left: 8%;
 }
 
 figure.fi{
@@ -476,6 +573,17 @@ img.h{
     text-decoration: none;
     font-family: cursive, 'Times New Roman', Times, serif;
 }
+
+.es{
+    height: 400px;
+}
+
+h5#corr{
+    margin-left: 30%;
+    margin-bottom: 100px;
+
+}
+
 
 
 
