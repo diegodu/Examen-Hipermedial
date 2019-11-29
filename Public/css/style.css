@@ -10,7 +10,7 @@ header{
     align-items: center;
 }
 .container{
-    width: 30%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -316,7 +316,7 @@ footer .contact{
     width: 100%;
     display: flex;
     justify-content: initial;
-    justify-content: initial;  
+
 }
 .maincontent1 .card{
     border: 2px solid rgba(0,0,0, 0.2);
@@ -419,7 +419,82 @@ footer .contact{
     background-color: rgb(37, 37, 37);
     color: white;
 }
+.maincontent2 .container{
+    display: flex;
+    width: 100%;
+    background-color: red;
+  
+}
+.maincontent2 .container{
+    height: 400px;
+    justify-content: space-between;
+}
+.maincontent2{
+    padding: 100px 0px;
+    justify-content: space-between;
+    display: flex;
+}
+.maincontent2 .divi{
+    display: flex;
+}
+.maincontent2 .divi .informa .est{
+    display: flex;
+}
 
+.maincontent2 .divi .informa .con {
+
+    display: flex;
+    background-color: rgb(175, 175, 255);
+    color: blue;
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
+.maincontent2 .divi .informa .con  input{
+    color: blue;
+    width: 75%;
+    height: 100%;
+    border: none;
+    justify-content: center;
+    background-color: rgb(175, 175, 255);
+    font-size: 15px;
+    margin-right: 14px;
+}
+.maincontent2 .divi .informa .con  i{
+    color: blue;
+    width: 100%;
+    border: none;
+    margin-left: 5px;
+}
+.maincontent2 .divi .imag figure{
+    padding: 20px;
+    box-shadow: 0px 0px  3px #888;
+
+}
+.maincontent2 .divi .imag figure img{
+    width: 200px;
+    height: 300px;
+
+}
+.maincontent2 .divi .informa{
+    margin-left: 100px;
+    
+}
+.maincontent2 .divi .informa .es{
+    padding: 20px 0px;
+    
+}
+.maincontent2 .divi .informa .com{
+
+    display: flex;
+    background-color: rgb(175, 175, 255);
+    color: blue;
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
 
 
 
