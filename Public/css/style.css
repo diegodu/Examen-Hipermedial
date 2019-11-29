@@ -422,7 +422,7 @@ footer .contact{
 .maincontent2 .container{
     display: flex;
     width: 100%;
-    background-color: red;
+
   
 }
 .maincontent2 .container{
@@ -436,7 +436,20 @@ footer .contact{
 }
 .maincontent2 .divi{
     display: flex;
+    width: 100%;
+    box-shadow: 0px 0px  3px #888;
+    
+    
 }
+.maincontent2 .fi{
+    display: flex;
+    width: 100%;
+}
+.maincontent2 .fi img{
+    margin-left: 330%;
+}
+
+
 .maincontent2 .divi .informa .est{
     display: flex;
 }
@@ -470,6 +483,7 @@ footer .contact{
 .maincontent2 .divi .imag figure{
     padding: 20px;
     box-shadow: 0px 0px  3px #888;
+    
 
 }
 .maincontent2 .divi .imag figure img{
@@ -477,24 +491,13 @@ footer .contact{
     height: 300px;
 
 }
-.maincontent2 .divi .informa{
-    margin-left: 100px;
-    
-}
+
 .maincontent2 .divi .informa .es{
     padding: 20px 0px;
     
 }
-.maincontent2 .divi .informa .com{
 
-    display: flex;
-    background-color: rgb(175, 175, 255);
-    color: blue;
-    width: 90%;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-}
+
 
 
 
