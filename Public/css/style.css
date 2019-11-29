@@ -10,7 +10,7 @@ header{
     align-items: center;
 }
 .container{
-    width: 80%;
+    width: 30%;
     margin: 0 auto;
 }
 
@@ -709,5 +709,43 @@ input, textarea{
 }
 
 
+.slider1 {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
 
+.slider1 ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 10s infinite alternate linear;
+}
+
+.slider1 li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider1 img {
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 300px;
+	width: 100%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
 
