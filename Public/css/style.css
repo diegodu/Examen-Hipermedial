@@ -527,6 +527,7 @@ footer .contact{
 .ajustar{
    
     margin-top: 2%;
+    margin-left: 8%;
 }
 
 figure.fi{
@@ -550,6 +551,17 @@ img.h{
     text-decoration: none;
     font-family: cursive, 'Times New Roman', Times, serif;
 }
+
+.es{
+    height: 400px;
+}
+
+h5#corr{
+    margin-left: 30%;
+    margin-bottom: 100px;
+
+}
+
 
 
 

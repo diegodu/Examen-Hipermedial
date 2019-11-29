@@ -21,7 +21,7 @@
         <nav class="nav-bar container">
             <ul>
                 <li><a href="index_admin.html">Inicio</a></li>
-                <li><a href="usuarios_admin.php" style="text-decoration-color: rgb(52, 122, 226);">Clientes</a></li>
+                <li><a href="usuarios_admin.php"  >Clientes</a></li>
                 <li><a href="productos_admin.php">Productos</a></li>
                 <li><a href="#">Pedidos</a></li>
                 <li><a href="#">Facturas</a></li>
@@ -30,9 +30,54 @@
         </nav>
 
     </header>
+    
 <!-------------------------------------------------------------->
+<h2>Usuarios</h2>
+
+<table style="width:80%">
+     
+        <?php
+        include '../../config/conexionBD.php';
+
+        $sql = "SELECT * FROM usuario";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+
+            while ($row = $result->fetch_assoc()) {
+
+                echo "<tr>";
+                echo " <td>" . "<img src='../../imagenes/christian/usuario.png' class='h'>" . "</td>";
+                echo " <td> ".
+                        "<tr>"
+                        ."<h5 style='margin-left: 30%; margin-bottom: 200px;'>Correo electronico</h5>"
+                        ."<h3 >". $row["usu_correo"] ."</h3>"
+                        ."<h3>". $row["usu_contrasenia"] ."<h3>"
+                        ."<h3>". $row["usu_cedula"] ."<h3>" 
+                        ."</tr>";
+                echo "</td>";
+                echo " <td>" . $row['usu_nombre'] . "</td>";
+                echo " <td>" . $row['usu_apellido'] . "</td>";
+                echo " <td>" . $row['usu_direccion'] . "</td>";
+                echo " <td>" . $row['usu_telefono'] . "</td>";
+                echo " <td>" . $row["usu_eliminado"] . "</td>";
+                echo " <td> <a href='eliminar.php?codigo=" . $row['usu_id'] . "'>Eliminar</a> </td>";
+                echo " <td> <a href='modificar.php?codigo=" . $row['usu_id'] . "'>Modificar</a> </td>";
+                /*echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_id'] . "'>Cambiarcontraseña</a> </td>";*/
+             
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr>";
+            echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
+            echo "</tr>";
+        }
 
 
+
+        $conn->close();
+        ?>
+    </table>
 
 <!------------------php---------------------------->
 
