@@ -46,18 +46,26 @@
 
             while ($row = $result->fetch_assoc()) {
 
+                /*echo "<img src='../../imagenes/christian/usuario.png' class='name' >" ;*/
+
                 echo "<tr>";
-                echo " <td>" . "<img src='../../imagenes/christian/usuario.png' class='h'>" . "</td>";
-                echo " <td> ".
-                        "<tr>"
-                        ."<h5 style='margin-left: 30%; margin-bottom: 200px;'>Correo electronico</h5>"
+                /*echo " <td>" . "<img src='../../imagenes/christian/usuario.png' class='h'>" . "</td>";*/
+                echo " <td> "."<img src='../../imagenes/christian/usuario.png' class='name' >".
+                        
+                        "<h5 >Correo electronico</h5>"
                         ."<h3 >". $row["usu_correo"] ."</h3>"
-                        ."<h3>". $row["usu_contrasenia"] ."<h3>"
-                        ."<h3>". $row["usu_cedula"] ."<h3>" 
-                        ."</tr>";
+                        ."<h5 >Contraseña</h5>"
+                        ."<h3>". $row["usu_contrasenia"] ."</h3>"
+                        ."<h5 >Cedula</h5>"
+                        ."<h3>". $row["usu_cedula"] ."</h3>";
+                        
                 echo "</td>";
-                echo " <td>" . $row['usu_nombre'] . "</td>";
-                echo " <td>" . $row['usu_apellido'] . "</td>";
+                echo " <td>" 
+                ."<h5 >Nombre</h5>"
+                ."<h3>".$row['usu_nombre'] ."</h3>"
+                ."<h5 >Cedula</h5>"
+                . $row['usu_apellido'] .
+                "</td>";
                 echo " <td>" . $row['usu_direccion'] . "</td>";
                 echo " <td>" . $row['usu_telefono'] . "</td>";
                 echo " <td>" . $row["usu_eliminado"] . "</td>";
