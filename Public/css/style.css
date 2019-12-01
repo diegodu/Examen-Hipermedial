@@ -584,12 +584,24 @@ h5#corr{
 
 }
 
-.name{
-    height: 5%;
-    width: 5%;
+
+
+
+.ajustusuario{
+  text-align: center;
+  background: chartreuse;
+ text-align: left ;
 }
 
 
+.a {
+    background: linear-gradient(to bottom, 
+    rgb(207, 223, 226), 
+    rgb(112, 183, 224), 
+    rgb(95, 114, 226));
+    border: hidden;
+    border-radius: 5px;
+}
 
 
 

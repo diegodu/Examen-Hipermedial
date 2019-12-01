@@ -32,77 +32,63 @@
     </header>
     
 <!-------------------------------------------------------------->
-<h2>Usuarios</h2>
+<h2>Modificar</h2>
+<section>
+    <?php
+    $codigo = $_GET["codigo"];
+    echo "aqui esta el codgo:  $codigo";
+    $sql = "SELECT * FROM usuario where usu_id=$codigo";
+    include '../../config/conexionBD.php';
+    $result = $conn->query($sql);
 
-<table style="width:80% ; margin-left: 10%; ">
-     
-        <?php
-        include '../../config/conexionBD.php';
+    if ($result->num_rows > 0) {
 
-        $sql = "SELECT * FROM usuario";
-        $result = $conn->query($sql);
+        while ($row = $result->fetch_assoc()) {
+            ?>
+            <form id="formulario01" method="POST" action="../controlador/modificar.php">
 
-        if ($result->num_rows > 0) {
+                <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
+                <label for="cedula">Cedula (*)</label>
+                <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>" required placeholder="Ingrese la cedula ..." />
+                <br>
+                <label for="nombres">Nombres (*)</label>
+                <input type="text" id="nombres" name="nombres" value="<?php echo $row["usu_nombre"];
+                                                                                ?>" required placeholder="Ingrese los dos nombres ..." />
+                <br>
+                <label for="apellidos">Apelidos (*)</label>
+                <input type="text" id="apellidos" name="apellidos" value="<?php echo $row["usu_apellido"];
+                                                                                    ?>" required placeholder="Ingrese los dos apellidos ..." />
+                <br>
+                <label for="direccion">Dirección (*)</label>
+                <input type="text" id="direccion" name="direccion" value="<?php echo $row["usu_direccion"];
+                                                                                    ?>" required placeholder="Ingrese la dirección ..." />
+                <br>
+                <label for="telefono">Teléfono (*)</label>
+                <input type="text" id="telefono" name="telefono" value="<?php echo $row["usu_telefono"];
+                                                                                ?>" required placeholder="Ingrese el teléfono ..." />
+                <br>
+           
+                <label for="correo">Correo electrónico (*)</label>
+                <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>" required placeholder="Ingrese el correo electrónico ..." />
+                <br>
 
-            while ($row = $result->fetch_assoc()) {
-                /*echo "<img src='../../imagenes/christian/usuario.png' class='name' >" ;*/
+                <label for="correo">Contraseña (*)</label>
+                <input type="text" id="contrasenia" name="contrasenia" value="<?php echo $row["usu_contrasenia"]; ?>" required placeholder="Ingrese la contraseña ..." />
+                <br>
+
+                <input type="submit" id="modificar" name="modificar" value="Modificar" />
                 
-                echo "<tr style=' text-align: center;  background: linear-gradient(to bottom, 
-                rgb(207, 223, 226), 
-                rgb(112, 183, 224), 
-                rgb(95, 114, 226));' >";
-
-
-                echo " <td style='width: 150px; margin-top: 15px; padding: 15px;'> "
-                ."<img src='../../imagenes/christian/usuario.png' style=' height: 30%;' >"."</td>" ;
-                /*echo " <td>" . "<img src='../../imagenes/christian/usuario.png' class='h'>" . "</td>";*/
-                echo " <td style='  margin-top: 15px; padding: 15px;' > ".
-                        
-                        "<h5 >Correo electronico :</h5>"
-                        ."<h3 >". $row["usu_correo"] ."</h3>"
-                        ."<h5 >Contraseña :</h5>"
-                        ."<h3>". $row["usu_contrasenia"] ."</h3>".
-                        "<h3> <a class='estilo' href='modificar_usu.php?codigo=" . $row['usu_id'] . "'>Cambiar contraseña</a> </h3>". "</td>";
-                echo " <td style='  margin-top: 15px; padding: 15px;'>" 
-                ."<h5 >Cedula :</h5>"
-                ."<h3>". $row["usu_cedula"] ."</h3>"
-                ."<h5 >Nombre :</h5>"
-                ."<h3>".$row['usu_nombre'] ."</h3>" 
-                ."<h5 >Apellido :</h5>"
-                ."<h3>". $row['usu_apellido'] ."</h3>".
-                "</td>";
-                
-                echo " <td style='  margin-top: 15px; padding: 15px;'>" .
-                "<h5 >Telefono :</h5>".
-                "<h3>".$row['usu_telefono'] ."</h3>".
-                "<h5 >Direccion :</h5>"
-                ."<h3>".$row['usu_direccion'] ."</h3>". 
-                "<h5 >Eliminado :</h5>"
-                ."<h3>". $row["usu_eliminado"] ."</h3>". "</td>";
-
-                echo " <td style='  margin-top: 15px; padding: 15px;'> ".
-                "<h5 > </h5>".
-                "<button>"."<a class='estilo' href='eliminar.php?codigo=".$row['usu_id'] . "'>Eliminar Usuario</a>" ."</button>".
-                "<h5 >.</h5>".
-                "<button>"."<a class='estilo' href='modificar_usu.php?codigo=" . $row['usu_id'] . "'>Modificar Usuario</a>"."</button>". 
-                " </td>";
-                /*echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_id'] . "'>Cambiarcontraseña</a> </td>";*/
-                
-                echo "</tr>";
-              
-                
-            }
-        } else {
-            echo "<tr>";
-            echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
-            echo "</tr>";
+            </form>
+    <?php
         }
+    } else {
+        echo "<p>Ha ocurrido un error inesperado !</p>";
+        echo "<p>" . mysqli_error($conn) . "</p>";
+    }
+    $conn->close();
+    ?>
+    </section>
 
-
-
-        $conn->close();
-        ?>
-    </table>
 
 <!------------------php---------------------------->
 
