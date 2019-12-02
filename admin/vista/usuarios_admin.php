@@ -11,13 +11,8 @@
 
 <body>
     <header>
-        <div class="bar-login">
-            <div class="btns container">
-                <a href="#"><i class="fas fa-sign-in-alt"></i> Iniciar sesion</a>
-                <a href="#"><i class="fas fa-user"></i> Registro</a>
-            </div>
-        </div>
-        <h1>LIBRERIA</h1>
+      
+        <h1>Usuarios Registrados</h1>
         <nav class="nav-bar container">
             <ul>
                 <li><a href="index_admin.html">Inicio</a></li>
@@ -62,7 +57,7 @@
                         ."<h3 >". $row["usu_correo"] ."</h3>"
                         ."<h5 >Contraseña :</h5>"
                         ."<h3>". $row["usu_contrasenia"] ."</h3>".
-                        "<h3> <a class='estilo' href='modificar_usu.php?codigo=" . $row['usu_id'] . "'>Cambiar contraseña</a> </h3>". "</td>";
+                        "<h3> <a class='estilo' href='contrasenia_usu.php?codigo=" . $row['usu_id'] . "'>Cambiar contraseña</a> </h3>". "</td>";
                 echo " <td style='  margin-top: 15px; padding: 15px;'>" 
                 ."<h5 >Cedula :</h5>"
                 ."<h3>". $row["usu_cedula"] ."</h3>"
@@ -82,7 +77,7 @@
 
                 echo " <td style='  margin-top: 15px; padding: 15px;'> ".
                 "<h5 > </h5>".
-                "<button>"."<a class='estilo' href='eliminar.php?codigo=".$row['usu_id'] . "'>Eliminar Usuario</a>" ."</button>".
+                "<button>"."<a class='estilo' href='eliminar_usu.php?codigo=".$row['usu_id'] . "'>Eliminar Usuario</a>" ."</button>".
                 "<h5 >.</h5>".
                 "<button>"."<a class='estilo' href='modificar_usu.php?codigo=" . $row['usu_id'] . "'>Modificar Usuario</a>"."</button>". 
                 " </td>";

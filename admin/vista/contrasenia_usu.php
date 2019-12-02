@@ -12,7 +12,7 @@
 <body>
     <header>
     
-        <h1>Modificar Usuario</h1>
+        <h1>Cambiar Contrasenia</h1>
       
 
     </header>
@@ -32,40 +32,26 @@
         while ($row = $result->fetch_assoc()) {
             ?>
             <section >
-            <form id="formulario01" method="POST" action="../controlador/modificar.php ">
+            <form id="formulario01" method="POST" action="../controlador/contrasenia.php ">
 
                 <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
                 <label for="cedula">Cedula (*)</label>
-                <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>" required placeholder="Ingrese la cedula ..." />
+                <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>" required placeholder="Ingrese la cedula ..."  disabled/>
                 <br>
                 <label for="nombres">Nombres (*)</label>
                 <input type="text" id="nombres" name="nombres" value="<?php echo $row["usu_nombre"];
-                                                                                ?>" required placeholder="Ingrese los dos nombres ..." />
+                                                                                ?>" required placeholder="Ingrese los dos nombres ..."  disabled/>
                 <br>
                 <label for="apellidos">Apelidos (*)</label>
                 <input type="text" id="apellidos" name="apellidos" value="<?php echo $row["usu_apellido"];
-                                                                                    ?>" required placeholder="Ingrese los dos apellidos ..." />
+                                                                                    ?>" required placeholder="Ingrese los dos apellidos ..."  disabled/>
                 <br>
-                <label for="direccion">Dirección (*)</label>
-                <input type="text" id="direccion" name="direccion" value="<?php echo $row["usu_direccion"];
-                                                                                    ?>" required placeholder="Ingrese la dirección ..." />
-                <br>
-                <label for="telefono">Teléfono (*)</label>
-                <input type="text" id="telefono" name="telefono" value="<?php echo $row["usu_telefono"];
-                                                                                ?>" required placeholder="Ingrese el teléfono ..." />
-                <br>
-           
-                <label for="correo">Correo electrónico (*)</label>
-                <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>" required placeholder="Ingrese el correo electrónico ..." />
-                <br>
-
+                
                 <label for="correo">Contraseña (*)</label>
                 <input type="text" id="contrasenia" name="contrasenia" value="<?php echo $row["usu_contrasenia"]; ?>" required placeholder="Ingrese la contraseña ..." />
                 <br>
 
                 <button><input type="submit" id="modificar" name="modificar" value="Modificar" /></button>
-               
-              
                 
             </form>
             <button class="formul"><a href="usuarios_admin.php" class="estilose"> Cancelar</a></button>
@@ -80,17 +66,6 @@
     $conn->close();
     ?>
     </section>
-
-
-<!------------------php---------------------------->
-
-<?php
-
-
-?>
-
-
-
 
 
 

@@ -587,21 +587,23 @@ h5#corr{
 
 
 
-.ajustusuario{
-  text-align: center;
-  background: chartreuse;
- text-align: left ;
+.formul{
+    position: absolute;
+   top: 50em;
+   right: 0;
+   bottom: 40em;
+   left: 50em;
+   width: 70px;
+   height: 20px;
+   text-decoration-color: black;
 }
 
-
-.a {
-    background: linear-gradient(to bottom, 
-    rgb(207, 223, 226), 
-    rgb(112, 183, 224), 
-    rgb(95, 114, 226));
-    border: hidden;
-    border-radius: 5px;
+.estilose{
+    text-decoration-color: black;   
+    text-decoration: none;
+    
 }
+
 
 
 
