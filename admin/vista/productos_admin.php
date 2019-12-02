@@ -11,13 +11,8 @@
 
 <body>
     <header>
-        <div class="bar-login">
-            <div class="btns container">
-                <a href="#"><i class="fas fa-sign-in-alt"></i> Iniciar sesion</a>
-                <a href="#"><i class="fas fa-user"></i> Registro</a>
-            </div>
-        </div>
-        <h1>LIBRERIA</h1>
+        
+        <h1>Productos</h1>
         <nav class="nav-bar container">
             <ul>
                 <li><a href="index_admin.html">Inicio</a></li>
@@ -25,6 +20,7 @@
                 <li><a href="productos_admin.php" style="text-decoration-color: rgb(52, 122, 226);">Productos</a></li>
                 <li><a href="#">Pedidos</a></li>
                 <li><a href="#">Facturas</a></li>
+                <li><a href="crear_libro.php">Agregar Libro</a></li>
              
             </ul>
         </nav>
@@ -32,10 +28,47 @@
     </header>
 
 <!------------------php---------------------------->
-<?php
+
+    <section class="maincontent container">
+        <h2>Productos</h2>
+        <?php
+        include '../../config/conexionBD.php';
+ 
+        $sql = "SELECT * FROM libro";
+        $result = $conn->query($sql);
 
 
-?>
+
+        if ($result->num_rows > 0) {
+
+            while ($row = $result->fetch_assoc()) {
+           
+                ?>
+        <div class="card">
+            <figure>
+            <img height="50px" src="data:image/jpg;base64,<?php echo base64_encode($row['img'])?>" />
+            </figure>
+            <a href="#">
+                <h3>Nombre Libro</h3>
+            </a>
+            <p>Ciencia Ficcion</p>
+            <p>$20</p>
+        </div>
+        <?php 
+            
+                
+            }
+        } else {
+            echo "<tr>";
+            echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
+            echo "</tr>";
+        }
+
+
+
+        $conn->close();
+        ?>
+    </section>
 
 
 
