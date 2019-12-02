@@ -11,13 +11,8 @@
 
 <body>
     <header>
-        <div class="bar-login">
-            <div class="btns container">
-                <a href="#"><i class="fas fa-sign-in-alt"></i> Iniciar sesion</a>
-                <a href="#"><i class="fas fa-user"></i> Registro</a>
-            </div>
-        </div>
-        <h1>LIBRERIA</h1>
+      
+        <h1>Usuarios Registrados</h1>
         <nav class="nav-bar container">
             <ul>
                 <li><a href="index_admin.html">Inicio</a></li>
@@ -34,7 +29,7 @@
 <!-------------------------------------------------------------->
 <h2>Usuarios</h2>
 
-<table style="width:80%">
+<table style="width:80% ; margin-left: 10%; ">
      
         <?php
         include '../../config/conexionBD.php';
@@ -45,27 +40,52 @@
         if ($result->num_rows > 0) {
 
             while ($row = $result->fetch_assoc()) {
+                /*echo "<img src='../../imagenes/christian/usuario.png' class='name' >" ;*/
+                
+                echo "<tr style=' text-align: center;  background: linear-gradient(to bottom, 
+                rgb(207, 223, 226), 
+                rgb(112, 183, 224), 
+                rgb(95, 114, 226));' >";
 
-                echo "<tr>";
-                echo " <td>" . "<img src='../../imagenes/christian/usuario.png' class='h'>" . "</td>";
-                echo " <td> ".
-                        "<tr>"
-                        ."<h5 style='margin-left: 30%; margin-bottom: 200px;'>Correo electronico</h5>"
+
+                echo " <td style='width: 150px; margin-top: 15px; padding: 15px;'> "
+                ."<img src='../../imagenes/christian/usuario.png' style=' height: 30%;' >"."</td>" ;
+                /*echo " <td>" . "<img src='../../imagenes/christian/usuario.png' class='h'>" . "</td>";*/
+                echo " <td style='  margin-top: 15px; padding: 15px;' > ".
+                        
+                        "<h5 >Correo electronico :</h5>"
                         ."<h3 >". $row["usu_correo"] ."</h3>"
-                        ."<h3>". $row["usu_contrasenia"] ."<h3>"
-                        ."<h3>". $row["usu_cedula"] ."<h3>" 
-                        ."</tr>";
-                echo "</td>";
-                echo " <td>" . $row['usu_nombre'] . "</td>";
-                echo " <td>" . $row['usu_apellido'] . "</td>";
-                echo " <td>" . $row['usu_direccion'] . "</td>";
-                echo " <td>" . $row['usu_telefono'] . "</td>";
-                echo " <td>" . $row["usu_eliminado"] . "</td>";
-                echo " <td> <a href='eliminar.php?codigo=" . $row['usu_id'] . "'>Eliminar</a> </td>";
-                echo " <td> <a href='modificar.php?codigo=" . $row['usu_id'] . "'>Modificar</a> </td>";
+                        ."<h5 >Contraseña :</h5>"
+                        ."<h3>". $row["usu_contrasenia"] ."</h3>".
+                        "<h3> <a class='estilo' href='contrasenia_usu.php?codigo=" . $row['usu_id'] . "'>Cambiar contraseña</a> </h3>". "</td>";
+                echo " <td style='  margin-top: 15px; padding: 15px;'>" 
+                ."<h5 >Cedula :</h5>"
+                ."<h3>". $row["usu_cedula"] ."</h3>"
+                ."<h5 >Nombre :</h5>"
+                ."<h3>".$row['usu_nombre'] ."</h3>" 
+                ."<h5 >Apellido :</h5>"
+                ."<h3>". $row['usu_apellido'] ."</h3>".
+                "</td>";
+                
+                echo " <td style='  margin-top: 15px; padding: 15px;'>" .
+                "<h5 >Telefono :</h5>".
+                "<h3>".$row['usu_telefono'] ."</h3>".
+                "<h5 >Direccion :</h5>"
+                ."<h3>".$row['usu_direccion'] ."</h3>". 
+                "<h5 >Eliminado :</h5>"
+                ."<h3>". $row["usu_eliminado"] ."</h3>". "</td>";
+
+                echo " <td style='  margin-top: 15px; padding: 15px;'> ".
+                "<h5 > </h5>".
+                "<button>"."<a class='estilo' href='eliminar_usu.php?codigo=".$row['usu_id'] . "'>Eliminar Usuario</a>" ."</button>".
+                "<h5 >.</h5>".
+                "<button>"."<a class='estilo' href='modificar_usu.php?codigo=" . $row['usu_id'] . "'>Modificar Usuario</a>"."</button>". 
+                " </td>";
                 /*echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_id'] . "'>Cambiarcontraseña</a> </td>";*/
-             
+                
                 echo "</tr>";
+              
+                
             }
         } else {
             echo "<tr>";

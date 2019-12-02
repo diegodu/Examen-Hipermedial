@@ -250,7 +250,6 @@ footer{
     height: 300px;
 }
 footer .contact{
-    
     display: flex;
     
 }
@@ -283,7 +282,8 @@ footer .contact{
     margin-left: 80%;
 }
 footer .contact{
-    margin-left: 0%;
+    
+    margin-left: 10%;
     justify-content: flex-start;
   justify-content: flex-start;  
 }
@@ -430,20 +430,16 @@ footer .contact{
 }
 .maincontent2 .divi{
     display: flex;
-    width: 80%;
-    box-shadow: 0px 0px  3px #888;
-    height: 400px;
+    width: 100%;
+    
+    height: 450px;
     
 }
-.maincontent2 .fi{
-    width: 20%;
-    box-shadow: 0px 0px  3px #888;
 
-}
 .maincontent2 .divi .imag{
-    width: 50%;
+    width: 60%;
     padding: 20px;
-    box-shadow: 0px 0px  3px #888;
+  
     
 
 }
@@ -451,8 +447,8 @@ footer .contact{
    
     padding: 20px;
     width: 100%;
-    height: 350px;
-    box-shadow: 0px 0px  3px #888;
+    height: 400px;
+  
 }
 .maincontent2 .divi .imag figure img{
    
@@ -460,12 +456,13 @@ footer .contact{
     height: 100%;
 }
 .maincontent2 .divi .informa{
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 50px;
+    margin-right: 30px;
     width: 100%;
+  
 }
 .maincontent2 .divi .informa div h3{
-    padding: 10px 0px 0px 0px;
+    padding: 15px 0px 0px 0px;
 }
 .maincontent2 .divi .informa div i{
     font-size: 10px;
@@ -475,6 +472,7 @@ footer .contact{
 }
 .maincontent2 .divi .informa .ess .est{
     display: flex;
+    padding: 5px 0px;
     
 }
 .maincontent2 .divi .informa .con{
@@ -503,7 +501,7 @@ footer .contact{
     padding: 8px 0px;
 }
 .maincontent2 .divi .informa .com{
-   padding: 10px;
+   padding: 15px 0px;
     width: 100%;
     height: 30px;
     border-radius: 5px;
@@ -512,13 +510,55 @@ footer .contact{
 .maincontent2 .divi .informa .com i{
     font-size: 20px;
  }
+.maincontent2 .divi .informa .com i:hover{
+    color: yellow;
+
+}
  .maincontent2 .divi .informa .com input{
     
     box-shadow: 0px 0px  3px #888;
-    height: 80px;
-    text-align: start;
+    height: 100px;
     margin-top: 20px;
  }
+ .descripcion .container{
+   
+     box-shadow: 0px 0px  3px #888;
+     padding: 20px;
+     width: 85%;
+     background-color: rgb(223, 221, 221);
+     
+ }
+ .comentarios .container {
+ 
+    padding: 20px 0px;
+    width: 85%;
+
+ }
+
+ .comentarios .container p{
+ 
+    background-color: rgb(223, 221, 221);
+
+ }
+ .comentarios .container h3 {
+ 
+    padding: 20px 0px;
+    
+
+
+ }
+ .comentarios .container div{
+    box-shadow: 0px 0px  3px #888;
+    padding: 10px 20px;
+
+
+ }
+ 
+
+
+
+
+
  
 
 
@@ -549,7 +589,7 @@ footer .contact{
 .ajustar{
    
     margin-top: 2%;
-    margin-left: 3%;
+    margin-left: 8%;
 }
 
 figure.fi{
@@ -585,7 +625,22 @@ h5#corr{
 }
 
 
+.formul{
+    position: absolute;
+   top: 50em;
+   right: 0;
+   bottom: 40em;
+   left: 50em;
+   width: 70px;
+   height: 20px;
+   text-decoration-color: black;
+}
 
+.estilose{
+    text-decoration-color: black;   
+    text-decoration: none;
+    
+}
 
 
 
@@ -914,33 +969,4 @@ input, textarea{
 	75% {margin-left: -300%;}
 	100% {margin-left: -300%;}
 }
-.somos{
-    padding-top: 160px;
-    width: 100%;
-    height: 700px;
-}
-.somos img{
-    display: block;
-    width: 1000px;
-    height: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.somos2{
- display: flex;
- width: 100%;
- padding-left: 70px;
- padding-right: 50px;
- padding-bottom: 20px;
-}
-.somos2 p{
-    width: 800px;
-    margin-top: 20px;
-    text-align: justify;
-}
-.somos2 img{
-    width: 800px;
-    height: 500px;
-    margin-top: 20px;
-    text-align: justify;
-}
+
