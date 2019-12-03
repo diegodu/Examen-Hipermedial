@@ -11,7 +11,25 @@
     //incluir conexión a la base de datos
     include '../../config/conexionBD.php';
     
-     
+     /********************************* */
+     $foto = $_FILES['imagen']['name'];
+$temp = $_FILES['imagen']['tmp_name'];
+$type = $_FILES['imagen']['type'];
+
+
+echo ($_FILES['imagen']['name']);
+
+$sql1 = "SELECT MAX(lib_codigo)+1 AS codigo  FROM libro;";
+$result1 = $conn->query($sql1);
+$row1 = $result1->fetch_assoc();
+echo $row1['codigo'];
+
+$directorio = "../../img/fotos/" . $row1['codigo'] . "/";
+
+move_uploaded_file($temp, "../../imagenes/Libros/" . $row1['codigo'] . "/$foto");
+
+
+     /********************************** */
     
     $ISBN = $_POST["ISBN"];
     $titulo = isset($_POST["titulo"]) ? mb_strtoupper(trim($_POST["titulo"]), 'UTF-8') : null;
@@ -24,10 +42,13 @@
     $editorial = isset($_POST["editorial"]) ? mb_strtoupper(trim($_POST["editorial"]), 'UTF-8') : null;
     $paginas = $_POST["paginas"];
     $anio = isset($_POST["anio"]) ? trim($_POST["anio"]) : null;
-    $imagen = addslashes(file_get_contents($_FILES["imagen"]['tmp_name']));
+
+    /********************************** */
 
 
-    $sql = "INSERT INTO  libro VALUES (0,1,1,$ISBN,'$titulo',$stock,$precio,'$observaciones','$resumen','$novedad','$idioma','$editorial',$paginas,'$anio','$imagen'  ) "; 
+    /***************************** */
+ 
+    $sql = "INSERT INTO  libro VALUES (0,1,1,$ISBN,'$titulo',$stock,$precio,'$observaciones','$resumen','$novedad','$idioma','$editorial',$paginas,'$anio','$foto'  ) "; 
   
     if ($conn->query($sql) === TRUE) {
         echo "Se ha actualizado los datos personales correctamemte!!!<br>";
@@ -36,7 +57,7 @@
     }
     
     
-    header("Location: ../vista/productos_admin.php");
+   
     $conn->close();
     ?>
 </body>

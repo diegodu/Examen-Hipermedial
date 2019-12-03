@@ -46,7 +46,7 @@
                 ?>
         <div class="card">
             <figure>
-            <img height="50px" src="data:image/jpg;base64,<?php echo base64_encode($row['img'])?>" />
+            <img src="../../../img/fotos/' . $row["usu_codigo"] . '/' . $row["img"] . '" >
             </figure>
             <a href="#">
                 <h3>Nombre Libro</h3>
