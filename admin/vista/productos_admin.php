@@ -46,7 +46,10 @@
                 ?>
         <div class="card">
             <figure>
-            <img src="../../../img/fotos/' . $row["usu_codigo"] . '/' . $row["img"] . '" >
+              
+                
+          <img src='../../imagenes/Libros/<?php echo $row["img"] ?>'/>
+          
             </figure>
             <a href="#">
                 <h3>Nombre Libro</h3>
