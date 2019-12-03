@@ -61,8 +61,8 @@
                      ."<h3>". $row["usu_contrasenia"] ."</h3>".
                      "<h3> <a class='estilo' href='contrasenia_usu.php?codigo=" . $row['usu_id'] . "'>Cambiar contraseña</a> </h3>". "</td>";
              echo " <td style='  margin-top: 15px; padding: 15px;'>" 
-             ."<h5 >Cedula :</h5>"
-             ."<h3>". $row["usu_cedula"] ."</h3>"
+             ."<h5 >Rol:</h5>"
+             ."<h3>". $row["usu_rol"] ."</h3>"
              ."<h5 >Nombre :</h5>"
              ."<h3>".$row['usu_nombre'] ."</h3>" 
              ."<h5 >Apellido :</h5>"
