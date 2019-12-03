@@ -31,37 +31,32 @@
     </header>
 
     <section id="contenido">
-        <form>
+        <form id="formulario01" method="POST" action="../Controlador/crear_Usuario.php">
             <h2 style="text-align: center; color: white;">Registrar</h2>
 
             <div class="ubicarIco">
-                <i class="fas fa-fingerprint"></i>
-                <input class="far fa-user" type="text" name="Cedula" value="" placeholder="Cedula" id="cedula">
-
+                <i class="far fa-user"></i>
+                <input type="text" name="nombre" value="" placeholder="Nombre" id="nombre">
             </div>
             <div class="ubicarIco">
                 <i class="far fa-user"></i>
-                <input type="text" name="Nombre" value="" placeholder="Nombre" id="nombre">
-            </div>
-            <div class="ubicarIco">
-                <i class="far fa-user"></i>
-                <input type="text" name="Apellido" value="" placeholder="Apellido" id="apellido">
+                <input type="text" name="apellido" value="" placeholder="Apellido" id="apellido">
             </div>
             <div class="ubicarIco">
                 <i class="fas fa-map-marked-alt"></i>
-                <input type="text" name="Direccion" value="" placeholder="Direccion" id="direccion">
+                <input type="text" name="direccion" value="" placeholder="Direccion" id="direccion">
             </div>
             <div class="ubicarIco">
                 <i class="fas fa-mobile-alt"></i>
-                <input type="text" name="Telefono" value="" placeholder="Telefono" id="telefono">
+                <input type="text" name="telefono" value="" placeholder="Telefono" id="telefono">
             </div>
             <div class="ubicarIco">
                 <i class="far fa-calendar-alt"></i>
-                <input type="text" name="Fechanac" value="" placeholder="Fecha Nacimiento" id="fechanac">
+                <input type="text" name="fechanac" value="" placeholder="Fecha Nacimiento" id="fechanac">
             </div>
             <div class="ubicarIco">
                 <i class="far fa-envelope"></i>
-                <input type="text" name="Correo" value="" placeholder="Correo" id="correo">
+                <input type="text" name="correo" value="" placeholder="Correo" id="correo">
             </div>
             <div class="ubicarIco">
                 <i class="fas fa-user-lock"></i>
@@ -71,7 +66,7 @@
                 <i class="fas fa-user-lock"></i>
                 <input type="password" placeholder="Repita Contraseña" name="Vcontraseña" id="Vcontraseña">
             </div>
-            <input type="button" value="ENVIAR" id="boton">
+            <input type="submit" value="ENVIAR" id="boton">
         </form>
     </section>
     <footer>
