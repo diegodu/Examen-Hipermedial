@@ -26,7 +26,7 @@
                 </li>
                 <li><a href="./quiens.html">Quienes somos</a>
                 </li>
-                <li><a href="#">Contactos</a></li>
+                <li><a href="#contactos">Contactos</a></li>
                 <li>
                     <div class="search-content">
                         <input type="search" name="" id="" placeholder="Buscar">
@@ -37,30 +37,12 @@
         </nav>
 
     </header>
-    <section class="slider">
-
-        <div class="imgcontent container1">
-            <i class="fas fa-chevron-left"></i>
-            <div class="slider1">
-                <ul>
-                    <li>
-                        <img src="http://dominicushoeve.com/wp-content/uploads/ktz/latest-high-resolution-wallpaper-1920x1080-70558-pictures-high-resolution-wallpaper-30whtvl34j4r12m8b0c1sa.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="http://youghaltennisclub.ie/wp-content/uploads/2014/06/Tennis-Wallpaper-High-Definition-700x300.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="http://welltechnically.com/wp-content/uploads/2013/08/android-wallpapers-700x300.jpg" alt="">
-                    </li>
-                    <li>
-                        <img src="http://welltechnically.com/wp-content/uploads/2013/09/android-widescreen-wallpaper-14165-hd-wallpapers-700x300.jpg" alt="">
-                    </li>
-                </ul>
-            </div>
-
-            <i class="fas fa-chevron-right"></i>
+    <section class="menuFondo">
+        <div class="menuInformacion">
+            <h2>Obten los mejores libros! Compra ya!</h2>
+            <p>Grandes descuentos por la compra de tu libro no lo pienses mas y ordena de inmediato</p>
         </div>
-
+        
     </section>
     <section class="maincontent container">
 
@@ -122,7 +104,7 @@
             <div id="map">
 
             </div>
-            <div class="redes">
+            <div  id="contactos" class="redes">
                 <div>
                     <h3>Contactos</h3>
                     <p>Cuenca-Ecuador </p>

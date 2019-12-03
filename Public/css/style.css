@@ -118,30 +118,7 @@ header .nav-bar ul li:hover > ul {
  display:block;
 }
 /*------------------------------------------------------------*/
-.slider{
-    background: rgb(109,6,15);
-    background: linear-gradient(90deg, rgba(109,6,15,1) 0%, rgba(120,84,217,1) 78%);
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.slider .imgcontent{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-}
-.slider .imgcontent figure{
-    width: 200px;
-    height: 300px;
-
-}
-.slider .imgcontent figure img{
-    width: 100%;
-    height: 100%;
-
-}
 #fondo1{
     width: 300px;
     height: 380px;
@@ -242,6 +219,9 @@ header .nav-bar ul li:hover > ul {
 }
 footer{
     width: 100%;
+}
+footer i{
+    font-size: 30px;
 }
 #map{
     
@@ -929,45 +909,7 @@ input, textarea{
 }
 
 
-.slider1 {
-	width: 95%;
-	margin: auto;
-	overflow: hidden;
-}
-
-.slider1 ul {
-	display: flex;
-	padding: 0;
-	width: 400%;
-	
-	animation: cambio 10s infinite alternate linear;
-}
-
-.slider1 li {
-	width: 100%;
-	list-style: none;
-}
-
-.slider1 img {
-    padding-left: 50px;
-    padding-right: 50px;
-    height: 300px;
-	width: 100%;
-}
-
-@keyframes cambio {
-	0% {margin-left: 0;}
-	20% {margin-left: 0;}
-	
-	25% {margin-left: -100%;}
-	45% {margin-left: -100%;}
-	
-	50% {margin-left: -200%;}
-	70% {margin-left: -200%;}
-	
-	75% {margin-left: -300%;}
-	100% {margin-left: -300%;}
-}
+ 
 
 .somos{
     padding-top: 50px;
@@ -1006,5 +948,34 @@ input, textarea{
 }
 .somos2 h2{
     margin: 40px 0px;
+
+}
+
+.menuFondo{
+    background-image: url("../../imagenes/pablo/fondoM.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 700px;
+    width: 100%;
+
+}
+.menuInformacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    color: white;
+    background-color: rgba(10, 131, 252,.2);
     
+}
+.menuInformacion h2{
+    font-size: 35px;
+}
+
+.menuInformacion p{
+    width: 600px;
+    font-size: 25px;
 }
