@@ -19,14 +19,13 @@ $type = $_FILES['imagen']['type'];
 
 echo ($_FILES['imagen']['name']);
 
-$sql1 = "SELECT MAX(lib_codigo)+1 AS codigo  FROM libro;";
+$sql1 = "SELECT MAX(lib_codigo)+1 AS co  FROM libro";
 $result1 = $conn->query($sql1);
 $row1 = $result1->fetch_assoc();
-echo $row1['codigo'];
-mkdir($directorio, 0777, true);
-$directorio = "../../imagenes/Libros/" . $row1['codigo'] . "/";
+echo $row1['co'];
 
-move_uploaded_file($temp, "../../imagenes/Libros/" . $row1['codigo'] . "/$foto");
+
+move_uploaded_file($temp, "../../imagenes/Libros/$foto");
 
 
      /********************************** */
@@ -46,9 +45,9 @@ move_uploaded_file($temp, "../../imagenes/Libros/" . $row1['codigo'] . "/$foto")
     /********************************** */
 
 
-    /***************************** */
+  
  
-    $sql = "INSERT INTO  libro VALUES (0,1,1,$ISBN,'$titulo',$stock,$precio,'$observaciones','$resumen','$novedad','$idioma','$editorial',$paginas,'$anio','$foto'  ) "; 
+    $sql = "INSERT INTO  libro VALUES (0,1,1,$ISBN,'$titulo',$stock,0,$precio,'$observaciones','$resumen','$novedad','$idioma','$editorial',$paginas,'$anio','" . $_FILES['imagen']['name'] . "' ) "; 
   
     if ($conn->query($sql) === TRUE) {
         echo "Se ha actualizado los datos personales correctamemte!!!<br>";
