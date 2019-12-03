@@ -23,8 +23,8 @@ $sql1 = "SELECT MAX(lib_codigo)+1 AS codigo  FROM libro;";
 $result1 = $conn->query($sql1);
 $row1 = $result1->fetch_assoc();
 echo $row1['codigo'];
-
-$directorio = "../../img/fotos/" . $row1['codigo'] . "/";
+mkdir($directorio, 0777, true);
+$directorio = "../../imagenes/Libros/" . $row1['codigo'] . "/";
 
 move_uploaded_file($temp, "../../imagenes/Libros/" . $row1['codigo'] . "/$foto");
 
