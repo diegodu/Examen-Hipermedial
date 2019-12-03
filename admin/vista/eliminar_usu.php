@@ -36,8 +36,7 @@ if ($result->num_rows > 0) {
         ?>
         <form id="formulario01" method="POST" action="../controlador/eliminar.php">
             <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
-            <label for="cedula">Cedula (*)</label>
-            <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>" disabled />
+          
             <br>
             <label for="nombres">Nombres (*)</label>
             <input type="text" id="nombres" name="nombres" value="<?php echo $row["usu_nombre"];

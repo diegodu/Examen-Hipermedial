@@ -35,8 +35,8 @@
             <form id="formulario01" method="POST" action="../controlador/modificar.php ">
 
                 <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
-                <label for="cedula">Cedula (*)</label>
-                <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>" required placeholder="Ingrese la cedula ..." />
+                <label for="rol">Rol (*)</label>
+                <input type="text" id="rol" name="rol" value="<?php echo $row["usu_rol"]; ?>" required placeholder="Ingreseun Rol ..." />
                 <br>
                 <label for="nombres">Nombres (*)</label>
                 <input type="text" id="nombres" name="nombres" value="<?php echo $row["usu_nombre"];
