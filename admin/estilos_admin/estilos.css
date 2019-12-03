@@ -1,0 +1,20 @@
+body .formato{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+body .formato table{
+    width: 80%;
+    border-spacing: 0 5px;
+}
+
+.formato table tr td:first-child{
+    margin-top: 0;
+    width: 100%;
+    border-radius: 20px 0 0 20px;
+}
+.formato table tr td:last-child{
+    margin-top: 0;
+    width: 100%;
+    border-radius: 0 20px 20px 0;
+}
