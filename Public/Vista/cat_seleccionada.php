@@ -69,88 +69,46 @@
            
 
             <section class="maincontent container">
-                <h2>LIBROS DESTACADOS</h2>
+            <h2>LIBROS DESTACADOS</h2>
+        <?php
+        include '../../config/conexionBD.php';
+
+        $sql = "SELECT * FROM libro ORDER BY 1 DESC limit 16;";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+
+            while ($row = $result->fetch_assoc()) {
+                ?>
                 <div class="card">
                     <figure>
-                        <a href="#"> <img src="../../imagenes/img2.png"></a>
+                        <a href="#"> <img src="../../imagenes/libros/<?php echo $row["img"] ?>"></a>
                     </figure>
                     <a href="#">
-                        <h3>Nombre Libro</h3>
+                        <h3><?php echo $row["lib_titulo"] ?></h3>
                     </a>
-                    <p>Ciencia Ficcion</p>
-                    <p>$20</p>
+                    <?php
+                            $sqlGenero = "SELECT * FROM genero where gen_codigo=" . $row["gen_codigo"] . ";";
+                            $sqlGenero = $conn->query($sqlGenero);
+                            $sqlGenero = $sqlGenero->fetch_assoc();
+
+                            ?>
+                    <p><?php echo $sqlGenero["gen_nombre"] ?></p>
+                    <p>$<?php echo $row["lib_precio"] ?></p>
                 </div>
-                <div class="card">
-                    <figure>
-                        <a href="#"> <img src="../../imagenes/img2.png"></a>
-                    </figure>
-                    <a href="#">
-                        <h3>Nombre Libro</h3>
-                    </a>
-                    <p>Ciencia Ficcion</p>
-                    <p>$20</p>
-                </div>
-                <div class="card">
-                    <figure>
-                        <a href="#"> <img src="../../imagenes/img2.png"></a>
-                    </figure>
-                    <a href="#">
-                        <h3>Nombre Libro</h3>
-                    </a>
-                    <p>Ciencia Ficcion</p>
-                    <p>$20</p>
-                </div>
-                <div class="card">
-                    <figure>
-                        <a href="#"> <img src="../../imagenes/img2.png"></a>
-                    </figure>
-                    <a href="#">
-                        <h3>Nombre Libro</h3>
-                    </a>
-                    <p>Ciencia Ficcion</p>
-                    <p>$20</p>
-                </div>
-                <div class="card">
-                    <figure>
-                        <a href="#"> <img src="../../imagenes/img2.png"></a>
-                    </figure>
-                    <a href="#">
-                        <h3>Nombre Libro</h3>
-                    </a>
-                    <p>Ciencia Ficcion</p>
-                    <p>$20</p>
-                </div>
-                <div class="card">
-                    <figure>
-                        <a href="#"> <img src="../../imagenes/img2.png"></a>
-                    </figure>
-                    <a href="#">
-                        <h3>Nombre Libro</h3>
-                    </a>
-                    <p>Ciencia Ficcion</p>
-                    <p>$20</p>
-                </div>
-                <div class="card">
-                    <figure>
-                        <a href="#"> <img src="../../imagenes/img2.png"></a>
-                    </figure>
-                    <a href="#">
-                        <h3>Nombre Libro</h3>
-                    </a>
-                    <p>Ciencia Ficcion</p>
-                    <p>$20</p>
-                </div>
-                <div class="card">
-                    <figure>
-                        <a href="#"> <img src="../../imagenes/img2.png"></a>
-                    </figure>
-                    <a href="#">
-                        <h3>Nombre Libro</h3>
-                    </a>
-                    <p>Ciencia Ficcion</p>
-                    <p>$20</p>
-                </div>
-        
+                
+        <?php
+
+            }
+        } else {
+            echo "<h2> No hay Libros </h2>";
+        }
+        $conn->close();
+        ?>
+
+
+
+
+               
             </section>
 
 
