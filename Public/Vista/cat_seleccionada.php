@@ -38,19 +38,8 @@
 
     </header>
     <section class="gener">
-        <nav id="menu">
-            <h3>Categorias</h3>
-            <input type="submit" value="Matematicas">
-            <input type="submit" value="Lengua y Literatura">
-            <input type="submit" value="Fisica">
-            <input type="submit" value="Estadistica">
-            <input type="submit" value="Ciencias Naturales">
-            <input type="submit" value="Programacion">
-            <input type="submit" value="Vida y Trascendencia">
-            <input type="submit" value="Idiomas">
-
-        </nav>
-        <section class="cat container">
+      <?php  include 'include/menucategoria.php' ?>
+        <section class="cat container" id="dcategoria">
             <section class="information">
                 <div class="info_cat">
                     <div>
@@ -60,9 +49,7 @@
                             repellat. Eos quasi, reprehenderit dignissimos harum minus impedit veritatis voluptatibus,
                             distinctio doloribus repellendus consequuntur a dicta.</p>
                     </div>
-                    <figure>
-                        <a href="../Vista/producto.html"> <img src="../../imagenes/img2.png"></a>
-                    </figure>
+                 
                 </div>
 
             </section>
