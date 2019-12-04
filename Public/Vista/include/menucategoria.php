@@ -11,7 +11,7 @@
             while ($row = $result->fetch_assoc()) {
                 ?>
                     <div class="categoria-item">
-                        <a href=""><?php echo $row["gen_nombre"]?></a>
+                        <a href="cat_seleccionada.php?categoria=<?php echo $row["gen_nombre"]; ?>"><?php echo $row["gen_nombre"]?></a>
                         <?php
                         $sqlGenero = 'SELECT COUNT(l.gen_codigo) as cantidad FROM libro l, genero g WHERE l.gen_codigo = g.gen_codigo AND
                         g.gen_nombre = "'.$row["gen_nombre"].'";';
