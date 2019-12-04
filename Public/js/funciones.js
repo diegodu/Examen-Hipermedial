@@ -1,7 +1,8 @@
-function searchBox(elemnt) {
-    let text = elemnt.value.trim()
-    text = text.toUpperCase()
-    //console.log(text)
+
+
+
+function buscarCategoria(element) {
+
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest()
     } else {
@@ -9,9 +10,10 @@ function searchBox(elemnt) {
     }
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("contentCards").innerHTML = this.responseText
+            document.getElementById("categorias-lista").innerHTML = this.responseText
         }
     };
-    xmlhttp.open("GET", "../Controlador/categoria.php?buscar=" + text, true)
+    xmlhttp.open("GET", "../Controlador/categoria.php?categoria=" + element.textContent, true)
     xmlhttp.send()
+    
 }

@@ -374,11 +374,13 @@ footer .contact{
     display: flex;
     justify-content: space-between;
     padding: 10px 10px;
+    cursor: pointer;
 }
 #menu-categorias .categoria-item a,span{
     text-decoration: none;
     color: #0A83FC;
 }
+
 
 #menu-categorias .categoria-item:hover{
     background-color: #FF4858;
