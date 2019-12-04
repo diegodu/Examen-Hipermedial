@@ -31,6 +31,7 @@ move_uploaded_file($temp, "../../imagenes/Libros/$foto");
      /********************************** */
 
     $autor = $_POST["autor"];
+    $categoria = $_POST["categoria"];
     $ISBN = $_POST["ISBN"];
     $titulo = isset($_POST["titulo"]) ? mb_strtoupper(trim($_POST["titulo"]), 'UTF-8') : null;
     $stock = $_POST["stock"];
@@ -48,7 +49,7 @@ move_uploaded_file($temp, "../../imagenes/Libros/$foto");
 
   
  
-    $sql = "INSERT INTO  libro VALUES (0,$autor,1,$ISBN,'$titulo',$stock,0,$precio,'$observaciones','$resumen','$novedad','$idioma','$editorial',$paginas,'$anio','" . $_FILES['imagen']['name'] . "' ) "; 
+    $sql = "INSERT INTO  libro VALUES (0,$autor,$categoria,$ISBN,'$titulo',$stock,0,$precio,'$observaciones','$resumen','$novedad','$idioma','$editorial',$paginas,'$anio','" . $_FILES['imagen']['name'] . "' ) "; 
   
     if ($conn->query($sql) === TRUE) {
         echo "Se ha actualizado los datos personales correctamemte!!!<br>";

@@ -361,26 +361,31 @@ footer .contact{
     box-shadow: 0px 0px  3px #888;
     padding: 30px;
 }
-#menu{
+#menu-categorias{
     width: 15%;
-    background-color: rgb(179, 178, 178);
-
+    display: flex;
+    flex-direction: column;
 }
-#menu input{
-    background-color: rgb(179, 178, 178);
-
-}
-#menu h3{
+#menu-categorias h3{
+    padding: 10px 0;
     text-align: center;
-    background-color: rgb(37, 37, 37);
-    color: white;
-    padding: 15px 0px;
 }
-#menu input:hover{
-    background-color: rgb(37, 37, 37);
-    color: white;
-    padding: 8px 0px;
+#menu-categorias .categoria-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    cursor: pointer;
 }
+#menu-categorias .categoria-item a,span{
+    text-decoration: none;
+    color: #0A83FC;
+}
+
+
+#menu-categorias .categoria-item:hover{
+    background-color: #FF4858;
+}
+
 .barra{
     display: flex;
     justify-content: center;

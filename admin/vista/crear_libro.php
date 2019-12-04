@@ -3,6 +3,9 @@ include '../../config/conexionBD.php';
 $query=mysqli_query($conn, "SELECT * FROM autor ");
 
 
+$query1=mysqli_query($conn, "SELECT * FROM genero ");
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -48,6 +51,32 @@ $query=mysqli_query($conn, "SELECT * FROM autor ");
 
     </div>
 
+<!----------------------------------------->
+<label for="categoria">Categoria (*)</label>
+    <!--autor -->
+    <div style="width: 500px ; margin: 0 auto; border: 1px solid #FCC;">
+    <center>
+        <select name="categoria" id="nombre">
+            <?php
+            while($datossss = mysqli_fetch_array($query1)){
+
+            
+            ?>
+            <option value="<?php echo $datossss['gen_codigo']; ?>"><?php echo $datossss['gen_nombre']; ?></option>
+            <?php
+            }
+
+            ?>
+        </select>
+    </center>
+
+    </div>
+
+<!--------------------------------------------->
+
+
+
+    
 
 
 
