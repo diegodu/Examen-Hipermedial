@@ -69,7 +69,7 @@
            
 
             <section class="maincontent container">
-            <h2>LIBROS DESTACADOS</h2>
+            <h2>LIBROS</h2>
         <?php
         include '../../config/conexionBD.php';
 
