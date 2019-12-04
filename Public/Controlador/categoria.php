@@ -1,12 +1,16 @@
-        <section class="cat container" id="dcategoria">
+  <?php
+
+    include '../../config/conexionBD.php';
+    $sqlGeneroCod = 'SELECT * FROM genero where gen_nombre="'. $_GET["categoria"] .'";';
+                                    $sqlGeneroCod = $conn->query($sqlGeneroCod);
+                                    $sqlGeneroCod = $sqlGeneroCod->fetch_assoc();
+  ?>
+  <section class="cat container" id="dcategoria">
             <section class="information">
                 <div class="info_cat">
                     <div>
-                        <h3><?php echo $_GET["categoria"]?></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi non explicabo quia voluptas
-                            eos
-                            repellat. Eos quasi, reprehenderit dignissimos harum minus impedit veritatis voluptatibus,
-                            distinctio doloribus repellendus consequuntur a dicta.</p>
+                        <h3><?php echo $sqlGeneroCod["gen_nombre"]?></h3>
+                        <p><?php echo $sqlGeneroCod["gen_descripcion"]?></p>
                     </div>
 
                 </div>
@@ -16,9 +20,8 @@
 
             <section class="maincontent container">
                 <h2>RESULTADO</h2>
-                <?php
-                include '../../config/conexionBD.php';
-
+                
+<?php
                 $sql = 'SELECT * FROM libro l, genero g WHERE l.gen_codigo = g.gen_codigo AND g.gen_nombre = "'.$_GET["categoria"].'";';
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
