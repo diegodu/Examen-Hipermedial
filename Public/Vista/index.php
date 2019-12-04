@@ -58,7 +58,7 @@
                 ?>
                 <div class="card">
                     <figure>
-                        <a href="#"> <img src="../../imagenes/libros/<?php echo $row["img"] ?>"></a>
+                        <a href="../../Public/Vista/producto.html"> <img src="../../imagenes/libros/<?php echo $row["img"] ?>"></a>
                     </figure>
                     <a href="#">
                         <h3><?php echo $row["lib_titulo"] ?></h3>
