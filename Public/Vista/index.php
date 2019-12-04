@@ -21,7 +21,7 @@
         <h1>LIBRERIA</h1>
         <nav class="nav-bar container">
             <ul>
-                <li><a href="../Vista/index.html">Inicio</a></li>
+                <li><a href="../Vista/index.php">Inicio</a></li>
                 <li><a href="../Vista/cat_seleccionada.php">Categorias</a>
                 </li>
                 <li><a href="./quiens.html">Quienes somos</a>
