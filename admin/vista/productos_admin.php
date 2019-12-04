@@ -35,7 +35,7 @@
         <?php
         include '../../config/conexionBD.php';
  
-        $sql = "SELECT * FROM libro";
+        $sql = "SELECT * FROM libro, genero WHERE libro.gen_codigo=genero.gen_codigo";
         $result = $conn->query($sql);
 
 
@@ -53,10 +53,10 @@
           
             </figure>
             <a href="#">
-                <h3>Nombre Libro</h3>
+                <h3><?php echo $row["lib_titulo"] ?></h3>
             </a>
-            <p>Ciencia Ficcion</p>
-            <p>$20</p>
+            <p><?php echo $row["gen_nombre"] ?></p>
+            <p><?php echo $row["lib_precio"] ?></p>
         </div>
         <?php 
             
