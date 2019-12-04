@@ -18,3 +18,123 @@ body .formato table{
     width: 100%;
     border-radius: 0 20px 20px 0;
 }
+
+.rfon{
+background: rgb(255, 255, 255);
+width: 100%;
+height:60px;
+
+padding-left: 15px;
+display: flex;
+padding-bottom: 30px;
+}
+
+.facDimension{
+    width: 100%;
+   
+}
+.rfon i{
+    
+    font-size: 50px;
+}
+.rcab{
+    margin: 0 auto;
+    width: 1000px;
+    background: rgb(226, 137, 4);
+    height: 150px;
+}
+.rcab h2{
+    flex-direction: column;
+    text-align: end;
+    height: 100%;
+    padding-top: 20px;
+    color: white;
+    font-size: 40px;
+    padding-right: 30px;
+    align-content: center;
+}
+
+.facContenido{
+    width: 1000px;
+    padding-top: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.facContenido span{
+    font-size: 25px;
+    color: rgb(94, 93, 93);
+}
+.facFecha {
+    text-align: end;
+}
+.factTabla  table{
+    border: 2px solid black;
+    width: 1000px;
+    margin: 0 auto;
+}
+.factTabla table tr:nth-child(even) 
+{background: #CCC 
+}
+
+.factTabla table tr:nth-child(odd) {background: #FFF}
+.factTabla  table tr td{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300px;
+}
+.factTabla  table tr th{
+    background-color: #5e5d63;
+    color: white;
+    font-size: 25px;
+    font-weight: 500px;
+}
+.facPago{
+    padding-top: 20px;
+    width: 1000px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+.calculapago1{
+    display: flex;
+    color:black;
+}
+.calculapago1 h3{
+   
+    width: 200px;
+    color:black;
+}
+.calculapago1 h2{
+    
+    width: 200px;
+    color:black;
+    
+}
+.calculapago1 input{
+    width: 150px;
+    text-align: center;
+}
+.verPedido{
+    margin: 30px auto;
+    width: 80%;
+    height: 500px;
+    display: flex;
+    background-color: rgb(170, 206, 240); 
+}
+
+.verPedidoIm{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verPedidoIm figure img{
+   
+    width: 200px;
+    height: 300px;
+}
