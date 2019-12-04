@@ -1,3 +1,9 @@
+<?php
+include '../../config/conexionBD.php';
+$query=mysqli_query($conn, "SELECT * FROM autor ");
+
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -19,6 +25,33 @@
    
     <form id="formulario01" method="POST" action="../controlador/crear_libro.php" enctype="multipart/form-data">
 
+
+
+
+    <label for="autor">Autor (*)</label>
+    <!--autor -->
+    <div style="width: 500px ; margin: 0 auto; border: 1px solid #FCC;">
+    <center>
+        <select name="autor" id="nombre">
+            <?php
+            while($datos = mysqli_fetch_array($query)){
+
+            
+            ?>
+            <option value="<?php echo $datos['aut_codigo']; ?>"><?php echo $datos['aut_nombre']." ".$datos['aut_apellido']; ?></option>
+            <?php
+            }
+
+            ?>
+        </select>
+    </center>
+
+    </div>
+
+
+
+
+    <br>
         <label for="ISBN">Isbn (*)</label>
         <input type="text" id="ISBN" name="ISBN" value="" placeholder="Ingrese el número de ISBN ..." required />
         <br>

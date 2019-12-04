@@ -22,9 +22,9 @@
 <section>
     <?php
     $codigo = $_GET["codigo"];
-    echo "aqui esta el codgo:  $codigo";
-    $sql = "SELECT * FROM usuario where usu_id=$codigo";
     include '../../config/conexionBD.php';
+    $sql = "SELECT * FROM usuario where usu_id=$codigo";
+    echo "aqui esta el codgo:  $codigo";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

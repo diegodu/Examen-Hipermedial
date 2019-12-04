@@ -21,6 +21,7 @@
                 <li><a href="#">Pedidos</a></li>
                 <li><a href="#">Facturas</a></li>
                 <li><a href="crear_libro.php">Agregar Libro</a></li>
+                <li><a href="crear_autor.php">Agregar Autor</a></li>
              
             </ul>
         </nav>
