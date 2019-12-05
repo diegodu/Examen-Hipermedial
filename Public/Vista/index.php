@@ -13,7 +13,7 @@
     <header>
         <div class="bar-login">
             <div class="btns container">
-                <a href="../Vista/login.html"><i class="fas fa-cart-arrow-down"></i></a>
+                <a href="../Vista/carrito.php"><i class="fas fa-cart-arrow-down"></i></a>
                 <a href="../Vista/login.html"><i class="fas fa-sign-in-alt"></i> Iniciar sesion</a>
                 <a href="../Vista/crear_usuario.html"><i class="fas fa-user"></i> Registro</a>
             </div>
