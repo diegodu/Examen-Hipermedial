@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../estilos_admin/estilos.css">
     <script src="../js/map.js"></script>
     
-    <title>Inicio Administrador</title>
+    <title>Pedidos</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
                 <a href="../../config/Cerrar_sesion.php"><i class="fas fa-sign-in-alt"></i> Cerrar sesion</a>
             </div>
         </div>
-        <h1>LIBRERIA</h1>
+        <h1>Pedidos</h1>
         <nav class="nav-bar container">
             <ul>
                 <li><a href="index_admin.html">Inicio</a></li>
@@ -34,27 +34,55 @@
 
     </header>
 
+
     <section class="verPedido">
+    <?php
+     $codigo = $_GET["codigo"];
+     include '../../config/conexionBD.php';
+      $sql2 = "SELECT * FROM usuario ";
+      echo "aqui esta el codgo:  $codigo";
+      
+      $result2 = $conn->query($sql2);
+
+    if ($result2->num_rows > 0) {
+        $row2 = $result2->fetch_assoc();
+
+        ?>
         <div class="verPedidoIm">
             <figure>
                 <img src="../../imagenes/descarga-1.png" alt="">
             </figure>
             <div class="descripcionPedido">
                     <h2>Informacion Pedido</h2>
-                    <p>Pablo Malla</p>
-                    <p>12/10/2019</p>
+                    <p><?php echo $row2["usu_direccion"];?></p>
+                    <p><?php echo $row2["usu_direccion"];?></p>
             </div>
            
         </div>
+        <?php
+
+        
+} else {
+    echo "<p>Ha ocurrido un error inesperado !</p>";
+    echo "<p>" . mysqli_error($conn) . "</p>";
+}
+$conn->close();
+?>
      
         <div class="informacionPedido">
-            <input name="creado" type="button" value="Creado">
-            <input name="aceptado" type="button" value="Aceptado">
-            <input name="camino" type="button" value="Camino">
-            <input name="finalizado" type="button" value="Finalizado">
-            <input name="rechazado" type="button" value="Rechazado">
+        <button> <a class='estilo' href='../controlador/estado_pedido.php?creado="C"'>Creado</a> </button>
+          
+            <button> <a class='estilo' href='../controlador/esta_pedido2.php?aceptado="A"'>Aceptado</a> </button>
+     
+            <button> <a class='estilo' href='../controlador/esta_pedido3.php?encamino="E"'>En camino</a> </button>
+        
+            <button> <a class='estilo' href='../controlador/esta_pedido4.php?finalizando="F"'>Finalizado</a> </button>
+          
+            <button> <a class='estilo' href='../controlador/esta_pedido5.php?rechazado="R"'>Rechazado</a> </button>
+          
         </div>
     </section>
+    
 
 
 <!---mapa-->
