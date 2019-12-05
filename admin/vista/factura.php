@@ -6,74 +6,97 @@
     <script src="https://kit.fontawesome.com/e564244708.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../estilos_admin/estilos.css">
     <title>Inicio Administrador</title>
 </head>
 
 <body>
     <header>
-        
-        <h1>Productos</h1>
+      
+        <h1>Usuarios Registrados</h1>
         <nav class="nav-bar container">
             <ul>
                 <li><a href="index_admin.html">Inicio</a></li>
-                <li><a href="usuarios_admin.php">Clientes</a></li>
-                <li><a href="productos_admin.php" style="text-decoration-color: rgb(52, 122, 226);">Productos</a></li>
+                <li><a href="usuarios_admin.php"  >Clientes</a></li>
+                <li><a href="productos_admin.php">Productos</a></li>
                 <li><a href="#">Pedidos</a></li>
                 <li><a href="#">Facturas</a></li>
-                <li><a href="crear_libro.php">Agregar Libro</a></li>
-                <li><a href="crear_autor.php">Agregar Autor</a></li>
              
             </ul>
         </nav>
 
     </header>
+    
+<!-------------------------------------------------------------->
+<h2>Usuarios</h2>
+
+<div class="formato">
+<table>
+     
+     <?php
+     include '../../config/conexionBD.php';
+
+     $sql = "SELECT * FROM usuario";
+     $result = $conn->query($sql);
+
+     if ($result->num_rows > 0) {
+
+         while ($row = $result->fetch_assoc()) {
+             /*echo "<img src='../../imagenes/christian/usuario.png' class='name' >" ;*/
+             
+             echo "<tr style=' text-align: center;  background: linear-gradient(to bottom, 
+             rgb(207, 223, 226), 
+             rgb(112, 183, 224), 
+             rgb(95, 114, 226));' >";
+
+
+             echo " <td style='width: 150px; margin-top: 15px; padding: 15px;'> "
+             ."<img src='../../imagenes/christian/usuario.png' style=' height: 30%;' >"."</td>" ;
+             /*echo " <td>" . "<img src='../../imagenes/christian/usuario.png' class='h'>" . "</td>";*/
+             echo " <td style='  margin-top: 15px; padding: 15px;' > ".
+                     
+                     "<h5 >Correo electronico :</h5>"
+                     ."<h3 >". $row["usu_correo"] ."</h3>";
+             echo " <td style='  margin-top: 15px; padding: 15px;'>" 
+             ."<h5 >Nombre :</h5>"
+             ."<h3>".$row['usu_nombre'] ."</h3>" 
+             ."<h5 >Apellido :</h5>"
+             ."<h3>". $row['usu_apellido'] ."</h3>".
+             "</td>";
+             
+             echo " <td style='  margin-top: 15px; padding: 15px;'>" .
+             "<h5 >Direccion :</h5>"
+             ."<h3>".$row['usu_direccion'] ."</h3>";
+             echo " <td style='  margin-top: 15px; padding: 15px;'> ".
+             "<h5 > </h5>".
+             "<button>"."<a class='estilo' href='facturas.php?codigo=".$row['usu_id'] . "'>Facturas</a>" ."</button>".
+             "<h5 >.</h5>";
+             
+             echo "</tr>";
+           
+             
+         }
+     } else {
+         echo "<tr>";
+         echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
+         echo "</tr>";
+     }
+
+
+
+     $conn->close();
+     ?>
+ </table>
+</div>
 
 <!------------------php---------------------------->
 
-    <section class="maincontent container">
-        <h2>Productos</h2>
-        <?php
-        include '../../config/conexionBD.php';
- 
-        $sql = "SELECT * FROM libro, genero WHERE libro.gen_codigo=genero.gen_codigo";
-        $result = $conn->query($sql);
 
 
 
-        if ($result->num_rows > 0) {
-
-            while ($row = $result->fetch_assoc()) {
-           
-                ?>
-        <div class="card">
-            <figure>
-              
-             
-          <img src='../../imagenes/Libros/<?php echo $row["img"] ?>'/>
-            
-            </figure>
-            
-                <h3><?php echo $row["lib_titulo"] ?></h3>
-            
-            <p><?php echo $row["gen_nombre"] ?></p>
-            <p><?php echo $row["lib_precio"] ?></p>
-            <h3> <a class='estilo' href='modificar_libro.php?libr=" <?php echo $row["lib_codigo"] ?> "'>Modificar Libro</a> </h3></td>;
-        </div>
-        <?php 
-            
-                
-            }
-        } else {
-            echo "<tr>";
-            echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
-            echo "</tr>";
-        }
 
 
 
-        $conn->close();
-        ?>
-    </section>
 
 
 
