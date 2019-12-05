@@ -1,4 +1,4 @@
-alert("fdfvb")
+
 function buscarCategoria(element) {
 
     if (window.XMLHttpRequest) {
@@ -13,5 +13,9 @@ function buscarCategoria(element) {
     };
     xmlhttp.open("GET", "../Controlador/categoria.php?categoria=" + element.textContent, true)
     xmlhttp.send()
+    
+}
+function like() {
+    
     
 }

@@ -76,7 +76,7 @@ if (isset($_SESSION['isLogged'])) {
                     <input type="submit" value="Agregar al carrito">
                 </div>
                 <div class="com">
-                    <a ><i class="far fa-heart"></i></a>
+                    <a onclick="like()" ><i class="far fa-heart"></i></a>
                     <a><i class="fas fa-heart"></i></a>
 
                     <?php
