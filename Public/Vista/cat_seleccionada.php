@@ -10,33 +10,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="bar-login">
-            <div class="btns container">
-                <a href="../Vista/login.html"><i class="fas fa-cart-arrow-down"></i></a>
-                <a href="../Vista/login.html"><i class="fas fa-sign-in-alt"></i> Iniciar sesion</a>
-                <a href="../Vista/crear_usuario.html"><i class="fas fa-user"></i> Registro</a>
-            </div>
-        </div>
-        <h1>LIBRERIA</h1>
-        <nav class="nav-bar container">
-            <ul>
-                <li><a href="../Vista/index.php">Inicio</a></li>
-                <li><a href="../Vista/categoria.html">Categorias</a>
-                </li>
-                <li><a href="../Vista/quiens.html">Quienes somos</a>
-                </li>
-                <li><a href="#contactos">Contactos</a></li>
-                <li>
-                    <div class="search-content">
-                        <input type="search" name="" id="" placeholder="Buscar">
-                        <i class="fas fa-search"></i>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-
-    </header>
+<?php include "include/header.php"?>
     <section class="gener">
         <?php include 'include/menucategoria.php' ?>
         <div id="categorias-lista">
