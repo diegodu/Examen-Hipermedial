@@ -37,7 +37,8 @@
         "lib_idioma = '$idioma', " .
         "lib_editorial = '$editorial', " .
         "lib_paginas = $paginas, " .
-        "lib_anio = '$anio' " ;
+        "lib_anio = '$anio' " .
+        "WHERE lib_codigo = $codigo";
     
     if ($conn->query($sql) === TRUE) {
         echo "Se ha actualizado los datos personales correctamemte!!!<br>";
