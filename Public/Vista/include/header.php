@@ -1,9 +1,24 @@
 <header>
     <div class="bar-login">
         <div class="btns container">
-            <a href="../Vista/login.php"><i class="fas fa-cart-arrow-down"></i></a>
-            <a href="../Vista/login.php"><i class="fas fa-sign-in-alt"></i> Iniciar sesion</a>
-            <a href="../Vista/crear_usuario.php"><i class="fas fa-user"></i> Registro</a>
+           
+            <?php 
+                if (isset($_SESSION['isLogged'])) {
+                  ?>
+                     <a href="../Vista/carrito.php"><i class="fas fa-cart-arrow-down"></i></a>
+                     <a href="../Vista/crear_usuario.php"><i class="fas fa-user"></i> <?php echo ($_SESSION['usu_nombre']." ".$_SESSION['usu_apellido'])?></a>
+                     <a href="../../config/Cerrar_sesion.php"><i class="fas fa-user"></i> Cerrar Sesion</a>
+                  <?php
+                }else{
+
+                    ?> 
+                     <a href="../Vista/login.php"><i class="fas fa-sign-in-alt"></i> Iniciar sesion</a>
+                    <a href="../Vista/crear_usuario.php"><i class="fas fa-user"></i> Registro</a>
+                    <?php 
+                }
+            
+            ?>
+           
         </div>
     </div>
     <h1>LIBRERIA</h1>

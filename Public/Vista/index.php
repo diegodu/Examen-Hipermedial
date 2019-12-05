@@ -1,4 +1,18 @@
+<?php 
+
+    session_start();
+    if (isset($_SESSION['isLogged'])) {
+        if ($_SESSION['usu_rol'] == 'admin') {
+            header("Location: ../../admin/vista/index_admin.html");
+        }
+
+    }
+   
+        
+?>
 <!DOCTYPE html>
+
+
 <html lang="en">
 
 <head>
@@ -11,6 +25,7 @@
 
 <body>
 <?php include "include/header.php"?>
+
     <section class="menuFondo">
         <div class="menuInformacion">
             <h2>Obten los mejores libros! Compra ya!</h2>

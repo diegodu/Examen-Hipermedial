@@ -1,3 +1,14 @@
+<?php 
+
+    session_start();
+    if (isset($_SESSION['isLogged'])) {
+        if ($_SESSION['usu_rol'] == 'admin') {
+            header("Location: ../../admin/vista/index_admin.html");
+        }
+
+    }
+        
+?>
 <!DOCTYPE html>
 <html>
 
@@ -31,19 +42,19 @@
     </header>
 
     <section id="contenido">
-            <form>
+            <form id="formulario01" method="POST" action="../Controlador/loginU.php">
                 <h2 style="text-align: center; color: white;">Login</h2>
     
                 <div class="ubicarIco">
                     <i class="far fa-envelope"></i>
-                    <input type="text" name="Correo" value="" placeholder="Correo" id="correo">
+                    <input type="text" name="correo" value="" placeholder="Correo" id="correo">
                 </div>
                 <div class="ubicarIco">
                     <i class="fas fa-user-lock"></i>
                     <input type="password" placeholder="Contraseña" name="contrasena" id="contrasena">
                 </div>
             
-                <input type="button" value="ENVIAR" id="boton">
+                <input type="submit" value="ENVIAR" id="boton">
             </form>
         </section>
 

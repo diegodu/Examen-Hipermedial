@@ -50,33 +50,41 @@
 
 
     <section class="factTabla">
-        <table >
+
+<!--------------------------------------->
+
+    <?php
+    $codigo = $_GET["codigo"];
+    include '../../config/conexionBD.php';
+    $sql = "SELECT * FROM usuario where usu_id=$codigo";
+    echo "aqui esta el codgo:  $codigo";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+
+        while ($row = $result->fetch_assoc()) {
+            ?>
+            <table >
             <tr>
                 <th>Firstname</th>
                 <th>Lastname</th>
                 <th>Age</th>
             </tr>
-            <tr>
-                <td>Jill</td>
-                <td>Smith</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
-                <td>94</td>
-            </tr>
-            <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
-                <td>94</td>
-            </tr>
-            <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
-                <td>94</td>
-            </tr>
         </table>
+            
+    <?php
+        }
+    } else {
+        echo "<p>Ha ocurrido un error inesperado !</p>";
+        echo "<p>" . mysqli_error($conn) . "</p>";
+    }
+    $conn->close();
+    ?>
+   
+
+
+
+<!------------------------------------------->
     </section>
     <section class="facPago">
         <div class="calculapago1">

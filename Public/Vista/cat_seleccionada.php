@@ -1,3 +1,14 @@
+<?php 
+
+    session_start();
+    if (isset($_SESSION['isLogged'])) {
+        if ($_SESSION['usu_rol'] == 'admin') {
+            header("Location: ../../admin/vista/index_admin.html");
+        }
+
+    }
+           
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +45,7 @@
                     <?php
                     include '../../config/conexionBD.php';
 
-                    $sql = "SELECT * FROM libro ORDER BY 1 DESC limit 16;";
+                    $sql = "SELECT * FROM libro ;";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
 
