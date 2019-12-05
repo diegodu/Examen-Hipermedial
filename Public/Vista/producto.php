@@ -76,8 +76,8 @@ if (isset($_SESSION['isLogged'])) {
                     <input type="submit" value="Agregar al carrito">
                 </div>
                 <div class="com">
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-heart"></i>
+                    <a ><i class="far fa-heart"></i></a>
+                    <a><i class="fas fa-heart"></i></a>
 
                     <?php
                     $sqllike = "SELECT SUM(c.cal_valor) as valor FROM libro l, calificaciones c WHERE c.lib_id = l.lib_codigo AND l.lib_codigo =" . $_GET["codigolibro"] . ";";
@@ -144,6 +144,7 @@ if (isset($_SESSION['isLogged'])) {
 
     </section>
     <?php include "include/footer.php" ?>
+    <script src="../js/funciones.js"></script>
 </body>
 
 </html>

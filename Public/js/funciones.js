@@ -1,6 +1,4 @@
-
-
-
+alert("fdfvb")
 function buscarCategoria(element) {
 
     if (window.XMLHttpRequest) {
