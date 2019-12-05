@@ -15,6 +15,7 @@ function buscarCategoria(element) {
     xmlhttp.send()
     
 }
+<<<<<<< HEAD
 function like() {
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest()
@@ -31,3 +32,10 @@ function like() {
 
     
 }
+=======
+
+function agregarCarrito(codigoL){
+    console.log(codigoL);
+}
+alert("j;oajaoao")
+>>>>>>> js
