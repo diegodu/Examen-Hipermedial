@@ -23,7 +23,7 @@
     $telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]) : null;
     $fechaNacimiento = isset($_POST["fechanac"]) ? trim($_POST["fechanac"]) : null;
     $correo = isset($_POST["correo"]) ? trim($_POST["correo"]) : null;
-    $contrasena = isset($_POST["password"]) ? trim($_POST["password"]) : null;
+    $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
 
     $sql = "INSERT INTO usuario VALUES (0,'usuario', '$nombres', '$apellidos','$fechaNacimiento',  '$correo', '$contrasena' , null, null, 'N','$telefono','$direccion')";
     if ($conn->query($sql) === TRUE) {
