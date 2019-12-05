@@ -76,7 +76,7 @@ if (isset($_SESSION['isLogged'])) {
                     <a style="color: black" href="#"> <i class="fas fa-cart-arrow-down"></i> Agregar al Carrito</a>
                 </div>
                 <div class="com">
-                    <a onclick="like()" ><i class="far fa-heart"></i></a>
+                    <a ><i class="far fa-heart"></i></a>
                     <a><i class="fas fa-heart"></i></a>
 
                     <?php
@@ -150,6 +150,10 @@ if (isset($_SESSION['isLogged'])) {
    </div>
     <?php include "include/footer.php" ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+   
+>>>>>>> cambios
     <script src="../js/funciones.js"></script>
 =======
    

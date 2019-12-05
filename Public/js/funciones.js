@@ -1,4 +1,4 @@
-
+alert("hola");
 function buscarCategoria(element) {
 
     if (window.XMLHttpRequest) {
