@@ -31,6 +31,17 @@ if(isset($_POST['nom_pais'])){
         echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>";
     }
 }
+if(isset($_POST['categoria'])){
+    $categoria=$_POST['categoria'];
+    $descripcion=$_POST['descripcion'];
+    echo $categoria;
+    $sql = "INSERT INTO  genero VALUES (0,'$categoria','$descripcion') "; 
+    if ($conn->query($sql) === TRUE) {
+        echo "Se ha actualizado los datos personales correctamemte!!!<br>";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>";
+    }
+}
 
 ?>
 <!DOCTYPE html>
@@ -129,6 +140,53 @@ if(isset($_POST['nom_pais'])){
 
    </section>
    <!------------------------------------------------------------------>
+
+<!-------------------------------------->
+<section id="contenido">
+   
+   <form id="formulario03" method="POST" action="crear_autor.php">
+
+ 
+
+   <label for="categoria">Categoria (*)</label>
+   <!--pais -->
+   <label for="categoria">Nombre del Pais (*)</label>
+       <input type="text" id="categoria" name="categoria" value="" placeholder="Ingrese el nombre de la categoria ..." required />
+       <br>
+
+
+   <br>
+   <label for="descripcion">Descripcion (*)</label>
+       <input type="text" id="descripcion" name="descripcion" value="" placeholder="Ingrese una descripcion..." required />
+       <br>
+
+
+   <br>
+
+       
+       <input type="submit" id="Crear" name="crear" value="Aceptar" />
+       <button><a href='productos_admin.php'>Cancelar</a></button>
+   </form>
+
+
+
+
+
+   </section>
+   <!------------------------------------------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <footer>
         <div class="contact container">
             <div id="map">
