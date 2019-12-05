@@ -14,31 +14,23 @@ $sql = "SELECT * FROM usuario WHERE usu_correo = '$usuario' and usu_contrasenia 
 
 $result = $conn->query($sql);
 
-echo $result["usu_correo"];
+$result = $result->fetch_assoc();
 
-while ($row = $result->fetch_assoc()) {
-    $aux = $row["usu_rol"];
-    $id = $row["usu_id"];
-}
+echo $result["usu_id"];
 
-
-if ($result->num_rows > 0) {
+if ($result> 0) {
     $_SESSION['isLogged'] = TRUE;
+    $_SESSION['usu_codigo'] = $result["usu_id"];
+    $_SESSION['usu_rol'] = $result["usu_rol"];
+    $_SESSION['usu_codigo'] = $result["usu_id"];
+    $_SESSION['usu_nombre'] = $result["usu_nombre"];
+    $_SESSION['usu_apellido'] = $result["usu_apellido"];
 
-    if ($aux == 'admin') {
-        echo " $aux";
-
-        header("Location: ../../admin/vista/index_admin.html");
-    }
-    if ($aux == 'usuario') {
-        $_SESSION['usu']=$usuario;
-        $_SESSION['contra']=$contrasena;
-        $_SESSION['id']=$id;
-
-        header("Location: ../../admin/vista/usuario/index_admin.php");
-    }
+   header("Location: ../Vista/index.php");
+   
+  
 } else {
-    //header("Location: ../vista/login.php");
+     header("Location: ../vista/login.php");
 }
 
 $conn->close();

@@ -1,3 +1,14 @@
+<?php 
+
+    session_start();
+    if (isset($_SESSION['isLogged'])) {
+        if ($_SESSION['usu_rol'] == 'admin') {
+            header("Location: ../../admin/vista/index_admin.html");
+        }
+
+    }
+           
+?>
 <!DOCTYPE html>
 <html lang="en">
 

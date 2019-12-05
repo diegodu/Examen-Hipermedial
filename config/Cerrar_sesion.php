@@ -2,5 +2,5 @@
  session_start();
  $_SESSION['isLogged'] = FALSE;
  session_destroy();
- header("Location: ../Public/Vista/index.html");
+ header("Location: ../Public/Vista/index.php");
 ?>
