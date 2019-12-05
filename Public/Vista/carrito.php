@@ -10,28 +10,7 @@
 </head>
 
 <body>
-    <header>
-        
-        <h1>LIBRERIA</h1>
-        <nav class="nav-bar container">
-            <ul>
-                <li><a href="../Vista/index.html">Inicio</a></li>
-                <li><a href="../Vista/cat_seleccionada.html">Categorias</a>
-                </li>
-                <li><a href="#">Quienes somos</a>
-                </li>
-                <li><a href="#">Contactos</a></li>
-                <li>
-                    <div class="search-content">
-                        <input type="search" name="" id="" placeholder="Buscar">
-                        <i class="fas fa-search"></i>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-
-    </header>
-
+<?php include "include/header.php"?>
     <section class="carrito">
         <h3>Producto</h3>
         <h3>Precio Unitario</h3>
