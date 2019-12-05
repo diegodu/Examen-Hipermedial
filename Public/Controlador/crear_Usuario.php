@@ -15,7 +15,7 @@
 <body>
     <?php
     //incluir conexión a la base de datos
-    include '../../../config/conexionBD.php';
+    include '../../config/conexionBD.php';
 
     $nombres = isset($_POST["nombre"]) ? mb_strtoupper(trim($_POST["nombre"]), 'UTF-8') : null;
     $apellidos = isset($_POST["apellido"]) ? mb_strtoupper(trim($_POST["apellido"]), 'UTF-8') : null;
@@ -25,7 +25,7 @@
     $correo = isset($_POST["correo"]) ? trim($_POST["correo"]) : null;
     $contrasena = isset($_POST["password"]) ? trim($_POST["password"]) : null;
 
-    $sql = "INSERT INTO usuario VALUES (0,'usuario, '$nombre', '$apellido',$fechanac',  '$correo', '$password' , 'N', null, null)";
+    $sql = "INSERT INTO usuario VALUES (0,'usuario', '$nombres', '$apellidos','$fechaNacimiento',  '$correo', '$contrasena' , null, null, 'N','$telefono','$direccion')";
     if ($conn->query($sql) === TRUE) {
         echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
     } else {

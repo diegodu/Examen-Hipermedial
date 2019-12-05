@@ -52,7 +52,7 @@
             </div>
             <div class="ubicarIco">
                 <i class="far fa-calendar-alt"></i>
-                <input type="text" name="fechanac" value="" placeholder="Fecha Nacimiento" id="fechanac">
+                <input type="date" name="fechanac" value="" placeholder="Fecha Nacimiento" id="fechanac">
             </div>
             <div class="ubicarIco">
                 <i class="far fa-envelope"></i>
