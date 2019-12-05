@@ -34,7 +34,7 @@
                     <?php
                     include '../../config/conexionBD.php';
 
-                    $sql = "SELECT * FROM libro ORDER BY 1 DESC limit 16;";
+                    $sql = "SELECT * FROM libro ;";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
 
