@@ -14,10 +14,10 @@
         <h1>LIBRERIA</h1>
         <nav class="nav-bar container">
             <ul>
-                <li><a href="../Vista/index.html">Inicio</a></li>
-                <li><a href="../Vista/cat_seleccionada.html">Categorias</a>
+                <li><a href="../Vista/index.php">Inicio</a></li>
+                <li><a href="../Vista/cat_seleccionada.php">Categorias</a>
                 </li>
-                <li><a href="./quiens.html">Quienes somos</a>
+                <li><a href="./quiens.php">Quienes somos</a>
                 </li>
                 <li><a href="#">Contactos</a></li>
                 <li>
@@ -52,7 +52,7 @@
             </div>
             <div class="ubicarIco">
                 <i class="far fa-calendar-alt"></i>
-                <input type="text" name="fechanac" value="" placeholder="Fecha Nacimiento" id="fechanac">
+                <input type="date" name="fechanac" value="" placeholder="Fecha Nacimiento" id="fechanac">
             </div>
             <div class="ubicarIco">
                 <i class="far fa-envelope"></i>
@@ -69,74 +69,7 @@
             <input type="submit" value="ENVIAR" id="boton">
         </form>
     </section>
-    <footer>
-        <div class="contact container">
-            <div id="map">
-
-            </div>
-            <div class="redes">
-                <div>
-                    <h3>Contactos</h3>
-                    <p>Cuenca-Ecuador </p>
-                    <a href="https://www.ups.edu.ec/">Universida Politecnica Salesiana</a>
-
-                    <p>Telefono <a href="tel:+0999287912">0999287912</a></p>
-
-                    <p>E-mail <a href="mailto:dduchimazad@est.ups.edu.ec">dduchimazad@est.ups.edu.ec</a></p>
-
-
-                </div>
-                <div>
-                    <h3>Siguenos</h3>
-                    <p>Siguenos en nuestras redes sociales</p>
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-twitter-square"></i>
-
-                </div>
-
-
-
-            </div>
-
-        </div>
-
-        <div class="about container">
-            <div class="info">
-                <h3>Informacion</h3>
-                <p>Quienes somos</p>
-                <p>Mision</p>
-                <p>Vision</p>
-                <p>Contactos</p>
-
-
-            </div>
-            <div class="libro">
-                <h3>Libros</h3>
-                <p>Matematicas</p>
-                <p>Ciencias Naturales</p>
-                <p>Estudios sociales</p>
-                <p>Literartura</p>
-
-            </div>
-            <div class="integrantes">
-                <h3>Integrantes</h3>
-                <p>Daniel Guzman</p>
-                <p>Christian Rivera</p>
-                <p>Diego Duchimaza</p>
-                <p>Pablo Malla</p>
-
-            </div>
-
-
-        </div>
-        <div class="target">
-            <i class="fab fa-cc-visa"></i>
-            <i class="fab fa-cc-mastercard"></i>
-            <i class="fab fa-cc-amex"></i>
-        </div>
-
-    </footer>
+    <?php include "include/footer.php"?>
 
 </body>
 

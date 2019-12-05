@@ -10,34 +10,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="bar-login">
-            <div class="btns container">
-                <a href="../Vista/login.html"><i class="fas fa-cart-arrow-down"></i></a>
-                <a href="../Vista/login.html"><i class="fas fa-sign-in-alt"></i> Iniciar sesion</a>
-                <a href="../Vista/crear_usuario.html"><i class="fas fa-user"></i> Registro</a>
-            </div>
-        </div>
-        <h1>LIBRERIA</h1>
-        <nav class="nav-bar container">
-            <ul>
-                <li><a href="../Vista/index.html">Inicio</a></li>
-                <li><a href="../Vista/categoria.html">Categorias</a>
-                </li>
-                <li><a href="#">Quienes somos</a>
-                </li>
-                <li><a href="#">Contactos</a></li>
-                <li>
-                    <div class="search-content">
-                        <input type="search" name="" id="" placeholder="Buscar">
-                        <i class="fas fa-search"></i>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-
-    </header>
-
+<?php include "include/header.php"?>
     <section class="maincontent2 container">
         <section class="divi">
             <div class="imag">
@@ -49,12 +22,7 @@
             <div class="informa">
                 <div>
                     <h3>The Arrivals</h3>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-
+                   
                 </div>
                 <div class="ess">
                     <p class="va">$20</p>
@@ -81,11 +49,8 @@
                     <input type="submit" value="Agregar al carrito">
                 </div>
                 <div class="com">
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
+                   <i class="far fa-thumbs-up"></i>
+                   
                     <input type="text" placeholder="Agregar comentario" name="comentario" id="comentario">
                 </div>
 
@@ -138,73 +103,7 @@
         </div>
 
     </section>
-    <footer>
-        <div class="contact container">
-            <div id="map">
-
-            </div>
-            <div class="redes">
-                <div>
-                    <h3>Contactos</h3>
-                    <p>Cuenca-Ecuador </p>
-                    <a href="https://www.ups.edu.ec/">Universida Politecnica Salesiana</a>
-
-                    <p>Telefono <a href="tel:+0999287912">0999287912</a></p>
-
-                    <p>E-mail <a href="mailto:dduchimazad@est.ups.edu.ec">dduchimazad@est.ups.edu.ec</a></p>
-
-
-                </div>
-                <div>
-                    <h3>Siguenos</h3>
-                    <p>Siguenos en nuestras redes sociales</p>
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-twitter-square"></i>
-
-                </div>
-
-
-
-            </div>
-
-        </div>
-
-        <div class="about container">
-            <div class="info">
-                <h3>Informacion</h3>
-                <p>Quienes somos</p>
-                <p>Mision</p>
-                <p>Vision</p>
-                <p>Contactos</p>
-
-
-            </div>
-            <div class="libro">
-                <h3>Libros</h3>
-                <p>Matematicas</p>
-                <p>Ciencias Naturales</p>
-                <p>Estudios sociales</p>
-                <p>Literartura</p>
-
-            </div>
-            <div class="integrantes">
-                <h3>Integrantes</h3>
-                <p>Christian Rivera</p>
-                <p>Diego Duchimaza</p>
-                <p>Pablo Malla</p>
-
-            </div>
-
-
-        </div>
-        <div class="target">
-            <i class="fab fa-cc-visa"></i>
-            <i class="fab fa-cc-mastercard"></i>
-            <i class="fab fa-cc-amex"></i>
-        </div>
-
-    </footer>
+    <?php include "include/footer.php"?>
 </body>
 
 </html>

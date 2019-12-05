@@ -10,33 +10,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="bar-login">
-            <div class="btns container">
-                <a href="../Vista/login.html"><i class="fas fa-cart-arrow-down"></i></a>
-                <a href="../Vista/login.html"><i class="fas fa-sign-in-alt"></i> Iniciar sesion</a>
-                <a href="../Vista/crear_usuario.html"><i class="fas fa-user"></i> Registro</a>
-            </div>
-        </div>
-        <h1>LIBRERIA</h1>
-        <nav class="nav-bar container">
-            <ul>
-                <li><a href="../Vista/index.php">Inicio</a></li>
-                <li><a href="../Vista/cat_seleccionada.php">Categorias</a>
-                </li>
-                <li><a href="./quiens.html">Quienes somos</a>
-                </li>
-                <li><a href="#contactos">Contactos</a></li>
-                <li>
-                    <div class="search-content">
-                        <input type="search" name="" id="" placeholder="Buscar">
-                        <i class="fas fa-search"></i>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-
-    </header>
+<?php include "include/header.php"?>
     <section class="menuFondo">
         <div class="menuInformacion">
             <h2>Obten los mejores libros! Compra ya!</h2>
@@ -58,7 +32,7 @@
                 ?>
                 <div class="card">
                     <figure>
-                        <a href="../../Public/Vista/producto.html"> <img src="../../imagenes/libros/<?php echo $row["img"] ?>"></a>
+                        <a href="../../Public/Vista/producto.php"> <img src="../../imagenes/libros/<?php echo $row["img"] ?>"></a>
                     </figure>
                     <a href="#">
                         <h3><?php echo $row["lib_titulo"] ?></h3>
@@ -91,9 +65,9 @@
         <div class="container">
             <div>
                 <h3>Obten los mejores libros</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi non explicabo quia voluptas eos
-                    repellat. Eos quasi, reprehenderit dignissimos harum minus impedit veritatis voluptatibus,
-                    distinctio doloribus repellendus consequuntur a dicta.</p>
+                <p>Nuestra actividad está vinculada al libro, solo nos debemos a nuestros lectores. Nuestra única meta es
+                el libro. Creemos que no siempre ser másgrande es ser mejor, y no siempre hay que crecer para tener
+                futuro.</p>
             </div>
             <i class="fas fa-book"></i>
         </div>
