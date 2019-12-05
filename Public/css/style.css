@@ -448,9 +448,7 @@ footer .contact{
 .maincontent2 .divi .informa div h3{
     padding: 15px 0px 0px 0px;
 }
-.maincontent2 .divi .informa div i{
-    font-size: 10px;
-}
+
 .maincontent2 .divi .informa .ess {
     padding: 10px 0px;
 }
@@ -492,13 +490,7 @@ footer .contact{
     
     
 }
-.maincontent2 .divi .informa .com i{
-    font-size: 20px;
- }
-.maincontent2 .divi .informa .com i:hover{
-    color: yellow;
 
-}
  .maincontent2 .divi .informa .com input{
     
     box-shadow: 0px 0px  3px #888;
