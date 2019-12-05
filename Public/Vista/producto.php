@@ -1,13 +1,12 @@
-<?php 
+<?php
 
-    session_start();
-    if (isset($_SESSION['isLogged'])) {
-        if ($_SESSION['usu_rol'] == 'admin') {
-            header("Location: ../../admin/vista/index_admin.html");
-        }
-
+session_start();
+if (isset($_SESSION['isLogged'])) {
+    if ($_SESSION['usu_rol'] == 'admin') {
+        header("Location: ../../admin/vista/index_admin.html");
     }
-          
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +65,7 @@
                     ?>
                     <div class="est">
                         <p>Autor:</p>
-                        <p><?php echo $sqlnombre["aunombre"]." ". $sqlnombre["auapellido"]?></p>
+                        <p><?php echo $sqlnombre["aunombre"] . " " . $sqlnombre["auapellido"] ?></p>
 
                     </div>
 
@@ -77,16 +76,11 @@
                     <input type="submit" value="Agregar al carrito">
                 </div>
                 <div class="com">
-                    <i class="far fa-thumbs-up"></i>
-                    <?php
-                    $sql = "SELECT g.gen_nombre as categoria FROM libro l, genero g WHERE g.gen_codigo = l.gen_codigo AND l.lib_codigo =" . $_GET["codigolibro"] . ";";
-                    $result = $conn->query($sql);
-                    $sqlcategoria = $result->fetch_assoc();
-
-                    ?>
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-heart"></i>
 
                     <?php
-                    $sqllike = "SELECT SUM(c.cal_valor) as valor FROM libro l, calificaciones c WHERE c.lib_id = l.lib_codigo AND l.lib_codigo = l.gen_codigo AND l.lib_codigo =" . $_GET["codigolibro"] . ";";
+                    $sqllike = "SELECT SUM(c.cal_valor) as valor FROM libro l, calificaciones c WHERE c.lib_id = l.lib_codigo AND l.lib_codigo =" . $_GET["codigolibro"] . ";";
                     $resultlike = $conn->query($sqllike);
                     $sqlcalificacion = $resultlike->fetch_assoc();
 
@@ -110,9 +104,9 @@
             <div>
                 <h3>Resumen</h3>
                 <?php
-                 $sqlcom = "SELECT lib_resumen as resumen FROM libro WHERE lib_codigo =" . $_GET["codigolibro"] . ";";
-                 $resultcom = $conn->query($sqlcom);
-                 $sqlcomentario = $resultcom->fetch_assoc();
+                $sqlcom = "SELECT lib_resumen as resumen FROM libro WHERE lib_codigo =" . $_GET["codigolibro"] . ";";
+                $resultcom = $conn->query($sqlcom);
+                $sqlcomentario = $resultcom->fetch_assoc();
                 ?>
                 <p><?php echo $sqlcomentario["resumen"] ?></p>
             </div>
@@ -120,33 +114,33 @@
 
     </section>
     <section class="comentarios container">
-    <h3>Comentarios</h3>
+        <h3>Comentarios</h3>
         <?php
-         $sqlre = "SELECT u.usu_nombre as nombre, c.comentario as comentario FROM libro l, comentarios c, usuario u WHERE c.com_id_libro = l.lib_codigo AND u.usu_id = c.com_id_usuario AND l.lib_codigo =" . $_GET["codigolibro"] . ";";
-         $resultre = $conn->query($sqlre);
-         if ($result->num_rows > 0) {
- 
-             while ($row = $resultre->fetch_assoc()) {
-                 ?>
-                  <div class="container">
-           
-            <div>
-                <h3><?php echo $row["nombre"] ?></h3>
-                <p><?php echo $row["comentario"] ?></p>
+        $sqlre = "SELECT u.usu_nombre as nombre, c.comentario as comentario FROM libro l, comentarios c, usuario u WHERE c.com_id_libro = l.lib_codigo AND u.usu_id = c.com_id_usuario AND l.lib_codigo =" . $_GET["codigolibro"] . ";";
+        $resultre = $conn->query($sqlre);
+        if ($result->num_rows > 0) {
 
-            </div>
-           
-        </div>
-                 
- 
-         <?php
- 
-             }
-         } else {
-             echo "<h2> No hay Libros </h2>";
-         }
-         $conn->close();
-         ?>
+            while ($row = $resultre->fetch_assoc()) {
+                ?>
+                <div class="container">
+
+                    <div>
+                        <h3><?php echo $row["nombre"] ?></h3>
+                        <p><?php echo $row["comentario"] ?></p>
+
+                    </div>
+
+                </div>
+
+
+        <?php
+
+            }
+        } else {
+            echo "<h2> No hay Libros </h2>";
+        }
+        $conn->close();
+        ?>
 
     </section>
     <?php include "include/footer.php" ?>

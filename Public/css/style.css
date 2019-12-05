@@ -492,13 +492,10 @@ footer .contact{
 }
 .maincontent2 .divi .informa .com i{
     font-size: 40px;
+    color: red;
+    background-color: red;
  }
-.maincontent2 .divi .informa .com i:hover{
-    color: blue;
-    font-size: 80px;
 
-
-}
  .maincontent2 .divi .informa .com input{
     
     box-shadow: 0px 0px  3px #888;
