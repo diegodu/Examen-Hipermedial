@@ -61,6 +61,10 @@ header nav ul{
 header nav ul .search-content{
     position: relative;
 }
+.listaBuscarLibro a{
+    color: #FF4858;
+    
+}
 header nav ul .search-content i{
     position: absolute;
     right: 10px;
@@ -989,3 +993,4 @@ input, textarea{
     width: 600px;
     font-size: 25px;
 }
+
