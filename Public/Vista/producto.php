@@ -85,7 +85,7 @@ if (isset($_SESSION['isLogged'])) {
                     $sqlcalificacion = $resultlike->fetch_assoc();
 
                     ?>
-                    <span><?php echo  $sqlcalificacion["valor"] ?></span>
+                    <span id="valorlike"><?php echo  $sqlcalificacion["valor"] ?></span>
                     <input type="text" placeholder="Agregar comentario" name="comentario" id="comentario">
                 </div>
 
