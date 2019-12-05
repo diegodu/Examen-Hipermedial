@@ -1,4 +1,4 @@
-alert("hola");
+
 function buscarCategoria(element) {
 
     if (window.XMLHttpRequest) {
@@ -15,7 +15,6 @@ function buscarCategoria(element) {
     xmlhttp.send()
     
 }
-<<<<<<< HEAD
 function like() {
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest()
@@ -32,10 +31,47 @@ function like() {
 
     
 }
-=======
 
 function agregarCarrito(codigoL){
     console.log(codigoL);
 }
-alert("j;oajaoao")
->>>>>>> js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function darLike(corazon){
+    console.log("Hola diste like")
+    
+}
