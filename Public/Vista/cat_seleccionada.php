@@ -18,11 +18,10 @@
                 <section class="information">
                     <div class="info_cat">
                         <div>
-                            <h3>Ciencia y tecnologia</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi non explicabo quia voluptas
-                                eos
-                                repellat. Eos quasi, reprehenderit dignissimos harum minus impedit veritatis voluptatibus,
-                                distinctio doloribus repellendus consequuntur a dicta.</p>
+                            <h3>Libreria</h3>
+                            <p>En esta seccion se muestran todos los libros agregados, de la misma forma, se puede
+                                seleccionar una categoria en especifico y revisar su contenido y descripcion.
+                            </p>
                         </div>
 
                     </div>

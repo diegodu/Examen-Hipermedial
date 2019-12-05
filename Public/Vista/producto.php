@@ -49,6 +49,7 @@
                     <input type="submit" value="Agregar al carrito">
                 </div>
                 <div class="com">
+                   <i class="far fa-thumbs-up"></i>
                    
                     <input type="text" placeholder="Agregar comentario" name="comentario" id="comentario">
                 </div>
