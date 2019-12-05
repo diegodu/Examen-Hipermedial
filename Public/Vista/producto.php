@@ -22,12 +22,7 @@
             <div class="informa">
                 <div>
                     <h3>The Arrivals</h3>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-
+                   
                 </div>
                 <div class="ess">
                     <p class="va">$20</p>
@@ -54,11 +49,7 @@
                     <input type="submit" value="Agregar al carrito">
                 </div>
                 <div class="com">
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
+                   
                     <input type="text" placeholder="Agregar comentario" name="comentario" id="comentario">
                 </div>
 

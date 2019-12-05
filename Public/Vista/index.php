@@ -32,7 +32,7 @@
                 ?>
                 <div class="card">
                     <figure>
-                        <a href="../../Public/Vista/producto.html"> <img src="../../imagenes/libros/<?php echo $row["img"] ?>"></a>
+                        <a href="../../Public/Vista/producto.php"> <img src="../../imagenes/libros/<?php echo $row["img"] ?>"></a>
                     </figure>
                     <a href="#">
                         <h3><?php echo $row["lib_titulo"] ?></h3>
@@ -65,9 +65,9 @@
         <div class="container">
             <div>
                 <h3>Obten los mejores libros</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi non explicabo quia voluptas eos
-                    repellat. Eos quasi, reprehenderit dignissimos harum minus impedit veritatis voluptatibus,
-                    distinctio doloribus repellendus consequuntur a dicta.</p>
+                <p>Nuestra actividad está vinculada al libro, solo nos debemos a nuestros lectores. Nuestra única meta es
+                el libro. Creemos que no siempre ser másgrande es ser mejor, y no siempre hay que crecer para tener
+                futuro.</p>
             </div>
             <i class="fas fa-book"></i>
         </div>
