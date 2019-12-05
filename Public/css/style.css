@@ -774,7 +774,7 @@ h5#corr{
     margin-top: 0px;
 }
 .carrito{
-    margin-top: 160px;
+    margin-top: 30px;
     width: 100%;
     height: 50px;
     display: flex;
@@ -839,34 +839,42 @@ h5#corr{
 .pago{
     padding-top: 20px;
     width: 100%;
-    padding-left: 52%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-end;
     padding-top: 30px;
     padding-bottom: 30px;
     height: auto;
-    float: right;
     box-shadow: 0px 0px  4px #888;
 }
+.pago input{
+    color: white;
+    font-weight: 900;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    width: 300px;
+}
+.pagarC{
+    background-color: #0A83FC;
+}
+.pagarC:hover{
+    background-color:  #FF4858;
+}
+
 .calculapago{
     display: flex;
     color:#0A83FC;
 }
-.calculapago h3{
-   
-    width: 400px;
-    color:#0A83FC;
-}
+
 .calculapago h2{
     
-    width: 400px;
+    width: 100px;
     color:#0A83FC;
-    
 }
-.calculapago p{
-    text-align: center;
-    width: 200px;
-    
 
-}
 
 #contenido{
     top: 0%;
