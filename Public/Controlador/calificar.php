@@ -10,8 +10,9 @@ include '../../config/conexionBD.php';
     $sqlcalificacion = $conn->query($sqlcalificacion);
     if($sqlcalificacion->num_rows > 0){
         $row = $sqlcalificacion->fetch_assoc();
-        $sqldelete = "DELETE FROM calificaciones WHERE cal.codigo=".$row['cal_codigo'].";";
+        $sqldelete = "DELETE FROM calificaciones WHERE cal_codigo=".$row['cal_codigo'].";";
         $conn->query($sqldelete);
+       
     }else{
         $sqlInsert = "INSERT INTO calificaciones ( 
             cal_valor,
@@ -23,6 +24,7 @@ include '../../config/conexionBD.php';
             " . $_SESSION['usu_codigo']  . "
         );";
         $conn->query($sqlInsert);
+     
     }
 $sqlcalificacion = "SELECT * FROM calificaciones c, libro l WHERE c.lib_id=" . $_GET['codProducto'] . " AND c.lib_id = l.lib_codigo AND c.cal_id_usu = " . $_SESSION["usu_codigo"] . ";";
 $sqlcalificacion = $conn->query($sqlcalificacion);

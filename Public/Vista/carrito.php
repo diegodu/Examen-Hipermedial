@@ -54,7 +54,6 @@ if (isset($_SESSION['isLogin'])) {
         <section class="pago">
 
             <div class="calculapago">
-                <h2>Total</h2>
                 <?php
                 $sqlSub = "SELECT SUM(l.lib_precio*c.car_cantidad) as subtotal FROM carrito c, libro l WHERE usu_codigo=" . $_SESSION['usu_codigo'] . " AND  l.lib_codigo = c.lib_codigo ;";
                 $resultSub = $conn->query($sqlSub);
@@ -63,6 +62,7 @@ if (isset($_SESSION['isLogin'])) {
 
                     $total = $rowSub['subtotal'] * 1.12;
                     ?>
+                
                     <span>Subtotal: <?php echo $rowSub['subtotal'] ?></span>
                     <span>Total: <?php echo $total ?></span>
                 <?php
@@ -74,7 +74,7 @@ if (isset($_SESSION['isLogin'])) {
                 }
                 ?>
             </div>
-            <a href="#" onclick="realizarPedido()">Agregar pedido</a>
+            <a href="#" onclick="realizarPedido()">Realizar pedido</a>
 
 
 

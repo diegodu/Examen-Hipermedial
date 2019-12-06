@@ -30,7 +30,7 @@ if (isset($_SESSION['isLogged'])) {
         </div>
 
     </section>
-    <section class="maincontent container">
+    <section class="maincontent container" id="contenedor-libros">
 
         <h2>ULTIMOS LIBROS AGREGADOS</h2>
         <?php

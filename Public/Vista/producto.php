@@ -97,23 +97,29 @@ if (isset($_SESSION['isLogged'])) {
 
                 </div>
                 <div class="com" id="calificacionLibro">
-                        <?php 
+                    <?php
+                    if (isset($_SESSION["isLogged"])) {
                         $sqlcalificacion = "SELECT * FROM calificaciones c, libro l WHERE c.lib_id=" . $sqllibro["lib_codigo"] . " AND c.lib_id = l.lib_codigo AND c.cal_id_usu = " . $_SESSION["usu_codigo"] . ";";
                         $sqlcalificacion = $conn->query($sqlcalificacion);
                         ?>
-                        
+
                         <?php
-                        if($sqlcalificacion->num_rows > 0){
+                            if ($sqlcalificacion->num_rows > 0) {
+                                ?>
+                            <a><i class="fas fa-heart" onclick="darLike(this<?php echo (', ' . $sqllibro['lib_codigo']) ?>)"></i></a>
+                        <?php
+                            } else {
+                                ?>
+                            <a><i class="far fa-heart" onclick="darLike(this<?php echo (', ' . $sqllibro['lib_codigo']) ?>)"></i></a>
+                        <?php
+                            }
+                        } else {
                             ?>
-                            <a><i class="fas fa-heart" onclick="darLike(this<?php echo (', '.$sqllibro['lib_codigo'] )?>)"></i></a>
-                            <?php
-                        }else{
-                            ?>
-                            <a><i class="far fa-heart" onclick="darLike(this<?php echo (', '.$sqllibro['lib_codigo'] )?>)"></i></a>
-                            <?php
-                        }
-                        ?>
-                        
+                        <a><i class="fas fa-heart" onclick="darLike(this<?php echo (', ' . $sqllibro['lib_codigo']) ?>)"></i></a>
+                    <?php
+                    }
+
+                    ?>
 
                     <?php
                     $sqllike = "SELECT SUM(c.cal_valor) as valor FROM libro l, calificaciones c WHERE c.lib_id = l.lib_codigo AND l.lib_codigo =" . $sqllibro["lib_codigo"] . ";";
@@ -121,8 +127,8 @@ if (isset($_SESSION['isLogged'])) {
                     $sqlcalificacion = $resultlike->fetch_assoc();
                     ?>
                     <span><?php echo $res = ($sqlcalificacion["valor"]  > 0) ? $sqlcalificacion["valor"] : 0; ?></span>
-                
-                    <textarea placeholder="Agregar comentario" name="comentario" id="comentario"></textarea> 
+
+                    <textarea placeholder="Agregar comentario" name="comentario" id="comentario"></textarea>
                     <input type="button" value="Agregar Comentario" onclick="comentar(<?php echo $sqllibro['lib_codigo'] ?>)">
 
                 </div>
@@ -154,47 +160,47 @@ if (isset($_SESSION['isLogged'])) {
     <section class="comentarios container">
         <h3 id="we">Comentarios</h3>
         <div id="comentarioslibro">
-        <?php
-        $sqlre = "SELECT u.usu_nombre as nombre, c.comentario as comentario FROM libro l, comentarios c, usuario u WHERE c.com_id_libro = l.lib_codigo AND c.eliminado = 'N' AND u.usu_id = c.com_id_usuario AND l.lib_codigo =" . $_GET["codigolibro"] . ";";
-        $resultre = $conn->query($sqlre);
-        if ($result->num_rows > 0) {
+            <?php
+            $sqlre = "SELECT u.usu_nombre as nombre, c.comentario as comentario FROM libro l, comentarios c, usuario u WHERE c.com_id_libro = l.lib_codigo AND c.eliminado = 'N' AND u.usu_id = c.com_id_usuario AND l.lib_codigo =" . $_GET["codigolibro"] . ";";
+            $resultre = $conn->query($sqlre);
+            if ($result->num_rows > 0) {
 
-            while ($row = $resultre->fetch_assoc()) {
-                ?>
-                <div class="container">
+                while ($row = $resultre->fetch_assoc()) {
+                    ?>
+                    <div class="container">
 
-                    <div>
-                        <h3><?php echo $row["nombre"] ?></h3>
-                        <p><?php echo $row["comentario"] ?></p>
+                        <div>
+                            <h3><?php echo $row["nombre"] ?></h3>
+                            <p><?php echo $row["comentario"] ?></p>
+
+                        </div>
 
                     </div>
 
-                </div>
 
+            <?php
 
-        <?php
-
+                }
+            } else {
+                echo "<h2> No hay comentarios </h2>";
             }
-        } else {
-            echo "<h2> No hay comentarios </h2>";
-        }
-        $conn->close();
-        ?>
-        
+            $conn->close();
+            ?>
+
         </div>
 
     </section>
-   <div id="NotificaCarrito">
+    <div id="NotificaCarrito">
 
-    <script>
-        let not = document.querySelector('.notificacion')
-        if(typeof not !== 'undefined'){
-            setTimeout(()=>{
-                not.remove();
-            },3000);
-        }
-    </script>
-   </div>
+        <script>
+            let not = document.querySelector('.notificacion')
+            if (typeof not !== 'undefined') {
+                setTimeout(() => {
+                    not.remove();
+                }, 3000);
+            }
+        </script>
+    </div>
     <?php include "include/footer.php" ?>
 
     <script src="../js/funciones.js"></script>

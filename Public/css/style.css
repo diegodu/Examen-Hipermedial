@@ -121,6 +121,13 @@ header .nav-bar ul ul a {
 header .nav-bar ul li:hover > ul {
  display:block;
 }
+header .nav-bar ul li .busqueda{
+    margin-left: 5px;
+    background-color:#0A83FC;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
 /*------------------------------------------------------------*/
 
 #fondo1{
@@ -857,6 +864,19 @@ h5#corr{
     width: 200px;
     width: 300px;
 }
+.pago a{
+    text-decoration: none;
+    padding: 10px 15px;
+    width: 200px;
+    background-color: #0A83FC;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+.pago a:hover{
+    opacity: .8;
+}
 .pagarC{
     background-color: #0A83FC;
 }
@@ -865,14 +885,20 @@ h5#corr{
 }
 
 .calculapago{
-    display: flex;
+   
     color:#0A83FC;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .calculapago h2{
     
     width: 100px;
     color:#0A83FC;
+}
+.calculapago span{
+    font-size: 30px;
 }
 
 
