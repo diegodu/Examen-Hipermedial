@@ -342,12 +342,8 @@ Una vez utilizado los métodos de adquisición de requerimientos para el buen mo
 
 Esta es nuestra pagina index en donde puede acceder cualquier usuario este o no registrado podra ver los productos de nuestra pagina pero no podra realizar una compra o agregar el producto al carrito, para esto debe registrarse o logearse según sea el caso.
 
-![Captura14](https://user-images.githubusercontent.com/33675679/70326642-0a992a80-1803-11ea-9621-d9b9234e603b.JPG)
-![Captura15](https://user-images.githubusercontent.com/33675679/70326643-0a992a80-1803-11ea-9021-000ccfde6e91.JPG)
-![Captura16](https://user-images.githubusercontent.com/33675679/70326644-0a992a80-1803-11ea-9a97-1d5a2918d04c.JPG)
-![Captura](https://user-images.githubusercontent.com/33675679/70326645-0b31c100-1803-11ea-827d-8b8409a11afd.JPG)
+
 ![Captura1](https://user-images.githubusercontent.com/33675679/70326647-0b31c100-1803-11ea-8dd0-03a58ab8357f.JPG)
-![Captura6](https://user-images.githubusercontent.com/33675679/70326653-0bca5780-1803-11ea-93fb-1c2cf1632ef1.JPG)
 
 
 
