@@ -76,7 +76,7 @@ $conn->close();
      
             <button> <a class='estilo' href='../controlador/esta_pedido3.php?encamino="E"'>En camino</a> </button>
         
-            <button> <a class='estilo' href='../controlador/esta_pedido4.php?finalizando="F"'>Finalizado</a> </button>
+            <button> <a class='estilo' href='../controlador/esta_pedido4.php?finalizado="F"'>Finalizado</a> </button>
           
             <button> <a class='estilo' href='../controlador/esta_pedido5.php?rechazado="R"'>Rechazado</a> </button>
           
