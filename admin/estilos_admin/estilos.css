@@ -83,10 +83,12 @@ padding-bottom: 30px;
 .factTabla table tr:nth-child(odd) {background: #FFF}
 .factTabla  table tr td{
     text-align: center;
+    width: 100px;
     font-size: 15px;
     font-weight: 300px;
 }
 .factTabla  table tr th{
+    width: 25%;
     background-color: #5e5d63;
     color: white;
     font-size: 25px;
