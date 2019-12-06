@@ -137,7 +137,7 @@ if (isset($_SESSION['isLogged'])) {
     <section class="comentarios container">
         <h3>Comentarios</h3>
         <?php
-        $sqlre = "SELECT u.usu_nombre as nombre, c.comentario as comentario FROM libro l, comentarios c, usuario u WHERE c.com_id_libro = l.lib_codigo AND u.usu_id = c.com_id_usuario AND l.lib_codigo =" . $_GET["codigolibro"] . ";";
+        $sqlre = "SELECT u.usu_nombre as nombre, c.comentario as comentario FROM libro l, comentarios c, usuario u WHERE c.com_id_libro = l.lib_codigo AND c.eliminado = 'N' AND u.usu_id = c.com_id_usuario AND l.lib_codigo =" . $_GET["codigolibro"] . ";";
         $resultre = $conn->query($sqlre);
         if ($result->num_rows > 0) {
 
