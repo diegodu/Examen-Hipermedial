@@ -19,8 +19,8 @@
                 <li><a href="index_admin.html">Inicio</a></li>
                 <li><a href="usuarios_admin.php"  >Clientes</a></li>
                 <li><a href="productos_admin.php">Productos</a></li>
-                <li><a href="#">Pedidos</a></li>
-                <li><a href="#">Facturas</a></li>
+                <li><a href="pedidos.php">Pedidos</a></li>
+                <li><a href="factura.php">Facturas</a></li>
              
             </ul>
         </nav>
@@ -119,7 +119,7 @@
 
     <footer>
         <div class="contact container">
-            <div id="map">
+            <div >
                     
             </div>
             <div class="redes">
