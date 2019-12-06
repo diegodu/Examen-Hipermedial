@@ -32,7 +32,7 @@
      include '../../config/conexionBD.php';
       $sql2 = "SELECT u.usu_nombre, u.usu_apellido, u.usu_correo, u.usu_direccion, f.fac_ca_fecha,f.fac_ca_id,SUM(FD.cantidad) AS cantidad 
       FROM facturacabecera AS f, factura_detalle AS fd, usuario AS u 
-      WHERE f.usu_id = u.usu_id AND fd.factura_id = f.fac_ca_id and f.fac_ca_id=121; ";
+      WHERE f.usu_id = u.usu_id AND fd.factura_id = f.fac_ca_id and f.fac_ca_id=$codigo; ";
       echo "aqui esta el codgo:  $codigo";
       
       $result2 = $conn->query($sql2);
@@ -77,22 +77,27 @@
     echo "<p>Ha ocurrido un error inesperado !</p>";
     echo "<p>" . mysqli_error($conn) . "</p>";
 }
-$conn->close();
+
 ?>
      
         <div class="informacionPedido">
-        <button> <a class='estilo' href='../controlador/estado_pedido.php?creado="C"'>Creado</a> </button>
+        <button> <a class='estilo' href='../controlador/estado_pedido.php?creado="<?php echo $row2["fac_ca_id"];?>"'>Creado</a> </button>
           
-            <button> <a class='estilo' href='../controlador/esta_pedido2.php?aceptado="A"'>Aceptado</a> </button>
+            <button> <a class='estilo' href='../controlador/esta_pedido2.php?aceptado="<?php echo $row2["fac_ca_id"];?>"'>Aceptado</a> </button>
      
-            <button> <a class='estilo' href='../controlador/esta_pedido3.php?encamino="E"'>En camino</a> </button>
+            <button> <a class='estilo' href='../controlador/esta_pedido3.php?encamino="<?php echo $row2["fac_ca_id"];?>"'>En camino</a> </button>
         
-            <button> <a class='estilo' href='../controlador/esta_pedido4.php?finalizado="F"'>Finalizado</a> </button>
+            <button> <a class='estilo' href='../controlador/esta_pedido4.php?finalizado="<?php echo $row2["fac_ca_id"];?>"'>Finalizado</a> </button>
           
-            <button> <a class='estilo' href='../controlador/esta_pedido5.php?rechazado="R"'>Rechazado</a> </button>
+            <button> <a class='estilo' href='../controlador/esta_pedido5.php?rechazado="<?php echo $row2["fac_ca_id"];?>"'>Rechazado</a> </button>
           
         </div>
     </section>
+
+    <?php
+
+$conn->close();
+?>
     
 
 

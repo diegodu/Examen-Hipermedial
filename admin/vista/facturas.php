@@ -42,12 +42,14 @@
     <?php
     $codigo = $_GET["codigo"];
     include '../../config/conexionBD.php';
-    $sql = "SELECT * FROM usuario where usu_id=$codigo";
-    echo "aqui esta el codgo:  $codigo";
+    $sql = "SELECT *
+    FROM facturacabecera AS f, factura_detalle AS fd, usuario AS u 
+    WHERE f.usu_id = u.usu_id AND fd.factura_id = f.fac_ca_id and f.fac_ca_id=$codigo;";
+    //echo "aqui esta el codgo:  $codigo";
     
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
-    echo $row["usu_nombre"];
+   // echo $row["usu_nombre"];
     ?>
 
 <section class="facContenido">
@@ -57,8 +59,8 @@
             <h2>Telefono: <span><?php echo $row["usu_telefono"];?></span></h2>
         </div>
 
-        <div class="facFecha">
-            <h2>Fecha: <span>12/05/2019</span></h2>
+        <div class="Fecha">
+            <h2>Fecha: <span><?php echo $row["fac_ca_fecha"];?></span></h2>
         </div>
 
     </section>
@@ -68,8 +70,10 @@
 
 
     <?php
-      $sql1 = "SELECT * FROM usuario ";
-      echo "aqui esta el codgo:  $codigo";
+      $sql1 = "SELECT *
+      FROM facturacabecera AS f, factura_detalle AS fd, libro AS l
+      WHERE f.fac_ca_id = fd.factura_id and fd.lib_codigo=l.lib_codigo and f.fac_ca_id=$codigo;";
+      //echo "aqui esta el codgo:  $codigo";
       
       $result1 = $conn->query($sql1);
 
@@ -80,6 +84,7 @@
         <tr>
             <th>NOMBRE</th>
             <th>CANTIDAD</th>
+            <th>PRECIO.U</th>
             <th>SUBTOTAL</th>
         </tr>
   
@@ -88,11 +93,15 @@
 <?php
 
         while ($row1 = $result1->fetch_assoc()) {
+            $aux=$row1["cantidad"];
+            $aux2=$row1["lib_precio"];
+
   
         echo"<table > <tr>".
-          "<td>". $row1["usu_nombre"]."</td>".
-          "<td>".$row1["usu_direccion"]."</td>".
-          "<td>".$row1["usu_telefono"]."</td>".
+          "<td>". $row1["lib_titulo"]."</td>".
+          "<td>".$row1["cantidad"]."</td>".
+          "<td>".$row1["lib_precio"]."</td>".
+          "<td>".($aux*$aux2)."</td>".
       "</tr> </table>";
         }
     } else {
@@ -107,8 +116,10 @@
 
 <!------------------------------------------->
 <?php
-      $sql2 = "SELECT * FROM usuario ";
-      echo "aqui esta el codgo:  $codigo";
+      $sql2 = "SELECT *
+      FROM facturacabecera AS f, factura_detalle AS fd, libro AS l
+      WHERE f.fac_ca_id = fd.factura_id and fd.lib_codigo=l.lib_codigo and f.fac_ca_id=$codigo; ";
+      //echo "aqui esta el codgo:  $codigo";
       
       $result2 = $conn->query($sql2);
 
@@ -120,31 +131,28 @@
     <section class="facPago">
         <div class="calculapago1">
         <input type="" placeholder="Subtotal" disabled >
-            <h3><?php echo $row2["usu_direccion"];?></h3>
+            <h3><?php echo $row2["fac_ca_subtotal"];?></h3>
             
 
         </div>
         <div class="calculapago1">
         <input type="" placeholder="Iva" disabled>
-            <h3><?php echo $row2["usu_direccion"];?></h3>
+            <h3>12%</h3>
           
 
         </div>
 
-        <div class="calculapago1">
-        <input type="" placeholder="Descuento" disabled>
-            <h3><?php echo $row2["usu_direccion"];?></h3>
-            
-        </div>
         <div class="calculapago1" style="background-color: rgb(226, 137, 4)">
         <input style="background-color: rgb(226, 137, 4)" type="" placeholder="Total" disabled>
-            <h2><?php echo $row2["usu_direccion"];?></h3>
+            <h2><?php echo $row2["fac_ca_total"];?></h3>
                 
 
         </div>
 
     </section> 
+    <a class='estilo' href='../controlador/eliminar_factura.php?eli_factura=" <?php echo $row2["fac_ca_id"];?> "'>Modificar Libro</a>
     <?php
+    
 
         
     } else {
@@ -159,10 +167,7 @@
     <section class="information">
         <div class="container">
             <div>
-                <h3>Obten los mejores libros</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi non explicabo quia voluptas eos
-                    repellat. Eos quasi, reprehenderit dignissimos harum minus impedit veritatis voluptatibus,
-                    distinctio doloribus repellendus consequuntur a dicta.</p>
+                <h3>Tu libreria Web</h3>
             </div>
             <i class="fas fa-book"></i>
         </div>
@@ -171,74 +176,6 @@
     
 
 
-
-    <footer>
-        <div class="contact container">
-            <div id="map">
-
-            </div>
-            <div class="redes">
-                <div>
-                    <h3>Contactos</h3>
-                    <p>Cuenca-Ecuador </p>
-                    <a href="https://www.ups.edu.ec/">Universida Politecnica Salesiana</a>
-
-                    <p>Telefono <a href="tel:+0999287912">0999287912</a></p>
-
-                    <p>E-mail <a href="mailto:dduchimazad@est.ups.edu.ec">dduchimazad@est.ups.edu.ec</a></p>
-
-
-                </div>
-                <div>
-                    <h3>Siguenos</h3>
-                    <p>Siguenos en nuestras redes sociales</p>
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-twitter-square"></i>
-
-                </div>
-
-
-
-            </div>
-
-        </div>
-
-        <div class="about container">
-            <div class="info">
-                <h3>Informacion</h3>
-                <p>Quienes somos</p>
-                <p>Mision</p>
-                <p>Vision</p>
-                <p>Contactos</p>
-
-
-            </div>
-            <div class="libro">
-                <h3>Libros</h3>
-                <p>Matematicas</p>
-                <p>Ciencias Naturales</p>
-                <p>Estudios sociales</p>
-                <p>Literartura</p>
-
-            </div>
-            <div class="integrantes">
-                <h3>Integrantes</h3>
-                <p>Christian Rivera</p>
-                <p>Diego Duchimaza</p>
-                <p>Pablo Malla</p>
-
-            </div>
-
-
-        </div>
-        <div class="target">
-            <i class="fab fa-cc-visa"></i>
-            <i class="fab fa-cc-mastercard"></i>
-            <i class="fab fa-cc-amex"></i>
-        </div>
-
-    </footer>
 
 </body>
 

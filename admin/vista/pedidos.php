@@ -35,7 +35,7 @@
      <?php
      include '../../config/conexionBD.php';
 
-     $sql = "SELECT u.usu_nombre, u.usu_apellido, u.usu_correo, u.usu_direccion, f.fac_ca_fecha,f.fac_ca_id 
+     $sql = "SELECT u.usu_nombre, u.usu_apellido, u.usu_correo, u.usu_direccion, f.fac_ca_fecha,f.fac_ca_id, fac_estado 
      FROM facturacabecera AS f, factura_detalle AS fd, usuario AS u 
      WHERE f.usu_id = u.usu_id AND fd.factura_id = f.fac_ca_id
      GROUP BY f.fac_ca_id;";
@@ -58,7 +58,9 @@
              echo " <td style='  margin-top: 15px; padding: 15px;' > ".
                      
                      "<h5 >Correo electronico :</h5>"
-                     ."<h3 >". $row["usu_correo"] ."</h3>";
+                     ."<h3 >". $row["usu_correo"] ."</h3>".
+                     "<h5 >Estado</h5>"
+                     ."<h3>".$row['fac_estado'] ."</h3>";
              echo " <td style='  margin-top: 15px; padding: 15px;'>" 
              ."<h5 >Nombre :</h5>"
              ."<h3>".$row['usu_nombre'] ."</h3>" 
