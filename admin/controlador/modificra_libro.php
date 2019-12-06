@@ -23,7 +23,7 @@
     $idioma = isset($_POST["idioma"]) ? trim($_POST["idioma"]) : null;
     $editorial = isset($_POST["editorial"]) ? trim($_POST["editorial"]) : null;
     $paginas =$_POST["paginas"];
-    $anio = isset($_POST["anio"]) ? trim($_POST["anio"]) : null;
+    $anio = $_POST["anio"];
   
     $sql = "UPDATE libro " .
         "SET lib_isbn = $rol, " .
