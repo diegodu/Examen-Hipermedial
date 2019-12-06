@@ -203,8 +203,8 @@ padding-bottom: 30px;
 }
 #map{
     width: 20%;
-    padding: 20%;
-  height: 50%;
+    padding: 5%;
+  height: 100%;
     background: red;
     z-index:1;
 
