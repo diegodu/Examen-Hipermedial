@@ -155,21 +155,14 @@ if (isset($_SESSION['isLogged'])) {
 
     </section>
    <div id="NotificaCarrito">
-   <div style="background-color: greenyellow; width: 300px; padding: 15px; position: fixed; bottom: 25px; right: 25px ; text-align: center; display: none;" >
+   <div style="background-color: greenyellow; width: 300px; padding: 15px; position: fixed; bottom: 25px; right: 25px ; text-align: center; " >
        <p> Agregador al Carrito</p>
     </div>
    </div>
     <?php include "include/footer.php" ?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-   
->>>>>>> cambios
+
     <script src="../js/funciones.js"></script>
-=======
-   
-    
->>>>>>> js
+
 </body>
 
 </html>
