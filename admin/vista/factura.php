@@ -36,7 +36,10 @@
      <?php
      include '../../config/conexionBD.php';
 
-     $sql = "SELECT * FROM usuario";
+     $sql = "SELECT u.usu_nombre, u.usu_apellido, u.usu_correo, u.usu_direccion, f.fac_ca_fecha,f.fac_ca_id 
+     FROM facturacabecera AS f, factura_detalle AS fd, usuario AS u 
+     WHERE f.usu_id = u.usu_id AND fd.factura_id = f.fac_ca_id
+     GROUP BY f.fac_ca_id;";
      $result = $conn->query($sql);
 
      if ($result->num_rows > 0) {
@@ -66,10 +69,17 @@
              
              echo " <td style='  margin-top: 15px; padding: 15px;'>" .
              "<h5 >Direccion :</h5>"
-             ."<h3>".$row['usu_direccion'] ."</h3>";
+             ."<h3>".$row['usu_direccion'].
+             "<h5 >Fecha :</h5>"
+             ."<h3>".$row['fac_ca_fecha'] .
+             "<h5 >N Factura:</h5>"
+             ."<h3>".$row['fac_ca_id'] 
+             
+             
+             ."</h3>";
              echo " <td style='  margin-top: 15px; padding: 15px;'> ".
              "<h5 > </h5>".
-             "<button>"."<a class='estilo' href='facturas.php?codigo=".$row['usu_id'] . "'>Facturas</a>" ."</button>".
+             "<button>"."<a class='estilo' href='facturas.php?codigo=".$row['fac_ca_id'] . "'>Factura</a>" ."</button>".
              "<h5 >.</h5>";
              
              echo "</tr>";
