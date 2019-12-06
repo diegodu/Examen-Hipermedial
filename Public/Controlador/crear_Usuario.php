@@ -38,7 +38,7 @@
 
     //cerrar la base de datos
     $conn->close();
-    echo "<a href='../vista/login.html'>Regresar</a>";
+    echo "<a href='../Vista/login.php'>Regresar</a>";
 
     ?>
 </body>

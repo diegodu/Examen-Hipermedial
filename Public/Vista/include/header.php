@@ -23,6 +23,9 @@
     </div>
     <h1>LIBRERIA</h1>
 
+    <?php
+    if (isset($_SESSION['isLogged'])) {
+        ?>
         <nav class="nav-bar container">
             <ul>
                 <li><a href="../Vista/index.php">Inicio</a></li>
@@ -38,13 +41,39 @@
                         <i class="fas fa-search"></i>
 
                     </div>
-
+                  
                 </li>
-                <li> <a class="busqueda" onclick="buscarlibro()" lhref="">Buscar</a></li>
+                <li>  <a class="busqueda" onclick="buscarlibro()" lhref="">Buscar</a></li>
             </ul>
         </nav>
-  
-    <script src="../js/funciones.js"></script>
+    <?php
+    } else {
+
+        ?>
+        <nav class="nav-bar container">
+           <ul>
+                <li><a href="../Vista/index.php">Inicio</a></li>
+                <li><a href="../Vista/cat_seleccionada.php">Categorias</a>
+                </li>
+                <li><a href="./quiens.php">Quienes somos</a>
+                </li>
+                <li><a href="#contactos">Contactos</a></li>
+                <li>
+                    <div class="search-content">
+                        <input type="search" name="" id="buscador" placeholder="Buscar">
+                        <i class="fas fa-search"></i>
+
+                    </div>
+                  
+                </li>
+                <li>  <a class="busqueda" onclick="buscarlibro()" lhref="">Buscar</a></li>
+            </ul>
+        </nav>
+    <?php
+    }
+
+    ?>
+ <script src="../js/funciones.js"></script>
 
 
 </header>
