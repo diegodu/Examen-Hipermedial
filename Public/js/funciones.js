@@ -77,6 +77,43 @@ function realizarPedido(){
 }
 
 
-function darLike(corazon){ 
-    document.getElementById("icono").scr;
+function darLike(element, codProducto){ 
+    if(element.classList.contains("far")){
+        element.classList.remove("far");
+        element.classList.add("fas");
+    }else{
+        element.classList.add("far");
+        element.classList.remove("fas");
+    }
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+    }
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("calificacionLibro").innerHTML = this.responseText
+        }
+    };
+    xmlhttp.open("GET", "../Controlador/calificar.php?codProducto="+codProducto, true)
+    xmlhttp.send()
+}
+
+function comentar(codProducto){
+    let comentario = document.getElementById('comentario')
+    
+
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+    }
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("comentarioslibro").innerHTML = this.responseText
+            comentario.value = ""
+        }
+    };
+    xmlhttp.open("GET", "../Controlador/comentar.php?codProducto="+codProducto+"&comentario="+comentario.value, true)
+    xmlhttp.send()
 }

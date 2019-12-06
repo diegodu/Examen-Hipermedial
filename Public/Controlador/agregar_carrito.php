@@ -21,14 +21,14 @@ if ($result->num_rows > 0) {
         WHERE car_codigo=" . $row['car_codigo'] . ";";
     if ($conn->query($sql)) {
       ?>
-      <div style="background-color: greenyellow; width: 300px; padding: 15px; position: fixed; bottom: 25px; right: 25px ; text-align: center; ">
+      <div class="notificacion" >
         <p>Producto agregado al carrito</p>
       </div>
     <?php
         } else {
           ?>
-      <div style="background-color: red; width: 300px; padding: 15px; position: fixed; bottom: 25px; right: 25px ; text-align: center; ">
-        <p>No se ah agregado al carrito11</p>
+      <div class="notificacion error" >
+        <p>No se ah agregado al carrito</p>
       </div>
     <?php
         }
@@ -43,14 +43,14 @@ if ($result->num_rows > 0) {
     );";
         if ($conn->query($sql)) {
           ?>
-      <div style="background-color: greenyellow; width: 300px; padding: 15px; position: fixed; bottom: 25px; right: 25px ; text-align: center; ">
+      <div class="notificacion" >
         <p>Producto agregado al carrito</p>
       </div>
     <?php
         } else {
           ?>
-      <div style="background-color: red; width: 300px; padding: 15px; position: fixed; bottom: 25px; right: 25px ; text-align: center; ">
-        <p>No se ah agregado al carrito22</p>
+      <div class="notificacion error" >
+        <p>No se ah agregado al carrito</p>
       </div>
 <?php
     }
