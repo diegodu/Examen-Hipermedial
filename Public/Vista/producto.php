@@ -65,7 +65,7 @@ if (isset($_SESSION['isLogged'])) {
                     ?>
                     <div class="est">
                         <p>Autor:</p>
-                        <p><?php echo $sqlnombre["aunombre"] . " " . $sqlnombre["auapellido"] ?></p>
+                        <p><?php echo $sqlnombre["aunombre"] . " " . $sqlnombre["auapellido"] ?></p> 
 
                     </div>
 
@@ -75,7 +75,7 @@ if (isset($_SESSION['isLogged'])) {
                     <?php 
                         if (isset($_SESSION['isLogged'])) {
                             ?>
-                             <a style="color: black" href=""> <i  class="fas fa-cart-arrow-down"></i> Agregar al Carrito</a>
+                             <a style="color: black" href="" onclick='agregarCarrito(<?php echo $sqllibro["lib_codigo"] ?>)'> <i  class="fas fa-cart-arrow-down"></i> Agregar al Carrito</a>
                              <?php 
                         }else{
                             ?>
