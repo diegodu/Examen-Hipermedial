@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
+    header("Location: ./login.php");
+}
 if (isset($_SESSION['isLogged'])) {
     if ($_SESSION['usu_rol'] == 'admin') {
         header("Location: ../../admin/vista/index_admin.html");
