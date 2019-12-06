@@ -30,7 +30,7 @@
     </section>
 
     <section class="somos2">
-        <div>
+        <div class="somosInfor">
             <h2>Quienes Somos</h2>
             <p>Somos una librería independiente nueva en el mercado.
 
