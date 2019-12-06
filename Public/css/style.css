@@ -234,6 +234,7 @@ footer i{
 }
 footer .contact{
     display: flex;
+    padding: 30px 0;
     
 }
 .redes{
@@ -461,44 +462,47 @@ footer .contact{
     padding: 5px 0px;
     
 }
-.maincontent2 .divi .informa .con{
-    display: flex;
-    background-color: blue;
-    width: 40%;
-    height: 30px;
-    color: white;
-    border-radius: 5px;
-    
+.maincontent2 .divi .informa .con a{
+    background-color: #0A83FC;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 20px; 
 }
-.maincontent2 .divi .informa .con input{
-    display: flex;
-    background-color: blue;
-    width:80%;
-    color: white;
-    
+.maincontent2 .divi .informa .con a:hover{
+    opacity: .8; 
 }
-.maincontent2 .divi .informa .con i{
-    display: flex;
-    background-color: blue;
-    width:20%;
-    color: white;
+
+
+#calificacionLibro{
+    margin-top: 20px;
+}
+#calificacionLibro i{
+    color: #FF4858;
+    font-size: 2.5em;
+}
+#calificacionLibro span{
     margin-left: 10px;
-    font-size: 20px;
-    padding: 8px 0px;
+    font-size: 2em;
 }
-.maincontent2 .divi .informa .com{
-   padding: 15px 0px;
+#calificacionLibro textarea{
+    background-color: #DFDDDD;
+    resize: none;
     width: 100%;
-    height: 30px;
-    border-radius: 5px;
-    
-    
+    height: 150px;
+    color: black;
 }
-.maincontent2 .divi .informa .com a i{
-    font-size: 40px;
-    color: red;
-  
- }
+#calificacionLibro input{
+    background-color: #FF4858;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+}
 
  .maincontent2 .divi .informa .com input{
     
@@ -511,30 +515,25 @@ footer .contact{
      box-shadow: 0px 0px  3px #888;
      padding: 20px;
      width: 85%;
-     background-color: rgb(223, 221, 221);
+    
      
  }
  .comentarios .container {
  
     padding: 20px 0px;
+    box-shadow: 0px 0px  3px #888;
     width: 85%;
 
  }
 
- .comentarios .container p{
  
-    background-color: rgb(223, 221, 221);
-
- }
- .comentarios .container h3 {
+ #we{
  
-    padding: 20px 0px;
-    
-
+    padding: 20px 80px;
 
  }
  .comentarios .container div{
-    box-shadow: 0px 0px  3px #888;
+   
     padding: 10px 20px;
 
 
@@ -999,6 +998,7 @@ input, textarea{
     font-size: 25px;
 }
 
+<<<<<<< HEAD
 .usuPedido{
     width: 80%;
     height: 600px;
@@ -1031,3 +1031,18 @@ input, textarea{
     font-size: 15px;
     font-weight: 300px;
 }
+=======
+#NotificaCarrito .notificacion{
+    background-color: greenyellow; 
+    width: 300px; 
+    padding: 15px; 
+    position: fixed; 
+    bottom: 25px; 
+    right: 25px ; 
+    text-align: center; 
+}
+#NotificaCarrito .error{
+    background-color: #FF4858;
+}
+
+>>>>>>> c38cc35b0a6fee1390ddf3741d785dbc96b92c01

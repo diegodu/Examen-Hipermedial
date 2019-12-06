@@ -96,18 +96,35 @@ if (isset($_SESSION['isLogged'])) {
 
 
                 </div>
-                <div class="com">
-                    <a onclick="darLike(this)"><i id="icono" class="far fa-heart"></i></a>
-
+                <div class="com" id="calificacionLibro">
+                        <?php 
+                        $sqlcalificacion = "SELECT * FROM calificaciones c, libro l WHERE c.lib_id=" . $sqllibro["lib_codigo"] . " AND c.lib_id = l.lib_codigo AND c.cal_id_usu = " . $_SESSION["usu_codigo"] . ";";
+                        $sqlcalificacion = $conn->query($sqlcalificacion);
+                        ?>
+                        
+                        <?php
+                        if($sqlcalificacion->num_rows > 0){
+                            ?>
+                            <a><i class="fas fa-heart" onclick="darLike(this<?php echo (', '.$sqllibro['lib_codigo'] )?>)"></i></a>
+                            <?php
+                        }else{
+                            ?>
+                            <a><i class="far fa-heart" onclick="darLike(this<?php echo (', '.$sqllibro['lib_codigo'] )?>)"></i></a>
+                            <?php
+                        }
+                        ?>
+                        
 
                     <?php
-                    $sqllike = "SELECT SUM(c.cal_valor) as valor FROM libro l, calificaciones c WHERE c.lib_id = l.lib_codigo AND l.lib_codigo =" . $_GET["codigolibro"] . ";";
+                    $sqllike = "SELECT SUM(c.cal_valor) as valor FROM libro l, calificaciones c WHERE c.lib_id = l.lib_codigo AND l.lib_codigo =" . $sqllibro["lib_codigo"] . ";";
                     $resultlike = $conn->query($sqllike);
                     $sqlcalificacion = $resultlike->fetch_assoc();
-
                     ?>
-                    <span id="valorlike"><?php echo  $sqlcalificacion["valor"] ?></span>
-                    <input type="text" placeholder="Agregar comentario" name="comentario" id="comentario">
+                    <span><?php echo $res = ($sqlcalificacion["valor"]  > 0) ? $sqlcalificacion["valor"] : 0; ?></span>
+                
+                    <textarea placeholder="Agregar comentario" name="comentario" id="comentario"></textarea> 
+                    <input type="button" value="Agregar Comentario" onclick="comentar(<?php echo $sqllibro['lib_codigo'] ?>)">
+
                 </div>
 
 
@@ -135,9 +152,10 @@ if (isset($_SESSION['isLogged'])) {
 
     </section>
     <section class="comentarios container">
-        <h3>Comentarios</h3>
+        <h3 id="we">Comentarios</h3>
+        <div id="comentarioslibro">
         <?php
-        $sqlre = "SELECT u.usu_nombre as nombre, c.comentario as comentario FROM libro l, comentarios c, usuario u WHERE c.com_id_libro = l.lib_codigo AND u.usu_id = c.com_id_usuario AND l.lib_codigo =" . $_GET["codigolibro"] . ";";
+        $sqlre = "SELECT u.usu_nombre as nombre, c.comentario as comentario FROM libro l, comentarios c, usuario u WHERE c.com_id_libro = l.lib_codigo AND c.eliminado = 'N' AND u.usu_id = c.com_id_usuario AND l.lib_codigo =" . $_GET["codigolibro"] . ";";
         $resultre = $conn->query($sqlre);
         if ($result->num_rows > 0) {
 
@@ -158,17 +176,25 @@ if (isset($_SESSION['isLogged'])) {
 
             }
         } else {
-            echo "<h2> No hay Libros </h2>";
+            echo "<h2> No hay comentarios </h2>";
         }
         $conn->close();
         ?>
+        
+        </div>
 
     </section>
-    <div id="NotificaCarrito">
-        <div style="background-color: greenyellow; width: 300px; padding: 15px; position: fixed; bottom: 25px; right: 25px ; text-align: center; ">
-            <p> Agregador al Carrito</p>
-        </div>
-    </div>
+   <div id="NotificaCarrito">
+
+    <script>
+        let not = document.querySelector('.notificacion')
+        if(typeof not !== 'undefined'){
+            setTimeout(()=>{
+                not.remove();
+            },3000);
+        }
+    </script>
+   </div>
     <?php include "include/footer.php" ?>
 
     <script src="../js/funciones.js"></script>

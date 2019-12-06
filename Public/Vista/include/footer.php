@@ -12,15 +12,17 @@
                     <p>Telefono <a href="tel:+0999287912">0999287912</a></p>
 
                     <p>E-mail <a href="mailto:dduchimazad@est.ups.edu.ec">dduchimazad@est.ups.edu.ec</a></p>
+                    <p>E-mail <a href="mailto:crivera@est.ups.edu.ec">crivera@est.ups.edu.ec</a></p>
+                    <p>E-mail <a href="mailto:pmalla@est.ups.edu.ec">pmalla@est.ups.edu.ec</a></p>
 
 
                 </div>
                 <div>
                     <h3>Siguenos</h3>
                     <p>Siguenos en nuestras redes sociales</p>
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-twitter-square"></i>
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/?hl=es-la"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/login?lang=es"><i class="fab fa-twitter-square"></i></a>
 
                 </div>
 
