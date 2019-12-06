@@ -75,7 +75,7 @@ if (isset($_SESSION['isLogged'])) {
                     <?php 
                         if (isset($_SESSION['isLogged'])) {
                             ?>
-                             <a style="color: black" href=""> <i class="fas fa-cart-arrow-down"></i> Agregar al Carrito</a>
+                             <a style="color: black" href=""> <i  class="fas fa-cart-arrow-down"></i> Agregar al Carrito</a>
                              <?php 
                         }else{
                             ?>
@@ -87,7 +87,7 @@ if (isset($_SESSION['isLogged'])) {
                    
                 </div>
                 <div class="com">
-                    <a onclick="darLike(this)"><i class="far fa-heart"></i></a>
+                    <a onclick="darLike(this)"><i id="icono" class="far fa-heart"></i></a>
                     
 
                     <?php

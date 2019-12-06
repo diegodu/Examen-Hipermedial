@@ -70,8 +70,6 @@ function agregarCarrito(codigoL){
 
 
 
-
-function darLike(corazon){
-    console.log("Hola diste like")
-    
+function darLike(corazon){ 
+    document.getElementById("icono").scr;
 }
