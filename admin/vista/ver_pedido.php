@@ -98,9 +98,9 @@ $conn->close();
 
 <!---mapa-->
   
-    <div class="contenedor">
+    <div class="contenedorM">
 
-
+            <h2>Ruta</h2>
             <div id="map" class="map"> </div>
             <script>
                 // Initialize and add the map
