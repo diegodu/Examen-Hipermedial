@@ -23,9 +23,6 @@
     </div>
     <h1>LIBRERIA</h1>
 
-    <?php
-    if (isset($_SESSION['isLogged'])) {
-        ?>
         <nav class="nav-bar container">
             <ul>
                 <li><a href="../Vista/index.php">Inicio</a></li>
@@ -37,46 +34,17 @@
                 <li><a href="./pedido.php">Pedidos</a></li>
                 <li>
                     <div class="search-content">
-                        <input onkeyup="buscar(this, 'index')" type="search" name="" id="" placeholder="Buscar">
+                        <input type="search" name="" id="buscador" placeholder="Buscar">
                         <i class="fas fa-search"></i>
-                        <div class="listaBuscarLibro">
-
-                        </div>
-
 
                     </div>
+
                 </li>
+                <li> <a class="busqueda" onclick="buscarlibro()" lhref="">Buscar</a></li>
             </ul>
         </nav>
-    <?php
-    } else {
-
-        ?>
-        <nav class="nav-bar container">
-            <ul>
-                <li><a href="../Vista/index.php">Inicio</a></li>
-                <li><a href="../Vista/cat_seleccionada.php">Categorias</a>
-                </li>
-                <li><a href="./quiens.php">Quienes somos</a>
-                </li>
-                <li><a href="#contactos">Contactos</a></li>
-                <li>
-                    <div class="search-content">
-                        <input onkeyup="buscar(this, 'index')" type="search" name="" id="" placeholder="Buscar">
-                        <i class="fas fa-search"></i>
-                        <div class="listaBuscarLibro">
-
-                        </div>
-
-
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    <?php
-    }
-
-    ?>
+  
+    <script src="../js/funciones.js"></script>
 
 
 </header>

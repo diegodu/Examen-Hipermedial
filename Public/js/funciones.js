@@ -117,3 +117,20 @@ function comentar(codProducto){
     xmlhttp.open("GET", "../Controlador/comentar.php?codProducto="+codProducto+"&comentario="+comentario.value, true)
     xmlhttp.send()
 }
+function buscarlibro() {
+    let buscador = document.getElementById('buscador')
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+    }
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("contenedor-libros").innerHTML = this.responseText
+            comentario.value = ""
+        }
+    };
+    xmlhttp.open("GET", "../Controlador/buscar.php?texto="+buscador.value, true)
+    xmlhttp.send()
+    
+}
