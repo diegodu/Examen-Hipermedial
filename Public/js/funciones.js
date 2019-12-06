@@ -1,4 +1,4 @@
-alert("hola");
+
 function buscarCategoria(element) {
 
     if (window.XMLHttpRequest) {
@@ -15,8 +15,8 @@ function buscarCategoria(element) {
     xmlhttp.send()
     
 }
-<<<<<<< HEAD
-function like() {
+
+function agregarCarrito(codigoL){
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest()
     } else {
@@ -24,18 +24,41 @@ function like() {
     }
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("valorlike").innerHTML = this.responseText
+            document.getElementById("NotificaCarrito").innerHTML = this.responseText
         }
     };
-    xmlhttp.open("GET", "../Controlador/categoria.php?categoria=" + element.textContent, true)
+    xmlhttp.open("GET", "../Controlador/agregar_carrito.php?codigoproducto=" + codigoL, true)
     xmlhttp.send()
-
-    
 }
-=======
 
-function agregarCarrito(codigoL){
-    console.log(codigoL);
+function actualizarCarrito(codCarrito, element) {
+
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+    }
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("carritoDetalle").innerHTML = this.responseText
+        }
+    };
+    xmlhttp.open("GET", "../Controlador/actuallizarCarrito.php?codCarrito=" + codCarrito+"&carritoCantidad="+element.value, true)
+    xmlhttp.send()
 }
-alert("j;oajaoao")
->>>>>>> js
+
+function realizarPedido(){
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest()
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+    }
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("carritoDetalle").innerHTML = this.responseText
+        }
+    };
+    xmlhttp.open("GET", "../Controlador/agregarPedido.php", true)
+    xmlhttp.send()
+}
+

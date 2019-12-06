@@ -73,7 +73,7 @@ if (isset($_SESSION['isLogged'])) {
                 </div>
                 <div class="con">
                     
-                    <a style="color: black" href="#"> <i class="fas fa-cart-arrow-down"></i> Agregar al Carrito</a>
+                    <a style="color: black" href="#" onclick='agregarCarrito(<?php echo $sqllibro["lib_codigo"] ?>)'> <i class="fas fa-cart-arrow-down"></i> Agregar al Carrito</a>
                 </div>
                 <div class="com">
                     <a ><i class="far fa-heart"></i></a>
@@ -144,21 +144,14 @@ if (isset($_SESSION['isLogged'])) {
 
     </section>
    <div id="NotificaCarrito">
-   <div style="background-color: greenyellow; width: 300px; padding: 15px; position: fixed; bottom: 25px; right: 25px ; text-align: center; display: none;" >
+   <div style="background-color: greenyellow; width: 300px; padding: 15px; position: fixed; bottom: 25px; right: 25px ; text-align: center; " >
        <p> Agregador al Carrito</p>
     </div>
    </div>
     <?php include "include/footer.php" ?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-   
->>>>>>> cambios
+
     <script src="../js/funciones.js"></script>
-=======
-   
-    
->>>>>>> js
+
 </body>
 
 </html>

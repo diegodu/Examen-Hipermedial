@@ -1,14 +1,11 @@
-<?php 
-
-    session_start();
-    if (isset($_SESSION['isLogged'])) {
-        if ($_SESSION['usu_rol'] == 'admin') {
-            header("Location: ../../admin/vista/index_admin.html");
-        }
-
+<?php
+session_start();
+if (isset($_SESSION['isLogged'])) {
+    if ($_SESSION['usu_rol'] == 'admin') {
+        header("Location: ../../admin/vista/index_admin.html");
     }
-   
-        
+}
+
 ?>
 <!DOCTYPE html>
 
@@ -24,7 +21,7 @@
 </head>
 
 <body>
-<?php include "include/header.php"?>
+    <?php include "include/header.php" ?>
 
     <section class="menuFondo">
         <div class="menuInformacion">
@@ -81,14 +78,14 @@
             <div>
                 <h3>Obten los mejores libros</h3>
                 <p>Nuestra actividad está vinculada al libro, solo nos debemos a nuestros lectores. Nuestra única meta es
-                el libro. Creemos que no siempre ser másgrande es ser mejor, y no siempre hay que crecer para tener
-                futuro.</p>
+                    el libro. Creemos que no siempre ser másgrande es ser mejor, y no siempre hay que crecer para tener
+                    futuro.</p>
             </div>
             <i class="fas fa-book"></i>
         </div>
 
     </section>
-    <?php include "include/footer.php"?>
+    <?php include "include/footer.php" ?>
 </body>
 
 </html>
