@@ -15,8 +15,7 @@ function buscarCategoria(element) {
     xmlhttp.send()
     
 }
-
-function agregarCarrito(codigoL){
+function like() {
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest()
     } else {
@@ -62,3 +61,40 @@ function realizarPedido(){
     xmlhttp.send()
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function darLike(corazon){ 
+    document.getElementById("icono").scr;
+}

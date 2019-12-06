@@ -35,11 +35,26 @@
 
 
 
-    <section class="facContenido">
+  
+
+<!--------------------------------------->
+
+    <?php
+    $codigo = $_GET["codigo"];
+    include '../../config/conexionBD.php';
+    $sql = "SELECT * FROM usuario where usu_id=$codigo";
+    echo "aqui esta el codgo:  $codigo";
+    
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    echo $row["usu_nombre"];
+    ?>
+
+<section class="facContenido">
         <div>
-            <h2>Cliente: <span>Pablo Malla</span> </h2>
-            <h2>Direccion: <span>Americas</span></h2>
-            <h2>Telefono: <span>P09767654</span></h2>
+            <h2>Cliente: <span><?php echo $row["usu_nombre"].$row["usu_apellido"]; ?></span> </h2>
+            <h2>Direccion: <span><?php echo $row["usu_direccion"];?></span></h2>
+            <h2>Telefono: <span><?php echo $row["usu_telefono"];?></span></h2>
         </div>
 
         <div class="facFecha">
@@ -51,64 +66,93 @@
 
     <section class="factTabla">
 
-<!--------------------------------------->
 
     <?php
-    $codigo = $_GET["codigo"];
-    include '../../config/conexionBD.php';
-    $sql = "SELECT * FROM usuario where usu_id=$codigo";
-    echo "aqui esta el codgo:  $codigo";
-    $result = $conn->query($sql);
+      $sql1 = "SELECT * FROM usuario ";
+      echo "aqui esta el codgo:  $codigo";
+      
+      $result1 = $conn->query($sql1);
 
-    if ($result->num_rows > 0) {
+    if ($result1->num_rows > 0) {
 
-        while ($row = $result->fetch_assoc()) {
-            ?>
-            <table >
-            <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Age</th>
-            </tr>
-        </table>
-            
-    <?php
+        ?>
+        <table >
+        <tr>
+            <th>NOMBRE</th>
+            <th>CANTIDAD</th>
+            <th>SUBTOTAL</th>
+        </tr>
+  
+    </table>
+        
+<?php
+
+        while ($row1 = $result1->fetch_assoc()) {
+  
+        echo"<table > <tr>".
+          "<td>". $row1["usu_nombre"]."</td>".
+          "<td>".$row1["usu_direccion"]."</td>".
+          "<td>".$row1["usu_telefono"]."</td>".
+      "</tr> </table>";
         }
     } else {
         echo "<p>Ha ocurrido un error inesperado !</p>";
         echo "<p>" . mysqli_error($conn) . "</p>";
     }
-    $conn->close();
+    
     ?>
    
 
 
 
 <!------------------------------------------->
+<?php
+      $sql2 = "SELECT * FROM usuario ";
+      echo "aqui esta el codgo:  $codigo";
+      
+      $result2 = $conn->query($sql2);
+
+    if ($result2->num_rows > 0) {
+        $row2 = $result2->fetch_assoc();
+
+        ?>
     </section>
     <section class="facPago">
         <div class="calculapago1">
-            <h3>Subtotal</h3>
-            <input type="" placeholder="Subtotal">
+        <input type="" placeholder="Subtotal" disabled >
+            <h3><?php echo $row2["usu_direccion"];?></h3>
+            
 
         </div>
         <div class="calculapago1">
-            <h3>Iva</h3>
-            <input type="" placeholder="Iva">
+        <input type="" placeholder="Iva" disabled>
+            <h3><?php echo $row2["usu_direccion"];?></h3>
+          
 
         </div>
 
         <div class="calculapago1">
-            <h3>Descuento</h3>
-            <input type="" placeholder="Descuento">
+        <input type="" placeholder="Descuento" disabled>
+            <h3><?php echo $row2["usu_direccion"];?></h3>
+            
         </div>
         <div class="calculapago1" style="background-color: rgb(226, 137, 4)">
-            <h2>Total</h3>
-                <input style="background-color: rgb(226, 137, 4)" type="" placeholder="Total">
+        <input style="background-color: rgb(226, 137, 4)" type="" placeholder="Total" disabled>
+            <h2><?php echo $row2["usu_direccion"];?></h3>
+                
 
         </div>
 
     </section> 
+    <?php
+
+        
+    } else {
+        echo "<p>Ha ocurrido un error inesperado !</p>";
+        echo "<p>" . mysqli_error($conn) . "</p>";
+    }
+    $conn->close();
+    ?>
 
 
 

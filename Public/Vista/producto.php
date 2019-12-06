@@ -72,12 +72,23 @@ if (isset($_SESSION['isLogged'])) {
 
                 </div>
                 <div class="con">
+                    <?php 
+                        if (isset($_SESSION['isLogged'])) {
+                            ?>
+                             <a style="color: black" href=""> <i  class="fas fa-cart-arrow-down"></i> Agregar al Carrito</a>
+                             <?php 
+                        }else{
+                            ?>
+                            <a style="color: black" href="./login.php"> <i class="fas fa-cart-arrow-down"></i> Agregar al Carrito</a>
+                            <?php
+                        } ?>
+                   
                     
-                    <a style="color: black" href="#" onclick='agregarCarrito(<?php echo $sqllibro["lib_codigo"] ?>)'> <i class="fas fa-cart-arrow-down"></i> Agregar al Carrito</a>
+                   
                 </div>
                 <div class="com">
-                    <a ><i class="far fa-heart"></i></a>
-                    <a><i class="fas fa-heart"></i></a>
+                    <a onclick="darLike(this)"><i id="icono" class="far fa-heart"></i></a>
+                    
 
                     <?php
                     $sqllike = "SELECT SUM(c.cal_valor) as valor FROM libro l, calificaciones c WHERE c.lib_id = l.lib_codigo AND l.lib_codigo =" . $_GET["codigolibro"] . ";";

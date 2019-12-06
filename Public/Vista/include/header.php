@@ -32,8 +32,13 @@
             <li><a href="#contactos">Contactos</a></li>
             <li>
                 <div class="search-content">
-                    <input type="search" name="" id="" placeholder="Buscar">
+                    <input onkeyup="buscar(this, 'index')" type="search" name="" id="" placeholder="Buscar">
                     <i class="fas fa-search"></i>
+                    <div class="listaBuscarLibro">
+                    
+                    </div>
+                   
+
                 </div>
             </li>
         </ul>
