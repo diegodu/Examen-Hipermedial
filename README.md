@@ -197,7 +197,7 @@ El software tendrá mantenimientos preventivos cada cierto período de tiempo, c
 ### 4.	Diagrama Entidad Relación
 
 Empezaremos por modelar un diagrama de entidad y relación el cual nos ayudara al manejo de nuestros datos en una base, para este caso seria una base de datos MySQL.
-
+![diagrama_libreria](https://user-images.githubusercontent.com/34308601/70336478-345c4c80-1817-11ea-97ed-b6dc8c5d961c.PNG)
 
  
 ### 5.	Diagrama de caso de Uso

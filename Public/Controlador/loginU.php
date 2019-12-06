@@ -19,19 +19,25 @@ $result = $result->fetch_assoc();
 echo $result["usu_id"];
 
 if ($result> 0) {
-    $_SESSION['isLogged'] = TRUE;
-    $_SESSION['usu_codigo'] = $result["usu_id"];
-    $_SESSION['usu_rol'] = $result["usu_rol"];
-    $_SESSION['usu_codigo'] = $result["usu_id"];
-    $_SESSION['usu_nombre'] = $result["usu_nombre"];
-    $_SESSION['usu_apellido'] = $result["usu_apellido"];
-    $_SESSION['usu_direccion'] = $result["usu_direccion"];
-    $_SESSION['usu_telefono'] = $result["usu_telefono"];
-    $_SESSION['usu_correo'] = $result["usu_correo"];
-    $_SESSION['usu_contrasenia'] = $result["usu_contrasenia"];
-    
+     if($result["usu_eliminado"] == 'N'){
+          $_SESSION['isLogged'] = TRUE;
+          $_SESSION['usu_codigo'] = $result["usu_id"];
+          $_SESSION['usu_rol'] = $result["usu_rol"];
+          $_SESSION['usu_codigo'] = $result["usu_id"];
+          $_SESSION['usu_nombre'] = $result["usu_nombre"];
+          $_SESSION['usu_apellido'] = $result["usu_apellido"];
+          $_SESSION['usu_direccion'] = $result["usu_direccion"];
+          $_SESSION['usu_telefono'] = $result["usu_telefono"];
+          $_SESSION['usu_correo'] = $result["usu_correo"];
+          $_SESSION['usu_contrasenia'] = $result["usu_contrasenia"];
+          
+      
+         header("Location: ../Vista/index.php");
 
-   header("Location: ../Vista/index.php");
+     }else{
+          header("Location: ../Vista/login.php"); 
+     }
+
    
   
 } else {
