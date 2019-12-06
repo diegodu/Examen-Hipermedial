@@ -30,9 +30,9 @@
                         ?>
                         <div class="card">
                             <figure>
-                                <a href="#"> <img src="../../imagenes/libros/<?php echo $row["img"] ?>"></a>
+                                <a href="../../Public/Vista/producto.php?codigolibro=<?php echo $row["lib_codigo"] ?>"> <img src="../../imagenes/libros/<?php echo $row["img"] ?>"></a>
                             </figure>
-                            <a href="#">
+                            <a href="../../Public/Vista/producto.php?codigolibro=<?php echo $row["lib_codigo"] ?>">
                                 <h3><?php echo $row["lib_titulo"] ?></h3>
                             </a>
                             <?php
