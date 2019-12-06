@@ -10,27 +10,18 @@
     <link rel="stylesheet" href="../estilos_admin/estilos.css">
     <script src="../js/map.js"></script>
     
-    <title>Pedidos</title>
+    <title>Pedido</title>
 </head>
 
 <body>
     <header>
         <div class="bar-login">
             <div class="btns container">
-                <a href="../../config/Cerrar_sesion.php"><i class="fas fa-sign-in-alt"></i> Cerrar sesion</a>
+                <a href="pedidos.php"><i class="fas fa-sign-in-alt"></i> Regresar</a>
             </div>
         </div>
-        <h1>Pedidos</h1>
-        <nav class="nav-bar container">
-            <ul>
-                <li><a href="index_admin.html">Inicio</a></li>
-                <li><a href="usuarios_admin.php">Clientes</a></li>
-                <li><a href="productos_admin.php" style="text-decoration-color: rgb(52, 122, 226);">Productos</a></li>
-                <li><a href="#">Pedidos</a></li>
-                <li><a href="#">Facturas</a></li>
-
-            </ul>
-        </nav>
+        <h2>Informacion Pedido</h2>
+    
 
     </header>
 
@@ -39,7 +30,9 @@
     <?php
      $codigo = $_GET["codigo"];
      include '../../config/conexionBD.php';
-      $sql2 = "SELECT * FROM usuario ";
+      $sql2 = "SELECT u.usu_nombre, u.usu_apellido, u.usu_correo, u.usu_direccion, f.fac_ca_fecha,f.fac_ca_id,SUM(FD.cantidad) AS cantidad 
+      FROM facturacabecera AS f, factura_detalle AS fd, usuario AS u 
+      WHERE f.usu_id = u.usu_id AND fd.factura_id = f.fac_ca_id and f.fac_ca_id=121; ";
       echo "aqui esta el codgo:  $codigo";
       
       $result2 = $conn->query($sql2);
@@ -53,9 +46,27 @@
                 <img src="../../imagenes/descarga-1.png" alt="">
             </figure>
             <div class="descripcionPedido">
-                    <h2>Informacion Pedido</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <h3>Nombre</h3>
+                   
+                    <p><?php echo $row2["usu_nombre"];?></p>
+                    <h3>Apellido</h3>
+                    
+                    <p><?php echo $row2["usu_apellido"];?></p>
+                    <h3>Correo</h3>
+                    
+                    <p><?php echo $row2["usu_correo"];?></p>
+                    <h3>Direccion</h3>
+                    
                     <p><?php echo $row2["usu_direccion"];?></p>
-                    <p><?php echo $row2["usu_direccion"];?></p>
+                    <h3>Fecha del pedido</h3>
+                    
+                    <p><?php echo $row2["fac_ca_fecha"];?></p>
+                    <h3>Cantidad de productos</h3>
+                  
+                    <p><?php echo $row2["cantidad"];?></p>
             </div>
            
         </div>
