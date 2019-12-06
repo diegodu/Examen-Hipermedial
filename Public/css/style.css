@@ -999,3 +999,35 @@ input, textarea{
     font-size: 25px;
 }
 
+.usuPedido{
+    width: 80%;
+    height: 600px;
+    margin: 0px auto;
+    padding-top: 50px;
+}
+.usuTabla table{
+    border: 2px solid black;
+    width: 100%;
+}
+
+.usuTabla table tr:nth-child(even) 
+{background: #CCC 
+}
+
+.usuTabla table tr:nth-child(odd) {
+    background: #FFF
+}
+
+
+.usuTabla  table tr td{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300px;
+}
+.usuTabla  table tr th{
+    text-align: center;
+    background-color: #0A83FC;
+    color: white;
+    font-size: 15px;
+    font-weight: 300px;
+}
