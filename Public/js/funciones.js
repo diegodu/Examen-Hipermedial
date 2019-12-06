@@ -38,11 +38,9 @@ function agregarCarrito(codigoL){
     }
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("valorlike").innerHTML = this.responseText
             document.getElementById("NotificaCarrito").innerHTML = this.responseText
         }
     };
-    xmlhttp.open("GET", "../Controlador/categoria.php?categoria=" + element.textContent, true)
     xmlhttp.open("GET", "../Controlador/agregar_carrito.php?codigoproducto=" + codigoL, true)
     xmlhttp.send()
 }
