@@ -31,17 +31,16 @@ $query1=mysqli_query($conn, "SELECT * FROM genero ");
 
 
 
-    <label for="autor">Autor (*)</label>
     <!--autor -->
-    <div style="width: 500px ; margin: 0 auto; border: 1px solid #FCC;">
+    <div style="width: auto ; margin: 0 auto;">
     <center>
-        <select name="autor" id="nombre">
+        <select name="autor" id="nombre" style="width: 100%; ">
             <?php
             while($datos = mysqli_fetch_array($query)){
 
-            
+           
             ?>
-            <option value="<?php echo $datos['aut_codigo']; ?>"><?php echo $datos['aut_nombre']." ".$datos['aut_apellido']; ?></option>
+            <option  value="<?php echo $datos['aut_codigo']; ?>"><?php echo $datos['aut_nombre']." ".$datos['aut_apellido']; ?></option>
             <?php
             }
 
@@ -52,11 +51,11 @@ $query1=mysqli_query($conn, "SELECT * FROM genero ");
     </div>
 
 <!----------------------------------------->
-<label for="categoria">Categoria (*)</label>
+
     <!--autor -->
-    <div style="width: 500px ; margin: 0 auto; border: 1px solid #FCC;">
+    <div style="width: auto ; margin: 0 auto; border: 1px solid #FCC;">
     <center>
-        <select name="categoria" id="nombre">
+        <select name="categoria" id="nombre" style="width: 100%; ">
             <?php
             while($datossss = mysqli_fetch_array($query1)){
 
@@ -81,26 +80,23 @@ $query1=mysqli_query($conn, "SELECT * FROM genero ");
 
 
     <br>
-        <label for="ISBN">Isbn (*)</label>
+        
         <input type="text" id="ISBN" name="ISBN" value="" placeholder="Ingrese el número de ISBN ..." required />
         <br>
-        <label for="titulo">titulo (*)</label>
+       
         <input type="text" id="titulo" name="titulo" value="" placeholder="Ingrese el titulo
 ..." required />
         <br>
 
-        <label for="stock">stock (*)</label>
+    
         <input type="text" id="stock" name="stock" value="" placeholder="Ingrese la cantidad de libros
 ..." required />
         <br>
 
-        
-        <label for="precio">precio (*)</label>
+
         <input type="text" id="precio" name="precio" value="" placeholder="Ingrese el precio por unidad ..." required />
         <br>
 
-
-        <label for="observaciones">observaciones (*)</label>
         <input type="text" id="observaciones" name="observaciones" value="" placeholder="Ingrese observaciones del libro   
 ..." required />
         <br>
@@ -109,34 +105,27 @@ $query1=mysqli_query($conn, "SELECT * FROM genero ");
 fecha de nacimiento ..." required />
         <br>
         -->  
-        <label for="resumen">resumen (*)</label>
+  
         <input type="text" id="resumen" name="resumen" value="" placeholder="Ingrese el resumen
 ..." required />
 
 
-        <br>
-        <label for="novedad">novedad (*)</label>
+     
         <input type="text" id="novedad" name="novedad" value="" placeholder="Ingrese una novedad del texto..." required />
-        <br>
-        <label for="idioma">idioma (*)</label>
+     
         <input type="text" id="idioma" name="idioma" value="" placeholder="Ingrese el idioma del texto..." required />
-        <br>
-        <label for="editorial">editorial(*)</label>
+       
         <input type="text" id="editorial" name="editorial" value="" placeholder="Ingrese la editorial..." required />
-        <br>
-        <label for="paginas">paginas(*)</label>
-        <input type="text" id="paginas" name="paginas" value="" placeholder="Ingrese el numero de paginas..." required />
-        <br>
-        <label for="anio">anio(*)</label>
-        <input type="text" id="anio" name="anio" value="" placeholder="Ingrese el anio de publicacion..." required />
-        <br>
 
-        <label for="imagen">Ingresar imagen(*)</label>
+        <input type="text" id="paginas" name="paginas" value="" placeholder="Ingrese el numero de paginas..." required />
+       
+        <input type="text" id="anio" name="anio" value="" placeholder="Ingrese el anio de publicacion..." required />
+      
         <input type="file" name="imagen"  required/>
         <br>
         
         <input type="submit" id="Crear" name="crear" value="Aceptar" />
-        <button><a href='productos_admin.php'>Cancelar</a></button>
+        <button><a href='productos_admin.php' style="text-decoration: none">Cancelar</a></button>
     </form>
 
     </section>

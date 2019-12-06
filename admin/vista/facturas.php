@@ -130,21 +130,21 @@
     </section>
     <section class="facPago">
         <div class="calculapago1">
-        <input type="" placeholder="Subtotal" disabled >
-            <h3><?php echo $row2["fac_ca_subtotal"];?></h3>
+        <input type="" placeholder="Subtotal" >
+            <h3 style="padding-left: 65px"><?php echo $row2["fac_ca_subtotal"];?></h3>
             
 
         </div>
         <div class="calculapago1">
-        <input type="" placeholder="Iva" disabled>
-            <h3>12%</h3>
+        <input type="" placeholder="Iva">
+            <h3 style="padding-left: 65px">12%</h3>
           
 
         </div>
 
         <div class="calculapago1" style="background-color: rgb(226, 137, 4)">
         <input style="background-color: rgb(226, 137, 4)" type="" placeholder="Total" disabled>
-            <h2><?php echo $row2["fac_ca_total"];?></h3>
+            <h2 style="padding-left: 50px"><?php echo $row2["fac_ca_total"];?></h3>
                 
 
         </div>

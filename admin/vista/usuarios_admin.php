@@ -44,7 +44,7 @@
          while ($row = $result->fetch_assoc()) {
              /*echo "<img src='../../imagenes/christian/usuario.png' class='name' >" ;*/
              
-             echo "<tr style=' text-align: center;  background: linear-gradient(to bottom, 
+             echo "<tr style=' text-align: center; padding: 20px ;background: linear-gradient(to bottom, 
              rgb(193, 194, 194), 
              rgb(228, 232, 235), 
              rgb(253, 253, 253));

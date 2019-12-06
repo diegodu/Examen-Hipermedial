@@ -69,9 +69,9 @@ if(isset($_POST['categoria'])){
 
     <label for="pais">Pais (*)</label>
     <!--pais -->
-    <div style="width: 500px ; margin: 0 auto; border: 1px solid #FCC;">
+    <div style="width: auto ; margin: 0 auto; ">
     <center>
-        <select name="pais" id="pais">
+        <select name="pais" id="pais" style="padding: 10px; margin: 10px; width: 90%;">
             <?php
             while($datos = mysqli_fetch_array($query)){
 
@@ -88,21 +88,19 @@ if(isset($_POST['categoria'])){
     </div>
 
 
-    <label for="nombre">Nombre (*)</label>
         <input type="text" id="nombre" name="nombre" value="" placeholder="Ingrese el nombre del autor ..." required />
         <br>
 
 
     <br>
   
-        <label for="apellido">Apellido(*)</label>
         <input type="text" id="apellido" name="apellido" value="" placeholder="Ingrese el apellido del autor
 ..." required />
         <br>
 
         
         <input type="submit" id="Crear" name="crear" value="Aceptar" />
-        <button><a href='productos_admin.php'>Cancelar</a></button>
+        <button><a href='productos_admin.php' style="text-decoration: none">Cancelar</a></button>
     </form>
 
 
@@ -120,7 +118,7 @@ if(isset($_POST['categoria'])){
 
  
 
-   <label for="nom_pais">Pais (*)</label>
+
    <!--pais -->
    <label for="nom_pais">Nombre del Pais (*)</label>
        <input type="text" id="nom_pais" name="nom_pais" value="" placeholder="Ingrese el nombre del pais ..." required />
@@ -131,7 +129,7 @@ if(isset($_POST['categoria'])){
 
        
        <input type="submit" id="Crear" name="crear" value="Aceptar" />
-       <button><a href='productos_admin.php'>Cancelar</a></button>
+       <button><a href='productos_admin.php' style="text-decoration: none">Cancelar</a></button>
    </form>
 
 
@@ -150,7 +148,6 @@ if(isset($_POST['categoria'])){
 
    <label for="categoria">Categoria (*)</label>
    <!--pais -->
-   <label for="categoria">Nombre del Pais (*)</label>
        <input type="text" id="categoria" name="categoria" value="" placeholder="Ingrese el nombre de la categoria ..." required />
        <br>
 
@@ -165,7 +162,7 @@ if(isset($_POST['categoria'])){
 
        
        <input type="submit" id="Crear" name="crear" value="Aceptar" />
-       <button><a href='productos_admin.php'>Cancelar</a></button>
+       <button><a href='productos_admin.php' style="text-decoration: none">Cancelar</a></button>
    </form>
 
 
