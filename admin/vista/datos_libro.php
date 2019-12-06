@@ -25,6 +25,7 @@
     include '../../config/conexionBD.php';
     $sql = "SELECT * FROM libro where lib_codigo=$codigo";
     echo "aqui esta el codgo:  $codigo";
+    
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -34,7 +35,7 @@
             <section >
             <form id="formulario01" method="POST" action="../controlador/modificra_libro.php ">
 
-                <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
+                <input type="hidden" id="codigo" name="codigo" value="<?php echo $row["lib_codigo"]; ?>" />
 
 
 
