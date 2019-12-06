@@ -17,9 +17,9 @@ if(isset($_GET['codProducto'])){
         '" . $_GET['comentario']  . "'
     );";
     if($conn->query($sqlInsert)){
-        echo "Coemntario incertado";
+
     }else{
-        echo "Coemntario NO incertado";
+        echo "Coementario NO incertado";
     }
 }
         $sqlre = "SELECT u.usu_nombre as nombre, c.comentario as comentario FROM libro l, comentarios c, usuario u WHERE c.com_id_libro = l.lib_codigo AND u.usu_id = c.com_id_usuario AND l.lib_codigo =" . $_GET["codProducto"] . ";";

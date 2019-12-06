@@ -34,7 +34,7 @@
                 <li><a href="./quiens.php">Quienes somos</a>
                 </li>
                 <li><a href="#contactos">Contactos</a></li>
-                <li><a href="#">Pedidos</a></li>
+                <li><a href="./pedido.php">Pedidos</a></li>
                 <li>
                     <div class="search-content">
                         <input onkeyup="buscar(this, 'index')" type="search" name="" id="" placeholder="Buscar">
