@@ -22,7 +22,7 @@
 <section>
     <?php
     $codigo = $_GET["codigo"];
-    echo "aqui esta el codgo:  $codigo";
+    //echo "aqui esta el codgo:  $codigo";
     $sql = "SELECT * FROM usuario where usu_id=$codigo";
     include '../../config/conexionBD.php';
     $result = $conn->query($sql);
@@ -35,9 +35,7 @@
             <form id="formulario01" method="POST" action="../controlador/contrasenia.php ">
 
                 <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
-                <label for="cedula">Cedula (*)</label>
-                <input type="text" id="cedula" name="cedula" value="<?php echo $row["usu_cedula"]; ?>" required placeholder="Ingrese la cedula ..."  disabled/>
-                <br>
+               
                 <label for="nombres">Nombres (*)</label>
                 <input type="text" id="nombres" name="nombres" value="<?php echo $row["usu_nombre"];
                                                                                 ?>" required placeholder="Ingrese los dos nombres ..."  disabled/>
@@ -81,10 +79,8 @@
     <section class="information">
         <div class="container">
             <div>
-                <h3>Obten los mejores libros</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi non explicabo quia voluptas eos
-                    repellat. Eos quasi, reprehenderit dignissimos harum minus impedit veritatis voluptatibus,
-                    distinctio doloribus repellendus consequuntur a dicta.</p>
+                <h3>Libreria Virtual</h3>
+               
             </div>
             <i class="fas fa-book"></i>
         </div>
@@ -92,74 +88,6 @@
     </section>
 
 
-    <footer>
-        <div class="contact container">
-            <div id="map">
-                    
-            </div>
-            <div class="redes">
-                <div>
-                        <h3>Contactos</h3>
-                        <p>Cuenca-Ecuador </p>
-                        <a href="https://www.ups.edu.ec/">Universida Politecnica Salesiana</a>
-                        
-                        <p>Telefono <a href="tel:+0999287912">0999287912</a></p>
-                        
-                        <p>E-mail <a href="mailto:dduchimazad@est.ups.edu.ec">dduchimazad@est.ups.edu.ec</a></p>
-                        
-
-                </div>
-                <div>
-                        <h3>Siguenos</h3>
-                        <p>Siguenos en nuestras redes sociales</p>
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-twitter-square"></i>
-
-                </div>
-                   
-                    
-
-            </div>
-
-        </div>
-
-        <div class="about container">
-            <div class="info">
-                <h3>Informacion</h3>
-                <p>Quienes somos</p>
-                <p>Mision</p>
-                <p>Vision</p>
-                <p>Contactos</p>
-
-
-            </div>
-            <div class="libro">
-                    <h3>Libros</h3>
-                    <p>Matematicas</p>
-                    <p>Ciencias Naturales</p>
-                    <p>Estudios sociales</p>
-                    <p>Literartura</p>
-
-            </div>
-            <div class="integrantes">
-                    <h3>Integrantes</h3>
-                    <p>Daniel Guzman</p>
-                    <p>Christian Rivera</p>
-                    <p>Diego Duchimaza</p>
-                    <p>Pablo Malla</p>
-
-            </div>
-            
-
-        </div>
-        <div class="target">
-                <i class="fab fa-cc-visa"></i>
-                <i class="fab fa-cc-mastercard"></i>
-                <i class="fab fa-cc-amex"></i>
-        </div>
-
-    </footer>
 </body>
 
 </html>
