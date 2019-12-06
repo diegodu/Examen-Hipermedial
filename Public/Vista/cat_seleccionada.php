@@ -43,39 +43,39 @@
                 <section class="maincontent container">
                     <h2>LIBROS</h2>
                     <?php
-                    include '../../config/conexionBD.php';
+        include '../../config/conexionBD.php';
 
-                    $sql = "SELECT * FROM libro ;";
-                    $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
+        $sql = "SELECT * FROM libro;";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
 
-                        while ($row = $result->fetch_assoc()) {
-                            ?>
-                            <div class="card">
-                                <figure>
-                                    <a href="#"> <img src="../../imagenes/libros/<?php echo $row["img"] ?>"></a>
-                                </figure>
-                                <a href="#">
-                                    <h3><?php echo $row["lib_titulo"] ?></h3>
-                                </a>
-                                <?php
-                                        $sqlGenero = "SELECT * FROM genero where gen_codigo=" . $row["gen_codigo"] . ";";
-                                        $sqlGenero = $conn->query($sqlGenero);
-                                        $sqlGenero = $sqlGenero->fetch_assoc();
-
-                                        ?>
-                                <p><?php echo $sqlGenero["gen_nombre"] ?></p>
-                                <p>$<?php echo $row["lib_precio"] ?></p>
-                            </div>
-
+            while ($row = $result->fetch_assoc()) {
+                ?>
+                <div class="card">
+                    <figure>
+                        <a href="../Vista/producto.php?codigolibro=<?php echo $row["lib_codigo"] ?>"> <img src="../../imagenes/libros/<?php echo $row["img"] ?>"></a>
+                    </figure>
+                    <a href="../Vista/producto.php?codigolibro=<?php echo $row["lib_codigo"] ?>">
+                        <h3><?php echo $row["lib_titulo"] ?></h3>
+                    </a>
                     <?php
+                            $sqlGenero = "SELECT * FROM genero where gen_codigo=" . $row["gen_codigo"] . ";";
+                            $sqlGenero = $conn->query($sqlGenero);
+                            $sqlGenero = $sqlGenero->fetch_assoc();
 
-                        }
-                    } else {
-                        echo "<h2> No hay Libros </h2>";
-                    }
-                    $conn->close();
-                    ?>
+                            ?>
+                    <p><?php echo $sqlGenero["gen_nombre"] ?></p>
+                    <p>$<?php echo $row["lib_precio"] ?></p>
+                </div>
+
+        <?php
+
+            }
+        } else {
+            echo "<h2> No hay Libros </h2>";
+        }
+        $conn->close();
+        ?>
                 </section>
             </section>
         </div>

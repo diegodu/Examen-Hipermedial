@@ -32,7 +32,7 @@ if (isset($_SESSION['isLogged'])) {
     </section>
     <section class="maincontent container">
 
-        <h2>LIBROS DESTACADOS</h2>
+        <h2>ULTIMOS LIBROS AGREGADOS</h2>
         <?php
         include '../../config/conexionBD.php';
 
