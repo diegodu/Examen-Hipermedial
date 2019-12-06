@@ -998,7 +998,6 @@ input, textarea{
     font-size: 25px;
 }
 
-<<<<<<< HEAD
 .usuPedido{
     width: 80%;
     height: 600px;
@@ -1031,7 +1030,6 @@ input, textarea{
     font-size: 15px;
     font-weight: 300px;
 }
-=======
 #NotificaCarrito .notificacion{
     background-color: greenyellow; 
     width: 300px; 
@@ -1045,4 +1043,3 @@ input, textarea{
     background-color: #FF4858;
 }
 
->>>>>>> c38cc35b0a6fee1390ddf3741d785dbc96b92c01
