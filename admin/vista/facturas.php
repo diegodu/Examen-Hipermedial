@@ -150,7 +150,9 @@
         </div>
 
     </section> 
+    <a class='estilo' href='../controlador/eliminar_factura.php?eli_factura=" <?php echo $row2["fac_ca_id"];?> "'>Modificar Libro</a>
     <?php
+    
 
         
     } else {
