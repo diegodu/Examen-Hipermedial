@@ -18,8 +18,8 @@
                 <li><a href="index_admin.html">Inicio</a></li>
                 <li><a href="usuarios_admin.php">Clientes</a></li>
                 <li><a href="productos_admin.php" style="text-decoration-color: rgb(52, 122, 226);">Productos</a></li>
-                <li><a href="#">Pedidos</a></li>
-                <li><a href="#">Facturas</a></li>
+                <li><a href="pedidos.php">Pedidos</a></li>
+                <li><a href="factura.php">Facturas</a></li>
                 <li><a href="crear_libro.php">Agregar Libro</a></li>
                 <li><a href="crear_autor.php">Agregar Autor</a></li>
              

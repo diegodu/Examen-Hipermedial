@@ -25,6 +25,11 @@ if ($result> 0) {
     $_SESSION['usu_codigo'] = $result["usu_id"];
     $_SESSION['usu_nombre'] = $result["usu_nombre"];
     $_SESSION['usu_apellido'] = $result["usu_apellido"];
+    $_SESSION['usu_direccion'] = $result["usu_direccion"];
+    $_SESSION['usu_telefono'] = $result["usu_telefono"];
+    $_SESSION['usu_correo'] = $result["usu_correo"];
+    $_SESSION['usu_contrasenia'] = $result["usu_contrasenia"];
+    
 
    header("Location: ../Vista/index.php");
    
