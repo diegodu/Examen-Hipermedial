@@ -1,33 +1,32 @@
-function initMap(latitud, longitud, zoom) {
-    google.maps.event.addDomListener(window, "load", () => {
-        var locate = { lat: latitud, lng: longitud };
-        var map = new google.maps.Map(
-            document.getElementById('map'),
-            {
-                center: locate,
-                zoom: zoom
-            }
-        )
-        var marker = new google.maps.Marker(
-            {
-                draggable: true,
-                animation: google.maps.Animation.DROP,
-                position: locate, map: map,
-                //title: 'Tienda'
-            }
-        );
-        marker.addListener('click', toggleBounce);
+function initMap() {
+    var directionsRenderer = new google.maps.DirectionsRenderer;
+    var directionsService = new google.maps.DirectionsService;
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 8,
+      center: {lat: -2.8869194, lng: -78.9914455}
+    });
+    directionsRenderer.setMap(map);
+    directionsRenderer.setPanel(document.getElementById('right-panel'));
 
-        function toggleBounce() {
-            //infowindow.open(map, marker);
-            if (marker.getAnimation() !== null) {
-                marker.setAnimation(null);
-            } else {
-                marker.setAnimation(google.maps.Animation.BOUNCE);
-            }
-        }
+    calculateAndDisplayRoute(directionsService, directionsRenderer);
+    
+  }
 
-    })
+  function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+    var end = document.getElementById('end').value;
+    directionsService.route({
+      origin: start,
+      destination: end,
+      travelMode: 'DRIVING'
+    }, function(response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+        window.alert('Directions request failed due to ' + status);
+      }
+    });
+  }
 
 
-}
+

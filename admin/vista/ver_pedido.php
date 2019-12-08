@@ -102,98 +102,21 @@ $conn->close();
 
 
 <!---mapa-->
-  
-    <div class="contenedorM">
-
-            <h2>Ruta</h2>
-            <div id="map" class="map"> </div>
-            <script>
-                // Initialize and add the map
-                function initMap() {
-                    var directionsService = new google.maps.DirectionsService;
-                    var directionsDisplay = new google.maps.DirectionsRenderer;
-
-                    navigator.geolocation.getCurrentPosition(fn_ok, fn_mal);
-
-                    function fn_mal() {}
-
-                    function fn_ok(rta) {
-                        var lat = rta.coords.latitude;
-                        var lon = rta.coords.longitude;
-                        console.log("Latitud: " + lat + " longitud: " + lon);
-
-                        var start = {
-                            lat: lat,
-                            lng: lon
-                        };
-
-                        var waypts = [{
-                            
-                            location: {
-                                lat: -2.923055,
-                                lng: -79.066342
-                            },
-                            stopover: true
-                        }, {
-                            location: {
-                                lat: lat,
-                                lng: lon
-                            },
-                            stopover: true
-                        }];
-
-                        console.log(lat, lon)
-
-
-                        var map = new google.maps.Map(document.getElementById('map'), {
-                            zoom: 6,
-                            center: {
-                                lat: waypts[0].location.lat,
-                                lng: waypts[0].location.lng
-                            }
-                        });
-                        directionsDisplay.setMap(map);
-                        directionsService.route({
-                            origin: {
-                                lat: waypts[0].location.lat,
-                                lng: waypts[0].location.lng
-                            },
-                            destination: {
-                                lat: waypts[1].location.lat,
-                                lng: waypts[1].location.lng
-                            },
-                            waypoints: waypts,
-                            travelMode: google.maps.TravelMode.WALKING
-                        }, function(response, status) {
-                            if (status === 'OK') {
-                                directionsDisplay.setDirections(response);
-                            } else {
-                                window.alert('Directions request failed due to ' + status);
-                            }
-                        });
-                    }
-                }
-            </script>
-
-
-
-
-
-
-
-
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2wESqJq6cIkEb7WMUZswtEoGVtyL4rkM&callback=initMap" async defer></script>
-        </div>
-      
-
-  
     
+    <input id="start" type="hidden" name="" value="<?php echo $row2['usu_direccion'];?>">
+    <input id="end" type="hidden" name="" value="Av. Turuhuayco & Calle Vieja, Cuenca">
+    
+    <div class="contentMap">
+    <h2>Ruta de envio</h2>
+    <div class="contenedorM">
+        <div id="map"></div>
+        <div id="right-panel"></div>
+    </div>
+    </div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjz6eJHmjVFuC-W5B5IhuWj4i9hE0aHJs&callback=initMap" type="text/javascript"></script>
+    <script src="../js/map.js"></script>
 
-
-
-
-
-
+    
 </body>
 
 </html>

@@ -204,18 +204,23 @@ padding-bottom: 30px;
     
 
 }
-#map{
-    width: 60%;
-    padding: 15%;
-  height: 100%;
-    background: red;
-    z-index:1;
-    margin: 10px;
 
- 
+.contentMap{
+    width: 80%;
+    margin: 0 auto;
 }
 .contenedorM{
-  
-    width: 100%;
+    margin-top: 10px;
+    display: flex;
+}
+.contenedorM #map{
+    width: 70%;
     height: 400px;
+}
+
+.contenedorM #right-panel{
+    width: 29%;
+    overflow: scroll;
+    height: 400px;
+    margin-left: 5px;
 }
