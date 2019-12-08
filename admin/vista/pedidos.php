@@ -38,7 +38,8 @@
      $sql = "SELECT u.usu_nombre, u.usu_apellido, u.usu_correo, u.usu_direccion, f.fac_ca_fecha,f.fac_ca_id, fac_estado 
      FROM facturacabecera AS f, factura_detalle AS fd, usuario AS u 
      WHERE f.usu_id = u.usu_id AND fd.factura_id = f.fac_ca_id
-     GROUP BY f.fac_ca_id;";
+     GROUP BY f.fac_ca_id
+     ORDER BY f.fac_ca_fecha DESC;";
      $result = $conn->query($sql);
 
      if ($result->num_rows > 0) {

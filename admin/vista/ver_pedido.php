@@ -33,7 +33,8 @@
       $sql2 = "SELECT u.usu_nombre, u.usu_apellido, u.usu_correo, u.usu_direccion, f.fac_ca_fecha,f.fac_ca_id,SUM(FD.cantidad) AS cantidad 
       FROM facturacabecera AS f, factura_detalle AS fd, usuario AS u 
       WHERE f.usu_id = u.usu_id AND fd.factura_id = f.fac_ca_id and f.fac_ca_id=$codigo; ";
-      echo "aqui esta el codgo:  $codigo";
+      //echo "aqui esta el codgo:  $codigo";
+      
       
       $result2 = $conn->query($sql2);
 
@@ -41,6 +42,7 @@
         $row2 = $result2->fetch_assoc();
 
         ?>
+        
         <div class="verPedidoIm">
             <figure>
                 <img src="../../imagenes/descarga-1.png" alt="">
@@ -90,6 +92,8 @@
             <button> <a class='estilo' href='../controlador/esta_pedido4.php?finalizado="<?php echo $row2["fac_ca_id"];?>"'>Finalizado</a> </button>
           
             <button> <a class='estilo' href='../controlador/esta_pedido5.php?rechazado="<?php echo $row2["fac_ca_id"];?>"'>Rechazado</a> </button>
+        
+            <button> <a class='estilo' href='fac_pedido.php?co="<?php echo $row2["fac_ca_id"];?>"'>Factura</a> </button>
           
         </div>
     </section>

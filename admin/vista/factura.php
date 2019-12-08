@@ -13,7 +13,7 @@
 <body>
     <header>
       
-        <h1>Usuarios Registrados</h1>
+        <h1>Facturas</h1>
         <nav class="nav-bar container">
             <ul>
                 <li><a href="index_admin.html">Inicio</a></li>
@@ -28,7 +28,7 @@
     </header>
     
 <!-------------------------------------------------------------->
-<h2>Usuarios</h2>
+
 
 <div class="formato">
 <table>
@@ -39,7 +39,8 @@
      $sql = "SELECT u.usu_nombre, u.usu_apellido, u.usu_correo, u.usu_direccion, f.fac_ca_fecha,f.fac_ca_id 
      FROM facturacabecera AS f, factura_detalle AS fd, usuario AS u 
      WHERE f.usu_id = u.usu_id AND fd.factura_id = f.fac_ca_id
-     GROUP BY f.fac_ca_id;";
+     GROUP BY f.fac_ca_id
+     ORDER BY f.fac_ca_fecha DESC;";
      $result = $conn->query($sql);
 
      if ($result->num_rows > 0) {

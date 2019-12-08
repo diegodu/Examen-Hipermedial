@@ -40,7 +40,7 @@
 <!--------------------------------------->
 
     <?php
-    $codigo = $_GET["codigo"];
+    $codigo = $_GET["co"];
     include '../../config/conexionBD.php';
     $sql = "SELECT *
     FROM facturacabecera AS f, factura_detalle AS fd, usuario AS u 
@@ -150,7 +150,7 @@
         </div>
 
     </section> 
-    <a class='estilo' href='../controlador/eliminar_factura.php?eli_factura=" <?php echo $row2["fac_ca_id"];?> "'>Anular</a>
+    <a class='estilo' href='../controlador/eliminar_factura.php?eli_factura=" <?php echo $row2["fac_ca_id"];?> "'>Modificar Libro</a>
     <?php
     
 
