@@ -19,10 +19,8 @@ $type = $_FILES['imagen']['type'];
 
 echo ($_FILES['imagen']['name']);
 
-$sql1 = "SELECT MAX(lib_codigo)+1 AS co  FROM libro";
-$result1 = $conn->query($sql1);
-$row1 = $result1->fetch_assoc();
-echo $row1['co'];
+$directorio = "../../imagenes/Libros/";
+mkdir($directorio, 0777, true);
 
 
 move_uploaded_file($temp, "../../imagenes/Libros/$foto");
@@ -60,6 +58,9 @@ move_uploaded_file($temp, "../../imagenes/Libros/$foto");
     
    
     $conn->close();
+
+    header("Location: ../vista/productos_admin.php");
+
     ?>
 </body>
 
