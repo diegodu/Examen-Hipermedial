@@ -115,7 +115,7 @@ if (isset($_SESSION['isLogged'])) {
                             }
                         } else {
                             ?>
-                        <a><i class="fas fa-heart" onclick="darLike(this<?php echo (', ' . $sqllibro['lib_codigo']) ?>)"></i></a>
+                        <a href="./login.php"><i class="fas fa-heart" ></i></a>
                     <?php
                     }
 
@@ -127,9 +127,19 @@ if (isset($_SESSION['isLogged'])) {
                     $sqlcalificacion = $resultlike->fetch_assoc();
                     ?>
                     <span><?php echo $res = ($sqlcalificacion["valor"]  > 0) ? $sqlcalificacion["valor"] : 0; ?></span>
-
-                    <textarea placeholder="Agregar comentario" name="comentario" id="comentario"></textarea>
+                    
+                    <?php
+                    if (isset($_SESSION['isLogged'])) {
+                        ?>
+                         <textarea placeholder="Agregar comentario" name="comentario" id="comentario"></textarea>
                     <input type="button" value="Agregar Comentario" onclick="comentar(<?php echo $sqllibro['lib_codigo'] ?>)">
+                    <?php
+                    } else {
+                        ?>
+                          <textarea placeholder="Agregar comentario" name="comentario" id="comentario"></textarea>
+                           <a href="./login.php"><input type="button" value="Agregar Comentario" ></a>
+                    <?php
+                    } ?>
 
                 </div>
 
